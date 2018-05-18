@@ -1,0 +1,58 @@
+<template>
+<div class="item-content">
+    <div class="item-media">
+      <img v-bind:src="thumbnail" class="thumbnail">
+    </div>
+    <div class="item-inner">
+      <div class="item-title-row">
+        <div class="item-title">{{item.name}}</div>
+        <div class="item-after">{{item.price}} &euro;</div>
+      </div>
+      <!-- div class="item-subtitle">item.note</div -->
+      <div class="item-text">{{item.note}}</div>
+    </div>
+</div>
+</template>
+
+<script>
+
+import { f7Card, f7List, f7ListGroup, f7ListItem, f7Button } from 'framework7-vue'
+import Framework7 from 'framework7'
+
+export default {
+  name: 'DishListItem',
+  components: {},
+  computed: {
+    thumbnail: function() {
+        const pics = this.item.pics
+
+        //TODO small size for thumbnail
+
+        if (pics && pics.length && pics.length > 0) {
+            const mainPic = pics[0]
+
+            return mainPic || ''
+        } else {
+            return ''
+        }
+    }
+  },
+  props: {
+    item: Object
+  }
+}
+</script>
+
+<style>
+.thumbnail {
+    width: 6em;
+    height: 6em;
+}
+
+.thema-red .item-inner {
+    border-bottom: 1px solid #e28b8b;
+}
+.thema-red .item-title {
+    /*color: #880707;*/
+}
+</style>

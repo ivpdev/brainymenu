@@ -1,0 +1,11 @@
+---
+applications:
+- name: brainymenu-standalone-menu-feature1
+  host: brainymenu-standalone-menu-feature1
+  buildpack: sdk-for-nodejs
+  command: npm start
+  path: .
+  memory: 64M
+  instances: 1
+  env:
+    NPM_CONFIG_PRODUCTION: false

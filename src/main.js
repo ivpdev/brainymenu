@@ -7,6 +7,9 @@ Vue.config.productionTip = false
 
 Vue.use(Framework7Vue, Framework7);
 
-new Vue({
+const app = new Vue({
   render: h => h(App)
-}).$mount('#app')
+})
+
+app.$mount('#app')
+window.aaap = app

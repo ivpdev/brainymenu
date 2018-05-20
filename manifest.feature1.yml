@@ -1,7 +1,7 @@
 ---
 applications:
-- name: brainymenu-standalone-menu-feature1
-  host: brainymenu-standalone-menu-feature1
+- name: brainymenu-standalone-menu-feature2
+  host: brainymenu-standalone-menu-feature2
   buildpack: sdk-for-nodejs
   command: npm start
   path: .

@@ -1,25 +1,14 @@
 <template>
-        <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
-            <f7-list-item v-for="(category, index) in data.menu" class="category-li"
-                v-on:click="onCategoryHeaderClick(category, index)">
+    <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
+        <f7-list-item v-for="(category, index) in data.menu" class="category-li"
+            v-on:click="onCategoryHeaderClick(category, index)">
 
-            <!-- f7-list-item accordion-item title="Accordion Item 1">
-                <f7-accordion-content>
-                  <f7-block>
-                    <p>Accordion Item 1 Content</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu felis volutpat, rutrum ex quis, lobortis ex. Curabitur quis mattis lorem. Nullam magna lacus, interdum vel maximus nec, vestibulum non quam. Phasellus ornare efficitur porttitor. Quisque neque diam, imperdiet in fermentum nec, congue vitae ante. Nullam imperdiet maximus commodo. Morbi pharetra id purus ac ultrices. Duis non posuere libero.</p>
-                  </f7-block>
-                </f7-accordion-content>
-              </f7-list-item -->
-
-
-                <li class="list-group-title">{{category.category}}</li>
-                <f7-list-group>
-                   <DishListItem v-for="(item, index) in category.items" v-bind:item="item"/>
-                </f7-list-group>
-            </f7-list-item>
-        </f7-list>
-
+            <li class="list-group-title">{{category.category}}</li>
+            <f7-list-group>
+               <DishListItem v-for="(item, index) in category.items" v-bind:item="item"/>
+            </f7-list-group>
+        </f7-list-item>
+    </f7-list>
 </template>
 
 <script>
@@ -87,7 +76,7 @@ export default {
 }
 
 .thema-red .list-group-title {
-    background: #ce7474;
+    background: #b70a0a;
     color: white;
 }
 

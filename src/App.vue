@@ -29,7 +29,7 @@
                   <f7-icon fa="shopping-cart"></f7-icon>
                   <f7-icon f7="close"></f7-icon>
 
-                  <f7-badge class="shopping-cart-count" color="orange">5</f7-badge>
+                  <f7-badge class="shopping-cart-count" color="orange">{{itemsInCartCount}}</f7-badge>
               </f7-fab>
 
               <f7-fab color="red"
@@ -47,7 +47,7 @@
       </f7-panel>
 
       <f7-popup ref="cartPanel"  class="popup-chat">
-        <f7-navbar title="Cart">
+        <f7-navbar title="Cart" class="cart-navbar">
           <f7-nav-right>
             <f7-link popup-close>Close</f7-link>
           </f7-nav-right>
@@ -62,28 +62,26 @@
 import Menu from './components/Menu.vue'
 import Chat from './components/Chat.vue'
 import Cart from './components/Cart.vue'
+import store from './store'
 import Framework7 from 'framework7'
-import menuData from './menuData.json'
-import {  f7Navbar, f7NavRight,
+import { f7Navbar, f7NavRight,
     f7Link, f7View, f7Page, f7Icon, f7Badge,
     f7Fab, f7FabButtons, f7FabButton, f7Panel, f7Popup } from 'framework7-vue'
-
 
 const localState = {
     cartOpened: false
 }
 
-
-
 export default {
   name: 'app',
   computed: {
     menuData: function() {
-        return menuData
-    }/*,
-    cartOpened: function() {
-        return localState.cartOpened
-    }*/
+        return store.state.menuData
+    },
+
+    itemsInCartCount: function() {
+        return store.state.cartData.reduce((acc, item) => acc + item.quantity, 0)
+    }
   },
   data() {
       return {
@@ -132,12 +130,16 @@ export default {
 <style>
 .shopping-cart-count {
     right: -11px;
-    top: -9px;
+    top: -7px;
     z-index: 1;
 }
 
 .thema-red .brainymenu-navbar.navbar {
     background-color: #c30808 !important;
+}
+
+.thema-red .cart-navbar.navbar {
+    background-color: #ff9800 !important;
 }
 
 .thema-red .fab.color-red>a {

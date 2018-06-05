@@ -6,7 +6,14 @@
     <div class="item-inner">
       <div class="item-title-row">
         <div class="item-title">{{item.name}}</div>
-        <div class="item-after">{{item.price}} &euro;</div>
+        <div class="item-after">
+            <f7-button fill round
+                color="orange"
+                icon-fa="cart-plus"
+                @click="addToCart(item)">
+                {{item.price}} &euro;
+            </f7-button>
+        </div>
       </div>
       <!-- div class="item-subtitle">item.note</div -->
       <div class="item-text">{{item.note}}</div>
@@ -15,13 +22,15 @@
 </template>
 
 <script>
-
-import { f7Card, f7List, f7ListGroup, f7ListItem, f7Button } from 'framework7-vue'
+import store from '../store'
+import { f7Button } from 'framework7-vue'
 import Framework7 from 'framework7'
 
 export default {
   name: 'DishListItem',
-  components: {},
+  components: {
+    f7Button
+  },
   computed: {
     thumbnail: function() {
         const pics = this.item.pics
@@ -35,6 +44,11 @@ export default {
         } else {
             return ''
         }
+    }
+  },
+  methods: {
+    addToCart: function(item) {
+      store.dispatch("addToCart", item)
     }
   },
   props: {

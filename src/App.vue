@@ -15,8 +15,8 @@
 
                 <f7-fab-buttons ref="menuButtons" class="speed-dial-opened">
                   <f7-fab-button color="orange" @click="onButtonClick">A</f7-fab-button>
-                  <f7-fab-button color="green" @click="onButtonClick">B</f7-fab-button>
-                  <f7-fab-button color="blue" @click="onButtonClick">C</f7-fab-button>
+                  <f7-fab-button color="orange" @click="onButtonClick">B</f7-fab-button>
+                  <f7-fab-button color="orange" @click="onButtonClick">C</f7-fab-button>
                 </f7-fab-buttons>
               </f7-fab>
 
@@ -43,17 +43,29 @@
       </f7-view>
 
       <f7-panel ref="chatPanel" right>
-            <Chat></Chat>
+        <Chat></Chat>
       </f7-panel>
 
-      <f7-popup ref="cartPanel"  class="popup-chat">
-        <f7-navbar title="Cart" class="cart-navbar">
-          <f7-nav-right>
-            <f7-link popup-close>Close</f7-link>
-          </f7-nav-right>
-        </f7-navbar>
-        <Cart></Cart>
-      </f7-popup>
+
+     <CartPanel ref="cartPanel"></CartPanel>
+
+      <!-- f7-popup ref="cartPanel" class="popup-chat">
+        <f7-page class="cart-page">
+            <f7-navbar title="Cart" class="cart-navbar">
+                <f7-nav-right>
+                   <f7-link popup-close>Close</f7-link>
+                </f7-nav-right>
+                </f7-navbar>
+                <Cart ref="cart"></Cart>
+                <f7-fab class="checkout-fab"
+                        color="red"
+                        position="right-bottom"
+                        popup-open=".popup-chat"
+                        @click="goToCheckout">
+                  BESTELLEN (<b>{{priceTotalInCart}} &euro;</b>)
+              </f7-fab>
+        </f7-page>
+      </f7-popup -->
 
     </div>
 </template>
@@ -62,13 +74,14 @@
 import Menu from './components/Menu.vue'
 import Chat from './components/Chat.vue'
 import Cart from './components/Cart.vue'
+import CartPanel from './components/CartPanel.vue'
 import store from './store'
 import Framework7 from 'framework7'
 import { f7Navbar, f7NavRight,
     f7Link, f7View, f7Page, f7Icon, f7Badge,
     f7Fab, f7FabButtons, f7FabButton, f7Panel, f7Popup } from 'framework7-vue'
 
-const localState = {
+const localState = {//TODO remove
     cartOpened: false
 }
 
@@ -81,6 +94,10 @@ export default {
 
     itemsInCartCount: function() {
         return store.state.cartData.reduce((acc, item) => acc + item.quantity, 0)
+    },
+
+    priceTotalInCart: function() {
+        return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
     }
   },
   data() {
@@ -106,7 +123,8 @@ export default {
     f7Panel,
     f7Popup,
     Chat,
-    Cart
+    Cart,
+    CartPanel
   },
   methods: {
     openCart: function() {
@@ -122,6 +140,10 @@ export default {
 
     onButtonClick: function() {
         console.log('AAA')
+    },
+
+    goToCheckout: function() {
+        this.$refs.cart.goToCheckout()
     }
   }
 }
@@ -144,6 +166,15 @@ export default {
 
 .thema-red .fab.color-red>a {
     background-color: #b70a0a !important;
+}
+
+.md .fab.checkout-fab>a,
+.ios .fab.checkout-fab>a {
+    width: 156px;
+}
+
+.cart-page .page-content {
+    padding-bottom: 56px;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-<div class="item-content">
+<div class="item-content dish-list-item">
     <div class="item-media">
       <img v-bind:src="thumbnail" class="thumbnail">
     </div>
@@ -63,7 +63,7 @@ export default {
     height: 6em;
 }
 
-.thema-red .item-inner {
+.thema-red .dish-list-item .item-inner {
     border-bottom: 1px solid #e28b8b;
 }
 .thema-red .item-title {

@@ -36,12 +36,19 @@
               </f7-block>
 
               <f7-block v-show="step.number==2">
-                <Checkout/>
+                <Checkout ref="checkout"/>
               </f7-block>
 
-              <f7-popover ref="finalConfirmation">
-                FinalConfirmation
-              </f7-popover>
+              <f7-actions ref="finalConfirmation">
+                <f7-actions-group>
+                  <f7-actions-label>Zahlungspflichtig bestellen</f7-actions-label>
+
+                  <f7-actions-button>Ok</f7-actions-button>
+                </f7-actions-group>
+                <f7-actions-group>
+                  <f7-actions-button color="red" bold>Cancel</f7-actions-button>
+                </f7-actions-group>
+              </f7-actions>
             </f7-block>
 
             <f7-fab v-show="step.number==1"
@@ -57,7 +64,6 @@
                   class="checkout-fab"
                   color="red"
                   position="right-bottom"
-                  popup-open=".popup-chat"
                   @click="goToFinalConfirmation">
               Weiter
             </f7-fab>
@@ -78,7 +84,11 @@
 import store from '../store'
 import Checkout from './Checkout'
 import { f7Block, f7List, f7ListItem, f7Swiper, f7SwiperSlide, f7Popup, f7Fab,
- f7Page, f7Navbar, f7NavRight, f7Link, f7Popover } from 'framework7-vue'
+ f7Page, f7Navbar, f7NavRight, f7Link, f7Popover, f7Sheet,
+ f7Actions, f7ActionsGroup, f7ActionsButton, f7ActionsLabel } from 'framework7-vue'
+import Dom7 from 'dom7'
+
+const $$ = Dom7
 
 export default {
   name: 'Cart',
@@ -90,6 +100,7 @@ export default {
         }
     }
   },
+
   components: {
     f7Block,
     f7List,
@@ -103,12 +114,17 @@ export default {
     f7Navbar,
     f7NavRight,
     f7Link,
-    f7Popover
+    f7Popover,
+    f7Sheet,
+    f7Actions,
+    f7ActionsGroup,
+    f7ActionsButton,
+    f7ActionsLabel
   },
 
   computed: {
     priceTotalInCart: function() {
-        return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+      return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
     }
   },
 

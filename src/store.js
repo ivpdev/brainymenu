@@ -25,7 +25,26 @@ const removeFromArray = (array, item) => {
 export default new Vuex.Store({
   state: {
     cartData: [],
-    menuData: menuData
+    menuData: menuData,
+    minimalSum: null,
+    checkoutForm: {
+        name: {
+            value: null,
+            valid: false
+        },
+        street: {
+            value: null,
+            valid: false
+        },
+        plz: {
+            value: null,
+            valid: false
+        },
+        email: {
+            value: null,
+            valid: false
+        }
+    }
   },
   mutations: {
     addToCart: function(state, item) {
@@ -50,6 +69,26 @@ export default new Vuex.Store({
         } else {
             console.warn('trying to remove non-existing item from cart')
         }
+    },
+
+    selectMinimalSum: function(state, minimalSum) {
+        state.minimalSum = minimalSum
+    },
+
+    updateCheckoutForm: function(state, data) {
+        state.checkoutForm = Object.assign(state.checkoutForm, data)
+    },
+
+    resetCheckoutForm: function(state, data) {
+        state.checkoutForm = {
+            name: null,
+            street: null,
+            plz: null,
+            email: {
+                value: null,
+                valid: false
+            }
+        }
     }
   },
   actions: {
@@ -59,6 +98,22 @@ export default new Vuex.Store({
 
     removeFromCart: function({commit}, item) {
         commit('removeFromCart', item)
+    },
+
+    selectMinimalSum: function({commit}, minimalSum) {
+        commit('selectMinimalSum', minimalSum)
+    },
+
+    resetMinimalSum: function({commit}) {
+        commit('selectMinimalSum', null)
+    },
+
+    updateCheckoutForm: function({commit}, data) {
+        commit('updateCheckoutForm', data)
+    },
+
+    resetCheckoutForm: function({commit}, data) {
+        commit('resetCheckoutForm', data)
     }
   }
 })

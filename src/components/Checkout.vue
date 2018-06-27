@@ -7,7 +7,8 @@
             <f7-input
                 required
                 validate
-                type="text" placeholder="" clear-button></f7-input>
+                type="text" placeholder="" clear-button
+                @change="onNameChange"></f7-input>
           </f7-list-item>
 
           <f7-list-item>
@@ -16,7 +17,10 @@
             <f7-input
              required
              validate
-             type="text" placeholder="" clear-button></f7-input>
+             type="text"
+             placeholder=""
+             clear-button
+             @change="onStreetChange"></f7-input>
           </f7-list-item>
 
           <f7-list-item>
@@ -45,11 +49,15 @@
 
           <f7-list-item>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
-            <f7-input type="email" validate placeholder="Your e-mail" clear-button></f7-input>
+            <f7-input type="email"
+                      validate
+                      placeholder="Your e-mail"
+                      clear-button
+                      @change="onEmailChange"></f7-input>
           </f7-list-item>
         </f7-list>
 
-        <CheckoutSum v-bind:minimalSum="selectedMinimalSum.value" v-bind:sum="11"></CheckoutSum>
+        <CheckoutSum :minimalSum="minimalSum" :sum="priceTotalInCart"></CheckoutSum>
     </div>
 </template>
 
@@ -58,6 +66,9 @@ import store from '../store'
 import CheckoutSum from './CheckoutSum'
 import { f7Block, f7List, f7ListItem, f7Icon, f7Input, f7Label } from 'framework7-vue'
 import Vuex from 'vuex'
+import Dom7 from 'dom7'
+
+const $$ = Dom7
 
 const availableZipCodes = [{
     zip: 81735,
@@ -72,10 +83,15 @@ export default {
   data: function() {
     return {
         cartData: store.state.cartData,
-        availableZipCodes: availableZipCodes,
-        selectedMinimalSum: {
-            value: null
-        }
+        availableZipCodes: availableZipCodes
+    }
+  },
+  computed: {
+    priceTotalInCart: function() {
+      return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+    },
+    minimalSum: function() {
+      return store.state.minimalSum
     }
   },
   components: {
@@ -88,12 +104,43 @@ export default {
     CheckoutSum
   },
   methods: {
+    onNameChange: function(e) {
+        const name = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+
+        store.dispatch('updateCheckoutForm', { name: {
+            value: name,
+            valid: !isInvalid
+        } })
+    },
+    onStreetChange: function(e) {
+        const street = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+
+        store.dispatch('updateCheckoutForm', { street: {
+            value: street,
+            valid: !isInvalid
+
+        } })
+    },
+    onEmailChange: function(e) {
+        //TODO validate
+        const email = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+        store.dispatch('updateCheckoutForm', { email: {
+                value: email,
+                valid: !isInvalid }})
+    },
     onZipChange: function(e) {
         const value = e.target.value
         const zipData = availableZipCodes.find(z => z.zip == value)
         const minimalSum = zipData.minimalSum
 
-        this.$set(this.selectedMinimalSum, 'value', minimalSum)
+        store.dispatch('updateCheckoutForm', { zip: {
+            value: value,
+            valid: true }})
+
+        store.dispatch('selectMinimalSum', minimalSum)
     }
   }
 }

@@ -53,7 +53,7 @@
 
             <f7-fab v-show="step.number==1"
                     class="checkout-fab"
-                    color="red"
+                    :color="fabToCheckout"
                     position="right-bottom"
                     popup-open=".popup-chat"
                     @click="goToCheckout">
@@ -62,7 +62,7 @@
 
             <f7-fab v-show="step.number==2"
                   class="checkout-fab"
-                  color="red"
+                  :color="fabToFinalConfirmation"
                   position="right-bottom"
                   @click="goToFinalConfirmation">
               Weiter
@@ -125,6 +125,12 @@ export default {
   computed: {
     priceTotalInCart: function() {
       return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+    },
+    fabToCheckout: function() {
+        return this.canGoToCheckout() ? "red" : "gray"
+    },
+    fabToFinalConfirmation: function() {
+        return this.canGoToFinalConfirmation() ? "red" : "gray"
     }
   },
 
@@ -137,16 +143,30 @@ export default {
       store.dispatch("removeFromCart", item)
     },
 
+    canGoToCheckout: function() {
+        return store.state.cartData.length > 0;
+    },
+
     goToCheckout: function() {
-        this.$set(this.step, 'number', 2 )
+        if (this.canGoToCheckout()) {
+            this.$set(this.step, 'number', 2 )
+        }
     },
 
     goToCartSummary: function() {
         this.$set(this.step, 'number', 1 )
     },
 
+    canGoToFinalConfirmation: function() {
+        return store.state.checkoutForm.name.valid &&
+               store.state.checkoutForm.street.valid &&
+               store.state.checkoutForm.email.valid
+    },
+
     goToFinalConfirmation: function() {
-        this.$refs.finalConfirmation.open()
+        if (this.canGoToFinalConfirmation()) {
+            this.$refs.finalConfirmation.open()
+        }
     },
 
     open: function() {

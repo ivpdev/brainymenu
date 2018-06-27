@@ -3,37 +3,48 @@
         <f7-list no-hairlines-md>
           <f7-list-item>
             <f7-label>Name</f7-label>
-            <f7-icon icon="demo-list-icon" slot="media"></f7-icon>
+            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
                 required
                 validate
-                type="text" placeholder="Your name" clear-button></f7-input>
+                type="text" placeholder="" clear-button></f7-input>
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Street</f7-label>
-            <f7-icon icon="demo-list-icon" slot="media"></f7-icon>
+            <f7-label>Strasse</f7-label>
+            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
              required
              validate
-             type="text" placeholder="Street" clear-button></f7-input>
+             type="text" placeholder="" clear-button></f7-input>
           </f7-list-item>
 
           <f7-list-item>
-            <f7-icon icon="demo-list-icon" slot="media"></f7-icon>
-            <f7-label>PLZ</f7-label>
-            <f7-input
+            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
+            <!-- f7-label>PLZ</f7-label -->
+            <!-- f7-input
                 type="select"
-                clear-button
-                @change="onZipChange"> <!-- TODO clear button doesn't work -->
-                <option v-for="(zipData, index) in availableZipCodes"
-                        v-bind:value="zipData.zip">
+                @change="onZipChange">
+
+                <option v-for="(zipData, index) in availableZipCodes">
                     {{zipData.zip}} - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
-            </f7-input>
+
+                <option value="14">1234 Mindestbestellwert 14</option>
+                <option value="15">1234 Mindestbestellwert 56</option>
+            </f7-input -->
+
+            <select
+                class="input-with-value"
+                @change="onZipChange">
+                <option v-for="(zipData, index) in availableZipCodes"
+                        :value="zipData.zip">
+                                {{zipData.zip}} - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
+            </select>
+
           </f7-list-item>
 
           <f7-list-item>
-            <f7-icon icon="demo-list-icon" slot="media"></f7-icon>
+            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input type="email" validate placeholder="Your e-mail" clear-button></f7-input>
           </f7-list-item>
         </f7-list>
@@ -46,6 +57,7 @@
 import store from '../store'
 import CheckoutSum from './CheckoutSum'
 import { f7Block, f7List, f7ListItem, f7Icon, f7Input, f7Label } from 'framework7-vue'
+import Vuex from 'vuex'
 
 const availableZipCodes = [{
     zip: 81735,

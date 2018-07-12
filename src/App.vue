@@ -32,12 +32,12 @@
                   <f7-badge class="shopping-cart-count" color="orange">{{itemsInCartCount}}</f7-badge>
               </f7-fab>
 
-              <f7-fab color="red"
+              <!-- f7-fab color="red"
                       position="right-bottom"
                       popup-open=".popup-chat"
                       @click="openChat">
                   <f7-icon fa="comments"></f7-icon>
-              </f7-fab>
+              </f7-fab -->
           </f7-page>
 
       </f7-view>

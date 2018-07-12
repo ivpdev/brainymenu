@@ -1,10 +1,10 @@
 <template>
     <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
         <f7-list-item v-for="(category, index) in data.menu" class="category-li"
-            v-on:click="onCategoryHeaderClick(category, index)">
-
-            <li class="list-group-title">{{category.category}}</li>
-            <f7-list-group>
+            v-on:click="onCategoryHeaderClick(category, index, $event)">
+            <li class="list-group-title">
+                <f7-icon :fa="collapsed[index] ? 'angle-down' : 'angle-up'"></f7-icon> {{category.category}}</li>
+            <f7-list-group :class="collapsed[index] ? 'category-collapsed' : 'category-expanded'">
                <DishListItem v-for="(item, index) in category.items" v-bind:item="item"/>
             </f7-list-group>
         </f7-list-item>
@@ -15,13 +15,13 @@
 
 import { f7Card, f7List, f7ListGroup,
     f7ListItem, f7Button, f7Accordion, f7AccordionItem,
-    f7AccordionToggle, f7AccordionContent, f7Block } from 'framework7-vue'
+    f7AccordionToggle, f7AccordionContent, f7Block,
+    f7Icon } from 'framework7-vue'
 import Framework7 from 'framework7'
 import DishListItem from './DishListItem'
+import Dom7 from 'dom7'
 
-const localState = {
-    collapsed: {}
-}
+const $$ = Dom7
 
 export default {
   name: 'Menu',
@@ -36,23 +36,31 @@ export default {
     f7AccordionItem,
     f7AccordionToggle,
     f7AccordionContent,
-    f7Block
+    f7Block,
+    f7Icon
   },
   props: {
     data: Object
   },
 
-  methods: {
-    isCollapsed: function(categoryIndex) {
-        return localState.collapsed[categoryIndex]
-    },
+  data: function() {
+    return {
+      collapsed: { }
+    }
+  },
 
-    onCategoryHeaderClick: function(category, index) {
+  methods: {
+    onCategoryHeaderClick: function(category, index, event) {
+        const el = event.target
+        const clickedOnHeader = $$(el).hasClass('list-group-title')
+
+        if (!clickedOnHeader) return
+
         this.toggleCollapsed(index)
     },
 
     toggleCollapsed: function(categoryIndex) {
-        localState.collapsed[categoryIndex] = !localState.collapsed[categoryIndex]
+        this.$set(this.collapsed, categoryIndex, !this.collapsed[categoryIndex])
     }
   }
 }
@@ -75,9 +83,14 @@ export default {
     margin: 0 !important;
 }
 
+.list-group-title {
+    cursor: pointer;
+}
+
 .thema-red .list-group-title {
     background: #b70a0a;
     color: white;
+    border-bottom: 1px solid white;
 }
 
 .chevron-down {
@@ -85,7 +98,7 @@ export default {
     background-size: 13px 13px;
 }
 
-.list-collapsed {
+.category-collapsed {
     display: none;
 }
 

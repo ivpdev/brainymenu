@@ -5,7 +5,11 @@
             <li class="list-group-title">
                 <f7-icon :fa="collapsed[index] ? 'angle-down' : 'angle-up'"></f7-icon> {{category.category}}</li>
             <f7-list-group :class="collapsed[index] ? 'category-collapsed' : 'category-expanded'">
-               <DishListItem v-for="(item, index) in category.items" v-bind:item="item"/>
+               <DishListItem
+                    v-for="(item, index) in category.items"
+                    v-bind:item="item"
+                    :defaultImage="data.defaultImage"
+                    />
             </f7-list-group>
         </f7-list-item>
     </f7-list>

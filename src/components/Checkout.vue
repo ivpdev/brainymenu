@@ -39,6 +39,7 @@
 
             <select
                 class="input-with-value"
+                ref="zipSelect"
                 @change="onZipChange">
                 <option v-for="(zipData, index) in availableZipCodes"
                         :value="zipData.zip">
@@ -67,23 +68,16 @@ import CheckoutSum from './CheckoutSum'
 import { f7Block, f7List, f7ListItem, f7Icon, f7Input, f7Label } from 'framework7-vue'
 import Vuex from 'vuex'
 import Dom7 from 'dom7'
+import orderingData from '../orderingData.json'
 
 const $$ = Dom7
-
-const availableZipCodes = [{
-    zip: 81735,
-    minimalSum: 12
-}, {
-    zip: 81549,
-    minimalSum: 10
-}];
 
 export default {
   name: 'Cart',
   data: function() {
     return {
         cartData: store.state.cartData,
-        availableZipCodes: availableZipCodes
+        availableZipCodes: orderingData.availableZipCodes
     }
   },
   computed: {
@@ -133,11 +127,20 @@ export default {
     },
     onZipChange: function(e) {
         const value = e.target.value
-        const zipData = availableZipCodes.find(z => z.zip == value)
+
+        this.validateOrderSum(value)
+    },
+
+    validate: function() {
+        this.validateOrderSum(this.$refs.zipSelect.value)
+    },
+
+    validateOrderSum: function(zip) {
+        const zipData = orderingData.availableZipCodes.find(z => z.zip == zip)
         const minimalSum = zipData.minimalSum
 
         store.dispatch('updateCheckoutForm', { zip: {
-            value: value,
+            value: zip,
             valid: true }})
 
         store.dispatch('selectMinimalSum', minimalSum)

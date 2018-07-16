@@ -15,8 +15,7 @@
             </f7-button>
         </div>
       </div>
-      <!-- div class="item-subtitle">item.note</div -->
-      <div class="item-text">{{item.note}}</div>
+      <div class="item-text">{{item.note || item.description}}</div>
     </div>
 </div>
 </template>
@@ -40,9 +39,9 @@ export default {
         if (pics && pics.length && pics.length > 0) {
             const mainPic = pics[0]
 
-            return mainPic || ''
+            return mainPic || this.defaultImage || ''
         } else {
-            return ''
+            return this.defaultImage || ''
         }
     }
   },
@@ -52,7 +51,8 @@ export default {
     }
   },
   props: {
-    item: Object
+    item: Object,
+    defaultImage: String
   }
 }
 </script>

@@ -3,7 +3,7 @@
         <f7-page class="cart-page">
             <f7-navbar title="Cart" class="cart-navbar">
                 <f7-nav-right>
-                     <f7-link popup-close>Close</f7-link>
+                     <f7-link popup-close>x</f7-link>
                 </f7-nav-right>
             </f7-navbar>
 
@@ -130,6 +130,7 @@ export default {
         return this.canGoToCheckout() ? "red" : "gray"
     },
     fabToFinalConfirmation: function() {
+
         return this.canGoToFinalConfirmation() ? "red" : "gray"
     }
   },
@@ -149,7 +150,8 @@ export default {
 
     goToCheckout: function() {
         if (this.canGoToCheckout()) {
-            this.$set(this.step, 'number', 2 )
+            this.$set(this.step, 'number', 2)
+            this.$refs.checkout.validate()
         }
     },
 
@@ -160,7 +162,8 @@ export default {
     canGoToFinalConfirmation: function() {
         return store.state.checkoutForm.name.valid &&
                store.state.checkoutForm.street.valid &&
-               store.state.checkoutForm.email.valid
+               store.state.checkoutForm.email.valid &&
+               this.priceTotalInCart >= store.state.minimalSum
     },
 
     goToFinalConfirmation: function() {

@@ -25,7 +25,7 @@ const removeFromArray = (array, item) => {
 export default new Vuex.Store({
   state: {
     cartData: [],
-    menuData: menuData,
+    menuData: menuData, //TODO move to config
     minimalSum: null,
     checkoutForm: {
         name: {

@@ -1,781 +1,2834 @@
 {
   "id": 5,
-  "name": "Hello World Restuarant",
-  "about": "„Hello World Restuarant“ ist eine Demo-Restuarant von dem Brainymenu-Chatbot. Fühlen Sie sich wie zuhause. Wir sind geöffnet rund um die Uhr.\n",
+  "name": "ASIA LITTLE DRAGON",
+  "about": "Bei uns können Sie bestellen, liefern lassen,\n selber abholen oder auch in unseren\n Räumlichkeiten Platz nehmen\n",
+  "defaultImage": "http://www.littledragon-asiabistro.de/images/skin/file-broken.png",
   "points": [
     {
       "id": 51
     }
   ],
   "menu": [
-    {
-      "category": "Vorspeisen",
-      "traits": [
-        "appetizers"
-      ],
-      "items": [
-        {
-          "name": "Karottensuppe",
-          "price": 3.5,
-          "description": "TODO Kürbissuppe schmeckt nach Herbst - heiß, cremig, würzig.\n",
-          "ingredients": [
-            "Hokkaido-Kürbis",
-            "Salz",
-            "Pfeffer",
-            "Cayennepfeffer",
-            "getrockneter Thymian",
-            "fettarme Milch",
-            "Toastbrot",
-            "Zitronensaft",
-            "Kürbiskernöl"
-          ],
-          "nutritionFacts": {
-            "calories": 276,
-            "carbohydrate": 21,
-            "protein": 7,
-            "fat": 17
-          },
-          "trais": [
-            "soup",
-            "vegetarian"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/carrots-soup-2157195_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/carrots-soup-2157198_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/carrots-soup-2157199_1280.jpg"
-          ]
-        },
-        {
-          "name": "Kürbissuppe",
-          "price": 4.5,
-          "description": "Kürbissuppe schmeckt nach Herbst - heiß, cremig, würzig.\n",
-          "ingredients": [
-            "Hokkaido-Kürbis",
-            "Salz",
-            "Pfeffer",
-            "Cayennepfeffer",
-            "getrockneter Thymian",
-            "fettarme Milch",
-            "Toastbrot",
-            "Zitronensaft",
-            "Kürbiskernöl"
-          ],
-          "nutritionFacts": {
-            "calories": 276,
-            "carbohydrate": 21,
-            "protein": 7,
-            "fat": 17
-          },
-          "traits": [
-            "soup",
-            "vegetarian"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pumpkin-soup-1685574_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pumpkin-soup-1685586_1280.jpg"
-          ]
-        },
-        {
-          "name": "Kartoffelsuppe",
-          "description": "Eine Suppe der traditionellen deutschen und österreichischen Küche. Cremig, würzig und herzhaft.",
-          "price": 4,
-          "traits": [
-            "soup"
-          ],
-          "ingredients": [
-            "Kartoffeln (mehligkochend)",
-            "Zwiebel",
-            "Suppengemüse",
-            "Gemüsebrühe",
-            "Sauerrahm",
-            "Petersilie",
-            "Salz und Pfeffer",
-            "Muskatnuss",
-            "Möhren",
-            "Sellerie",
-            "Porree",
-            "Salz",
-            "Pfeffer",
-            "Rosenpaprika",
-            "Gemüsebrühe",
-            "Stiele Majoran",
-            "Stiele Petersilie",
-            "saure Sahne"
-          ],
-          "nutritionFacts": {
-            "calories": 363,
-            "carbohydrate": 48,
-            "protein": 12,
-            "fat": 7
-          },
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/potato-soup-2152254_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/potato-soup-2152265_1280.jpg"
-          ]
-        },
-        {
-          "name": "Feigensalat",
-          "description": "Dieser Salat verwöhnt die Geschmacksnerven mit der Süße von Feigen und Honig und der Würze von Rucola und Ziegenkäse.\n",
-          "price": 4.5,
-          "ingredients": [
-            "Feigen",
-            "Parmaschinken",
-            "Mozzarella",
-            "Basilikum",
-            "Olivenöl",
-            "Zitronensaft",
-            "Honig",
-            "Meersalz",
-            "Pfeffer"
-          ],
-          "nutritionFacts": {
-            "calories": 168,
-            "carbohydrate": 45,
-            "protein": 8,
-            "fat": 4
-          },
-          "traits": [
-            "salad"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/salad-1672504_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/salad-1672505_1280.jpg"
-          ]
-        },
-        {
-          "name": "grüner Salat",
-          "note": "leichter Salat mit Salatblätter, Tomaten, Gurken und mehr",
-          "price": 4,
-          "ingredients": [
-            "gemischter Blattsalat",
-            "Kirschtomaten",
-            "weißer Balsamico",
-            "Zitronensaft",
-            "körniger Senf",
-            "Honig",
-            "Olivenöl",
-            "Salz",
-            "Pfeffer"
-          ],
-          "traits": [
-            "salad",
-            "vegetarian"
-          ],
-          "nutritionFacts": {
-            "calories": 41,
-            "carbohydrate": 4.5,
-            "protein": 0,
-            "fat": 3
-          },
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/salad-2655893_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/salad-2655915_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/salad-2655934_1280.jpg"
-          ]
-        },
-        {
-          "name": "gefüllte Champignons",
-          "price": 5,
-          "traits": [
-            "mushrooms"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/mushrooms-3069811_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/mushrooms-3069816_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/mushrooms-3069822_1280.jpg"
-          ]
-        },
-        {
-          "name": "Dolmadakia",
-          "note": "griechisches Gericht. Weinblätter gefüllt mit Reis, Tzatziki, \"garniert\"",
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/dolmadakia.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/dolmadakia2.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-rest-id4/Dolmadakia.jpg"
-          ],
-          "price": 4.9
-        },
-        {
-          "name": "Reisnudelsalad",
-          "price": 4,
-          "note": "mit frischem Spargel",
-          "traits": [
-            "salad",
-            "rice",
-            "noodle"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/rice-noodles-2284920_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/rice-noodles-2284931_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/rice-noodles-2284949_1280.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Hauptspeisen",
-      "traits": [
-        "main-course"
-      ],
-      "items": [
-        {
-          "name": "Rührei-Sandwich",
-          "price": 6.5,
-          "note": "zwei Sandwiches mit Schinken, Käse und Rührei",
-          "traits": [
-            "cheese"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/fried-eggs-2796406_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/bread-2796393_1280.jpg"
-          ]
-        },
-        {
-          "name": "Knusprige Hühnerflügel",
-          "price": 9,
-          "traits": [
-            "chicken"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/chicken-1559548_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/chicken-1559579_1280.jpg"
-          ]
-        },
-        {
-          "name": "gegrilltes Hähnchen",
-          "price": 10,
-          "traits": [
-            "chicken"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/chicken-3183558_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/barbecue-84671_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/barbecue-89166_1280.jpg"
-          ]
-        },
-        {
-          "name": "Wienerschnitzel mit Pommes",
-          "price": 10.5,
-          "traits": [
-            "pork"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/schnipo-1837703_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/schnitzel-68040_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/wiener-schnitzel-356436_1280.jpg"
-          ]
-        },
-        {
-          "name": "Kalbsteak",
-          "price": 14,
-          "traits": [
-            "beef"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/steak-2272464_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/meat-3127696_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/steak-2272467_1280.jpg"
-          ]
-        },
-        {
-          "name": "Gebratene Ente mit Brokkoli",
-          "traits": [
-            "duck"
-          ],
-          "price": 13,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/eric-mcnew-484749-unsplash.jpg"
-          ]
-        },
-        {
-          "name": "ungarisches Gulasch",
-          "traits": [
-            "beef"
-          ],
-          "price": 10.5,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/goulash-1696569_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/goulash-1696582_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/goulash-1696586_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/goulash-1696635_1280.jpg"
-          ]
-        },
-        {
-          "name": "Lachssteak",
-          "traits": [
-            "fisch"
-          ],
-          "price": 12,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/food-salmon-teriyaki-cooking.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/salmon-dish-food-meal-46239.jpeg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pexels-photo-262982.jpeg"
-          ]
-        },
-        {
-          "name": "Weißwurst",
-          "traits": [
-            "beef"
-          ],
-          "note": "Weißwurst ist eine Brühwurst aus fein gekuttertem Kalbfleisch",
-          "price": 6.5,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/weisswurst-2580025_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/weisswurst-2577747_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/weisswurst-2580017_1280.jpg"
-          ]
-        },
-        {
-          "name": "Paella",
-          "traits": [
-            "seafood"
-          ],
-          "note": "ein spanisches Reisgericht aus der Pfanne",
-          "price": 10,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/paella-2428933_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/paella-2428945_1280.jpg"
-          ]
-        },
-        {
-          "name": "Reis mit Bohnen",
-          "traits": [
-            "vegetarian"
-          ],
-          "price": 9,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/dragne-marius-527803-unsplash.jpg"
-          ]
-        },
-        {
-          "name": "Vegan-Teller",
-          "traits": [
-            "vegetarian"
-          ],
-          "price": 9,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/edgar-castrejon-459822-unsplash-small.jpg"
-          ]
-        },
-        {
-          "name": "Couscous mit Kichererbsen, Fenchel und Zitrusfrucht",
-          "price": 8,
-          "traits": [
-            "vegetarian"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/couscous-945029_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/citrus-couscous-945743_1280.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Nachtisch",
-      "traits": [
-        "desserts"
-      ],
-      "items": [
-        {
-          "name": "Zwetschgendatschi",
-          "price": 4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cake-1578711_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cake-1578684_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cake-1578728_1280.jpg"
-          ]
-        },
-        {
-          "name": "Erdbeereis",
-          "price": 4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/strawberries-1314524_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/strawberries-1314494_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/strawberries-1314511_1280.jpg"
-          ]
-        },
-        {
-          "name": "Himbeer-Pfannkuchen",
-          "price": 3.5,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pancake-1984693_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pancake-1984705_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pancake-1984712_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/pancake-1984716_1280.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Kalte Getränke",
-      "traits": [
-        "drinks"
-      ],
-      "items": [
-        {
-          "name": "Afri-Cola",
-          "traits": [
-            "caffeine"
-          ],
-          "volume": "0.2l",
-          "price": 2,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cola-1774702_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/plastic-box-3130917_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/drink-872576_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/drink-872601_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/drink-872603_1280.jpg"
-          ]
-        },
-        {
-          "name": "Bluna",
-          "traits": [
-            "dye"
-          ],
-          "volume": "0.2l",
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/Orange_Italian_Soda-1518712741-1.png",
-            "https://upload.wikimedia.org/wikipedia/commons/e/e3/Blunaflasche.jpg"
-          ],
-          "price": 2
-        },
-        {
-          "name": "Sprite",
-          "volume": "0.33l",
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/SpicyPaloma.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/lemon-3095881_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/sprite-2.jpg"
-          ],
-          "price": 2.2
-        },
-        {
-          "name": "Club Mate",
-          "traits": [
-            "caffeine",
-            "gluten-NEG"
-          ],
-          "volume": "0.5l",
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/clubmate1.jpg"
-          ],
-          "price": 2.8
-        },
-        {
-          "name": "Eistee",
-          "volume": "0.5l",
-          "price": 2.3,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/ice-lemon-tea-1726270_1280.jpg"
-          ]
-        },
-        {
-          "name": "Smoothie",
-          "note": "Kiwi, Orange, Himbeere, Grapefruit",
-          "volume": "0.5l",
-          "price": 2.3,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/smoothies-2253430_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/smoothies-2253423_1280.jpg"
-          ]
-        },
-        {
-          "name": "Stilles Wasser",
-          "volume": "0.5l",
-          "price": 1.4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/glass-1206584_1280.jpg"
-          ]
-        },
-        {
-          "name": "Mineralwasser",
-          "volume": "0.3l",
-          "price": 1.4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/bottle-2582012_1280.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Alkoholisch",
-      "traits": [
-        "alcohol",
-        "drinks"
-      ],
-      "items": [
-        {
-          "name": "Bier",
-          "note": "Pilsener",
-          "volume": "0.5l",
-          "price": 2.6,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/ale-2299366_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/beer-foam-2738937_1280.jpg"
-          ]
-        },
-        {
-          "name": "Bier",
-          "note": "alkoholfrei",
-          "traits": [
-            "alcohol-NEG"
-          ],
-          "volume": "0.5l",
-          "price": 2.6,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/glass-1206584_1280.jpg"
-          ]
-        },
-        {
-          "name": "Radler",
-          "volume": "0.33l",
-          "price": 2.6,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/beer-2593427_1280.jpg"
-          ]
-        },
-        {
-          "name": "Hefeweizen",
-          "volume": "0.5l",
-          "price": 3.1,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/wheat-798674_1280.jpg"
-          ]
-        },
-        {
-          "name": "Hefeweizen",
-          "note": "alkoholfrei",
-          "traits": [
-            "alcohol-NEG"
-          ],
-          "volume": "0.5l",
-          "price": 3.1,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/beer-1620319_1280.png"
-          ]
-        },
-        {
-          "name": "Sekt",
-          "traits": [
-            "gluten-NEG",
-            "vine"
-          ],
-          "volume": "0.1l",
-          "price": 3,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/champagne-1110591_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/alcohol-2178775_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/champagne-1020308_1280.jpg"
-          ]
-        },
-        {
-          "name": "Rioja",
-          "traits": [
-            "gluten-NEG",
-            "vine"
-          ],
-          "volume": "0.2l",
-          "price": 3,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/wine-3219862_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/wine-541922_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/winery-1179256_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/bottle-of-wine-2570215_1280.jpg"
-          ]
-        },
-        {
-          "name": "Riesling",
-          "traits": [
-            "gluten-NEG",
-            "vine"
-          ],
-          "volume": "0.2l",
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/a-glass-of-428316_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/wine-2464116_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/white-2559865_1280.jpg"
-          ],
-          "price": 3
-        },
-        {
-          "name": "Cuba Libre",
-          "traits": [
-            "caffeine",
-            "dye",
-            "cocktail"
-          ],
-          "volume": "0.3l",
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cuba-libre-2524121_1280.jpg"
-          ],
-          "price": 5
-        },
-        {
-          "name": "Gin Tonic",
-          "traits": [
-            "cocktail",
-            "quinine",
-            "gluten-NEG"
-          ],
-          "volume": "0.3l",
-          "price": 5,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/gin-2126375_1280.jpg"
-          ]
-        },
-        {
-          "name": "Mojito",
-          "traits": [
-            "cocktail"
-          ],
-          "volume": "0.3l",
-          "price": 5,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/mojito-2928204_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cocktail-2306939_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/mojito-814042_1280.jpg"
-          ]
-        },
-        {
-          "name": "Spritz Aperol",
-          "traits": [
-            "caffeine",
-            "dye",
-            "quinine",
-            "cocktail"
-          ],
-          "volume": "0.3l",
-          "price": 4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/drink-797375_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/alcohol-879367_1280.jpg"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Heiße Getränke",
-      "traits": [
-        "drinks"
-      ],
-      "items": [
-        {
-          "name": "Espresso",
-          "traits": [
-            "caffeine"
-          ],
-          "price": 1.6,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-3047385_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-2538290_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-3199010_1280.jpg"
-          ]
-        },
-        {
-          "name": "Cappuccino",
-          "traits": [
-            "caffeine"
-          ],
-          "price": 2,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-2608864_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-983955_1280.jpg"
-          ]
-        },
-        {
-          "name": "Doppelter Espresso",
-          "traits": [
-            "caffeine"
-          ],
-          "price": 2.2,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-923151_1280.jpg"
-          ]
-        },
-        {
-          "name": "Latte Macchiato",
-          "traits": [
-            "caffeine"
-          ],
-          "price": 2.2,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-642835_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/coffee-642836_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/latte-macchiato-646273_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/latte-macchiato-74286.jpg"
-          ]
-        },
-        {
-          "name": "Kakao",
-          "price": 2.2,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cocoa-504306_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/cocoa-504269_1280.jpg"
-          ]
-        },
-        {
-          "name": "Frischer Minztee",
-          "price": 2,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/herbal-tea-1410565_1280.jpg"
-          ]
-        },
-        {
-          "name": "Schwarzer Tee (Darjeeling)",
-          "traits": [
-            "caffeine",
-            "tea"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/tea-2570717_1280.jpg"
-          ],
-          "price": 1.4
-        },
-        {
-          "name": "Schwarzer Tee (Earl Grey)",
-          "traits": [
-            "caffeine",
-            "tea"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/drink-3197939_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/tea-2696758_1280.jpg"
-          ],
-          "price": 1.4
-        },
-        {
-          "name": "Grüner Tee",
-          "traits": [
-            "tea"
-          ],
-          "price": 1.4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/tea-1918614_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/tea-1918616_1280.jpg"
-          ]
-        },
-        {
-          "name": "Kamillentee",
-          "traits": [
-            "tea"
-          ],
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/black-tea-245479_1280.jpg",
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/chamomile-829220_1280.jpg"
-          ],
-          "price": 1.4
-        },
-        {
-          "name": "Pfefferminztee",
-          "traits": [
-            "tea"
-          ],
-          "price": 1.4,
-          "pics": [
-            "https://s3.eu-central-1.amazonaws.com/brainymenu-cafe-democafe-5/teacup-2325722_1280.jpg"
-          ]
-        }
-      ]
-    }
+
+    {"category" : "Suppen",
+      "trais" : ["soup"], "items" : [
+      {
+        "name" : "001 Gemüse-Suppe * 4,G",
+        "description" : "mit frischem Gemüse & Glasnudeln",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "002 Peking-Suppe * 4",
+        "description" : "mit Gemüse (süß-sauer-scharf)",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "003 Wan-Tan-Suppe * 4,G",
+        "description" : "mit Gemüse & fleischgefüllten Maultaschen",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "004 Glasnudel-Suppe * 4,G",
+        "description" : "mit Gemüse, Hühnerbrust, Bambus & Glasnudeln",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "005 Tom-Yam-Gai * 4",
+        "description" : "mit Gemüse, Hühnerbrust, Pilze in thail.Sauce, scharf",
+        "price" : 3.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "006 Tom-Kha-Gai * 4,B",
+        "description" : "mit Gemüse, Hühnerbrust, Pilze, Kokosmilch, sauer-scharf",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "007 Tom-Yam-Gung * 4",
+        "description" : "mit Gemüse, Garnelen, Pilze in thail.Sauce, sauer-scharf",
+        "price" : 3.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "008 Miso-Suppe",
+        "description" : "mit Tofu & Seetang (japanisch)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "009 Kani-Miso-Suppe * 1",
+        "description" : "mit Krebsfleisch & Seetang (japanisch)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "010 Little Dragon-Suppe * 4",
+        "description" : "mit Gemüse, Schnellnudeln, Hühnerbrust & Koriander",
+        "price" : 3.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Vorspeisen",
+      "trais" : ["appetizers"], "items" : [
+      {
+        "name" : "011 Krupuk",
+        "description" : "Krabbenchips",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "012 Herbstrollen",
+        "description" : "Vegetarische Minirolle",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "013a China-Frühlingsrollen",
+        "description" : "mit Fleisch",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "013b China-Frühlingsrollen",
+        "description" : "mit Gemüse",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "014 Wan-Tan",
+        "description" : "Gebackene fleischgefüllte Maultaschen",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "015 Vietnam-Frühlingsrollen",
+        "description" : "mit Gemüse, Fleisch und Glasnudeln",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "016 Chicken-Wings",
+        "description" : "Hühnerflügel, gebacken mit süßer Chilisauce",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "017 Großgarnelen",
+        "description" : "Gebacken mit süßer Chilisauce",
+        "price" : 4.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Salate",
+      "trais" : ["salads"], "items" : [
+      {
+        "name" : "021 Gemischter Salat",
+        "description" : "mit Gemüse der Saison (Bitte Dressing auswählen)",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "021a Develey-Dressing Balsamico",
+        "description" : "Je Salat nur ein Dressing auswählen",
+        "price" : 0.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "021b Develey-Dressing Essig-Öl",
+        "description" : "Je Salat nur ein Dressing auswählen",
+        "price" : 0.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "021c Develey-Dressing French",
+        "description" : "Je Salat nur ein Dressing auswählen",
+        "price" : 0.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "021d Develey-Dressing Joghurt",
+        "description" : "Je Salat nur ein Dressing auswählen",
+        "price" : 0.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "021e Develey-Dressing Kräuter",
+        "description" : "Je Salat nur ein Dressing auswählen",
+        "price" : 0.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "021f Develey-Dressing Sauerrahm",
+        "description" : "Je Salat nur ein Dressing auswählen",
+        "price" : 0.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "022 Hühnerbrustfilet-Salat * G",
+        "description" : "mit Sojabohnen",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "023 Hühnerbrust Salat * G",
+        "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
+        "price" : 3.40,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "024 Tintenfisch Salat * G",
+        "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "025 Rindfleisch Salat * G",
+        "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "026 Grossgarnelen Salat * G",
+        "description" : "Salat aus Spinat mit Sesam Sauce (Japanisch)",
+        "price" : 4.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "027 Horenso-Gomaae Salat * K,F",
+        "description" : "Salat aus Spinat mit Sesam Sauce (Japanisch)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "028 Seetang Salat",
+        "description" : "mit Seetang und Eissalat (Japanisch)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "029 Isosalat * 1,L",
+        "description" : "Oktopus, Krebse, Thunfisch, Lachs, fliegender Fisch-Rogen (Japanisch)",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Tages Sushi",
+      "trais" : ["day_sushi"], "items" : [
+      {
+        "name" : "S41 12 Röllchen",
+        "description" : "3 Tekka-, 3 Kappa-, 3 Sake-, 3 Avokado-Maki",
+        "price" : 5.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S42 12 Röllchen",
+        "description" : "6 Sake-, 6 Tekka-Maki",
+        "price" : 6.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S43 12 Röllchen",
+        "description" : "6 Salmon-Philadelphia-, 6 Sake-, 3 Avokado-Maki",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S44 18 Röllchen",
+        "description" : "6 Kappa-, 6 Avokado-, 6 Avokado-Philadelphia-Maki",
+        "price" : 8.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S45 18 Röllchen",
+        "description" : "3 Shinko[1]-, 3 Kampyo[1]-, 3 Avokado-, 3 Kappa-, 6 Horenso-Goaae-Maki",
+        "price" : 8.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S46 12 Röllchen + 2 Nigiri",
+        "description" : "3 Sake-, 3 Tekka-, 6 Kappa-Maki + 1 Thunfisch, 1 Lachs",
+        "price" : 8.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S47 18 Röllchen",
+        "description" : "6 Sake-Kawa-, 3 Kappa-, 6 Sake-, 3 Avokado-Maki",
+        "price" : 9.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S48 12 Röllchen + 3 Nigiri",
+        "description" : "3 Kappa-, 3 Sake-, 3 Kampyo[1]-, 3 Tekka-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstrich",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S49 12 Röllchen + 2 Nigiri",
+        "description" : "6 Sake-, 6 Tekka-Maki + 1 Thunfisch, 1 Lachs",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S50 12 Röllchen + 2 Nigiri",
+        "description" : "6 Sake-, 6 Alaska-Sesam-Maki + 1 Thunfisch, 1 Lachs",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S51 18 Röllchen",
+        "description" : "6 California Tobiko[1]-, 6 Sake-Kawa-, 6 Avocado-Philadelphia-Maki",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S52 6 Röllchen + 5 Nigiri",
+        "description" : "3 California Tobiko[1]-, 3 Alaska-Ttobiko[1]-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstich, 1 Scampi, 1 Tintenfisch",
+        "price" : 13.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S53 12 Röllchen + 4 Nigiri",
+        "description" : "6 California[1]-Sesam-, 3 Avokado-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch",
+        "price" : 14.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S54 12 Röllchen + 5 Nigiri",
+        "description" : "3 Sake-, 3 Kampyo[1]-, 3 Tekka-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch, 1 Octopus",
+        "price" : 14.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S55 12 Röllchen + 6 Nigiri",
+        "description" : "6 Avokado-, 6 Tekka-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Octopus",
+        "price" : 15.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S56 12 Röllchen + 6 Nigiri",
+        "description" : "3 Kamppa-, 3 Shinko-, 3 Ebi-, 3 Kani-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch",
+        "price" : 15.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S57 12 Röllchen + 6 Nigiri",
+        "description" : "3 Shinko-, 3 Kampyo[1]-, 3 Avokado-, 3 Kappa-Maki + 3 Thunfisch, 2 Lachs, 1 Lachskaviar",
+        "price" : 16.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S58 24 Röllchen + 10 Nigiri (für 2 Personen)",
+        "description" : "6 Kappa-, 6 Tekka-, 6 Alaska-, 6 Sake-Maki + 10 Nigiri",
+        "price" : 29.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S59 18 Röllchen + 14 Nigiri (für 2-3 Personen)",
+        "description" : "6 California[1]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki + 14 Nigiri",
+        "price" : 34.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S60 18 Röllchen + 18 Nigiri (für 3 Personen)",
+        "description" : "6 Sake-, 6 Tekka-, 6 Alaska-Tobiko[1]-Maki + 18 Nigiri",
+        "price" : 44.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "S61 36 Röllchen - 28 Nigiri (Familien-Glück f. 4 Per.)",
+        "description" : "6 Shinko-, 6 Tekka-, 6 Sake-, 6 Avokado-, 6 Sake-Kawa-, 6 Alaska-Tobico-Maki + 28 Nigiri",
+        "price" : 64.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Sushi - Nigir",
+      "trais" : ["sushi-nigir"], "items" : [
+      {
+        "name" : "301 Sushi Nigir - Avocado",
+        "description" : "Avocado (1 Stück)",
+        "price" : 1.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "302 Sushi Nigir - Ika",
+        "description" : "Tintenfisch (1 Stück)",
+        "price" : 43375,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "303 Sushi Nigir - Toka",
+        "description" : "Oktopus (1 Stück)",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "304 Sushi Nigir - Kani",
+        "description" : "Krebsfleisch (1 Stück)",
+        "price" : 1.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "305 Sushi Nigir - Sake",
+        "description" : "Lachs (1 Stück)",
+        "price" : 2.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "306 Sushi Nigir - Ebi",
+        "description" : "Scampi (1 Stück)",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "307 Sushi Nigir - Maguro",
+        "description" : "Thunfisch (1 Stück)",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "308 Sushi Nigir - Tobiko",
+        "description" : "Fliegender Fisch-Rogen (1 Stück)",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "309 Sushi Nigri - Ikura",
+        "description" : "Lachskaviar",
+        "price" : 3.40,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Sushi - Nori Maki",
+      "trais" : ["sushi-nori-maki"], "items" : [
+      {
+        "name" : "311 Sushi Nori Maki - Kappa-Maki",
+        "description" : "mit Gurgen und Sesam (6 Röllchen)",
+        "price" : 2.40,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "312 Sushi Nori Maki - Avokado-Maki",
+        "description" : "mit Avokado (6 Röllchen)",
+        "price" : 2.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "313 Sushi Nori Maki - Kamo-Maki",
+        "description" : "mit Entenbrust (6 Röllchen)",
+        "price" : 4.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "314 Sushi Nori Maki - Sake-Maki",
+        "description" : "mit Lachs (6 Röllchen)",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "315 Sushi Nori Maki - Salmon Stick Maki",
+        "description" : "mit Lachs und Avocado (6 Röllchen)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "316 Sushi Nori Maki - Kampyo-Maki",
+        "description" : "mit Kürbis (6 Röllchen)",
+        "price" : 2.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "317 Sushi Nori Maki - Tekka-Maki",
+        "description" : "mit Thunfisch (6 Röllchen)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "318 Sushi Nori Maki - Ebi-Maki",
+        "description" : "mit Scampi (6 Röllchen)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "319 Sushi Nori Maki - Kani-Maki * 1",
+        "description" : "mit Krebsfleisch (6 Röllchen)",
+        "price" : 2.60,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "320 Sushi Nori Maki - Shinko-Maki",
+        "description" : "mit Rettich (6 Röllchen)",
+        "price" : 2.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Sushi Inside-Out Maki",
+      "trais" : ["sushi-inside-out-maki"], "items" : [
+      {
+        "name" : "321 Sushi Inside-Out Maki - Horenso-Goaae-Maki",
+        "description" : "mit Spinat und Sesamsauce, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.30,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "322 Sushi Inside-Out Maki - Alaska-Sesam-Maki",
+        "description" : "mit Lachs, Avokado, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "323 Sushi Inside-Out Maki - Alaska-Tobiko[1]-Maki",
+        "description" : "mit Lachs, Avokado, ummantelt und Fliegender Fisch-Rogen (6 Röllchen)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "324 Sushi Inside-Out Maki - Sake-Kawa-Maki",
+        "description" : "mit Gegrillte Lachshaut, Gurken und Mayonnaise, ummantelt und Sesam (6 Röllchen)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "325 Sushi Inside-Out Maki - Maguro-Maki",
+        "description" : "mit Ente, Gurken und Mayonaise, ummantelt und Sesam (6 Röllchen)",
+        "price" : 5.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "326 Sushi Inside-Out Maki - Tori-Karaage-Maki",
+        "description" : "mit fritierte Hühnerstücke, Gurken und Mayonnaise, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "327 Sushi Inside-Out Maki - California-Sesam-Maki",
+        "description" : "mit Surimi und Avokado, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "328 Sushi Inside-Out Maki - California-Tobiko-Maki",
+        "description" : "mit Surimi und Avokado, ummantelt und Fliegender Fisch-Rogen (6 Röllchen)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "329 Sushi Inside-Out Maki - Boston-Maki",
+        "description" : "mit Thunfisch und Avokado, ummantelt und Sesam (6 Röllchen)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "330a Sushi Inside-Out Maki - Salmon-Philadelphia-Maki",
+        "description" : "mit Frischkäse, Lachs und Gurken, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "330b Sushi Inside-Out Maki - Salmon-Philadelphia-Maki",
+        "description" : "mit Frischkäse, Lachs und Avokado, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "331 Sushi Inside-Out Maki - Avokado-Philadelphia-Maki",
+        "description" : "mit Frischkäse und Avokado, ummantelt und Sesam (6 Röllchen)",
+        "price" : 4.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "332 Sushi Inside-Out Maki - Tuna-Philadelphia-Maki",
+        "description" : "mit Frischkäse, Thunfisch und Gurken, ummantelt und Sesam (6 Röllchen)",
+        "price" : 5.30,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Sushi Temaki / Sashimi",
+      "trais" : ["sushi-temaki"], "items" : [
+      {
+        "name" : "333 Sushi Temaki - Maguro",
+        "description" : "mit Thunfisch und Avokado (1 Stück)",
+        "price" : 4.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "334 Sushi Temaki - Sake",
+        "description" : "mit Lachs und Avokado (1 Stück)",
+        "price" : 4.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "335 Sushi Temaki - California",
+        "description" : "mit Avokado, Surimi, Lachskaviar und Sesam (1 Stück)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "336 Sushi Temaki - Ebi",
+        "description" : "mit Garnelen, Gurken und Sesam (1 Stück)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "337 Sushi Temaki - Ikura",
+        "description" : "mit Lachskaviar, Avokado und Sesam (1 Stück)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "338 Gemischte Sashimi",
+        "description" : "mit Lachs und Thunfisch",
+        "price" : 14.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "333 Sushi Temaki - Maguro",
+        "description" : "mit Thunfisch und Avokado (1 Stück)",
+        "price" : 4.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "334 Sushi Temaki - Sake",
+        "description" : "mit Lachs und Avokado (1 Stück)",
+        "price" : 4.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "335 Sushi Temaki - California",
+        "description" : "mit Avokado, Surimi, Lachskaviar und Sesam (1 Stück)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "336 Sushi Temaki - Ebi",
+        "description" : "mit Garnelen, Gurken und Sesam (1 Stück)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "337 Sushi Temaki - Ikura",
+        "description" : "mit Lachskaviar, Avokado und Sesam (1 Stück)",
+        "price" : 5.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "338 Gemischte Sashimi",
+        "description" : "mit Lachs und Thunfisch",
+        "price" : 14.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Hühnerfleischgerichte (mit Reis)",
+      "trais" : ["chicken-dishes-with-rice"], "items" : [
+      {
+        "name" : "211 Gebr. Hühnerfleisch - Chop-Suey * 4,G",
+        "description" : "mit Gemüse",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "212 Gebr. Hühnerfleisch - Gung-Po * 4,E,G",
+        "description" : "mit Gemüse, Cashew in Hoisin",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "213 Gebr. Hühnerfleisch - Bamboo * 4,G",
+        "description" : "mit Bambus und Pilze",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "214 Gebr. Hühnerfleisch - Sate * 4,B,F,G",
+        "description" : "mit Gemüse, Kokosmilch in Erdnuss-Sauce",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "215 Gebr. Hühnerfleisch - China-Curry * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch und China-Curry",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "216 Gebr. Hühnerfleisch - Suki Yaki * 4,G",
+        "description" : "mit Gemüse und Glasnudeln",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "217 Gebr. Hühnerfleisch - Gai Tord Jieu Lhon * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Tamarinde, Koriander",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "218 Gebr. Hühnerfleisch - Thai Curry * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "219 Gebr. Hühnerfleisch - Gai Pad Bai Graprau * 4,G",
+        "description" : "mit Peperoni, Thai Basilikum, rote Zwiebeln",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "220 Gebr. Hühnerfleisch - Ga Chua Ngot * 4",
+        "description" : "mit Gemüse, Ananas, Bambus in süß-sauer Sauce",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Hühnerkeule (o. Knochen, m. Reis)",
+      "trais" : ["chicken-leg"], "items" : [
+      {
+        "name" : "221 Knusprige Hühnerkeule * 4,G",
+        "description" : "mit Gemüse",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "222 Knusprige Hühnerkeule * 4,E,G",
+        "description" : "mit Gemüse, Cashew in Hoisin",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "223 Knusprige Hühnerkeule * 4,G",
+        "description" : "mit Gemüse, Bambus und Pilze",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "224 Knusprige Hühnerkeule * 4,B,F,G",
+        "description" : "mit Gemüse, Kokosmilch in Erdnuss-Sauce",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "225 Knusprige Hühnerkeule * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch und China-Curry",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "226 Knusprige Hühnerkeule * 4,G",
+        "description" : "mit Gemüse und Glasnudeln",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "227 Knusprige Hühnerkeule * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Tamarinde, Koriander",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "228 Knusprige Hühnerkeule * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+        "price" : 8.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Rindfleischgerichte (mit Reis)",
+      "trais" : ["beef-dishes"], "items" : [
+      {
+        "name" : "231 Gebr. Rindfleisch - Chop-Suey * 4,G",
+        "description" : "mit Gemüse",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "232 Gebr. Rindfleisch - Gung-Po * 4,E,G",
+        "description" : "mit Gemüse, Cashew in Hoisin",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "233 Gebr. Rindfleisch - Bamboo * 4,G",
+        "description" : "mit Bambus und Pilze",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "234 Gebr. Rindfleisch - Sate * 4,B,F,G",
+        "description" : "mit Gemüse, Kokosmilch in Erdnuss-Sauce",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "235 Gebr. Rindfleisch - China-Curry * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch und China-Curry",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "236 Gebr. Rindfleisch - Suki Yaki * 4,G",
+        "description" : "mit Gemüse und Glasnudeln",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "237 Gebr. Rindfleisch - Nua Tord Jieu Lhon * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Tamarinde und Koriander",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "238 Gebr. Rindfleisch - Thai Curry * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "239 Gebr. Rindfleisch - Nua Pad Bai Graprau * 4,G",
+        "description" : "mit Peperoni, Thai Basilikum, rote Zwiebeln",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "240 Gebr. Rindfleisch - Bo Xa Ot * 4,G",
+        "description" : "mit Paprika, Zwiebeln und Zitronengras",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "240A Gebr. Rindfleisch - Bo Xao Hanh * 4,G",
+        "description" : "mit Zwiebeln, Lauch und Austernsauce",
+        "price" : 7.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Schweinefleischgerichte (mit Reis)",
+      "trais" : ["pork-dishes"], "items" : [
+      {
+        "name" : "241 Gebr. Schweinefleisch - Chop-Suey * 4,G",
+        "description" : "mit Gemüse",
+        "price" : 7.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "242 Gebr. Schweinefleisch - Gung-Po * 4,E,G",
+        "description" : "mit Gemüse, Cashew in Hoisin",
+        "price" : 7.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "243 Gebr. Schweinefleisch - Bamboo * 4,G",
+        "description" : "mit Bambus und Pilze",
+        "price" : 7.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "244 Gebr. Schweinefleisch - Sate * 4,B,F,G",
+        "description" : "mit Gemüse, Kokosmilch in Erdnuss-Sauce",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "245 Gebr. Schweinefleisch - China-Curry *4,G",
+        "description" : "mit Gemüse, Kokosmilch und China-Curry",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "246 Gebr. Schweinefleisch - Suki Yaki *4,G",
+        "description" : "mit Gemüse und Glasnudeln",
+        "price" : 7.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "247 Gebr. Schweinefleisch - Mu Tord Jieu Lhon *4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Entenfleischgerichte (mit Reis)",
+      "trais" : ["duck-dishes"], "items" : [
+      {
+        "name" : "251 Gebr. Entenfleisch - Chop-Suey *4,G",
+        "description" : "mit Gemüse",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "252 Gebr. Entenfleisch - Gung-Po *4,B,F,G",
+        "description" : "mit Gemüse, Cashew in Hoisin",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "253 Gebr. Entenfleisch - Bamboo *4,G",
+        "description" : "mit Bambus und Pilze",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "254 Gebr. Entenfleisch - Sate *4,B,F,G",
+        "description" : "mit Gemüse, Kokosmilch in Erdnuss-Sauce",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "255 Gebr. Entenfleisch - China-Curry *4,B,F,G",
+        "description" : "mit Gemüse, Kokosmilch und China-Curry",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "256 Gebr. Entenfleisch - Suki Yaki *4,G",
+        "description" : "mit Gemüse und Glasnudeln",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "257 Gebr. Entenfleisch - Ped Yang Tow Jiew Lhon *4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Tamarinde und Koriander",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "258 Gebr. Entenfleisch - Thai Curry *4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "259 Gebr. Entenfleisch - Vit Chua Ngot *4",
+        "description" : "mit Gemüse, Ananas, Bambus, in süß-saurer Sauce",
+        "price" : 10.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Meerfrüchtegerichte (mit Reis)",
+      "trais" : ["seafood-dishes"], "items" : [
+      {
+        "name" : "261 Gebr. Tintenfisch - Muc Xan Gung *4,G",
+        "description" : "mit Gemüse und Ingwer",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "262 Gebr. Tintenfisch - Muc Thai Curry *4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry mit Basilikum",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "263 Gebr. Fischfilet - Ca Chua Ngot *4",
+        "description" : "mit Gemüse, Ananas, Bambus in süß-sauer Sauce",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "264 Gebr. Fischfilet - Ca Thai Curry *4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry mit Basilikum",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "265 Gebr. Großgarnelen - Tom Chop-Suey * 4,G",
+        "description" : "mit Gemüse",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "266 Gebr. Großgarnelen - Tom Thai Curry * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "267 Gebr. Großgarnelen - Tom Xa Ot * 4,G",
+        "description" : "mit Gemüse, Paprika, Bambus und Zitronengras",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "268 Gebr. Großgarnelen - Tom Chua Ngot * 4",
+        "description" : "mit Gemüse, Ananas, Bambus in süß-saurer Sauce",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "269 Gebr. Großgarnelen - Gung-Po * 4,E,G",
+        "description" : "mit Gemüse, Cashewnüsse, in hoisin Sauce",
+        "price" : 11.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Vegetarische Gerichte (mit Reis)",
+      "trais" : ["vegitarian-dishes"], "items" : [
+      {
+        "name" : "291 Gebratenes Gemüse * 4,G",
+        "description" : "mit Champignons",
+        "price" : 6.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "292 Gebratenes Gemüse * 4,F,G",
+        "description" : "mit Erdnuss-Sauce und Kokosmilch",
+        "price" : 6.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "293 Gebratenes Gemüse * 4,B,G",
+        "description" : "mit China-Curry und Kokosmilch",
+        "price" : 6.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "294 Gebratenes Gemüse * 4,B,G",
+        "description" : "mit Kokosmilch, Thai-Rot Curry und Basilikum",
+        "price" : 6.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "295 Gebratener Tofu * 4,G",
+        "description" : "mit Gemüse und Champignons",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "296 Gebratener Tofu * 4,F,G",
+        "description" : "mit Gemüse, Kokosmilch und Erdnuss-Sauce",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "297 Gebratener Tofu * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch und China-Curry",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "298 Gebratener Tofu * 4,B,G",
+        "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
+        "price" : 7.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "271 Gebratener Eierreis * 4,D,G",
+        "description" : "mit Gemüse",
+        "price" : 6.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "272 Gebratener Eierreis * 4,D,G",
+        "description" : "mit Gemüse und Hühnerfleisch",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "273 Gebratener Eierreis * 4,D,G",
+        "description" : "mit Gemüse und Rindfleisch",
+        "price" : 7.70,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "274 Gebratener Eierreis * 4,D,G",
+        "description" : "mit Gemüse und Krabben",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "275 Gebratener Eierreis - Nasi-Goreng * 4,D,G",
+        "description" : "mit Gemüse, versch. Fleisch, Krabben und Curry",
+        "price" : 8.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "276a Gebratener Eierreis * 4,D,G",
+        "description" : "mit Gemüse, knuspriges Entenfleisch (Hoisinsauce)",
+        "price" : 11.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "276b Gebratener Eierreis * 4,D,G",
+        "description" : "mit Gemüse, knuspriges Entenfleisch (Süß-sauer Sauce)",
+        "price" : 11.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "277 Gebratene Eiernudeln * 4,D,G",
+        "description" : "mit Gemüse",
+        "price" : 6.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "278 Gebratene Eiernudeln * 4,D,G",
+        "description" : "mit Gemüse und Hühnerfleisch",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "279 Gebratene Eiernudeln * 4,D,G",
+        "description" : "mit Gemüse und Rindfleisch",
+        "price" : 7.70,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "280 Gebratene Eiernudeln * 4,D,G",
+        "description" : "mit Gemüse und Krabben",
+        "price" : 7.90,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "281 Gebratene Eiernudeln - Bami-Goreng * 4,D,G",
+        "description" : "mit Gemüse, versch. Fleisch, Krabben und Curry",
+        "price" : 8.30,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "282a Gebratene Eiernudeln * 4,D,G",
+        "description" : "mit Gemüse, knuspriges Entenfleisch (Hoisinsauce)",
+        "price" : 11.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "282b Gebratene Eiernudeln * 4,D,G",
+        "description" : "mit Gemüse, knuspriges Entenfleisch (Süß-sauer Sauce)",
+        "price" : 11.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Nachtisch",
+      "trais" : ["dessert"], "items" : [
+      {
+        "name" : "121 Gebackene Banane * Q",
+        "description" : "mit Honig und Mandeln",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "122 Gebackene Ananas * Q",
+        "description" : "mit Honig und Mandeln",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "124a BEN & JERRY's Caramel Chew Chew",
+        "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+        "price" : 3.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "124b BEN & JERRY's Strawberry Cheesecake",
+        "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+        "price" : 3.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "124c BEN & JERRY's Cookie Dough",
+        "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+        "price" : 3.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "124d BEN & JERRY's Chunky Monkey",
+        "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+        "price" : 3.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "123 Mangocreme",
+        "description" : "null",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Nichtalkohlische Getränke",
+      "trais" : ["non-alcoholic-drinks"], "items" : [
+      {
+        "name" : "125a Coca Cola * 1,3,9",
+        "description" : "1 Liter",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "125b Coca Cola Light * 1,5,6,7",
+        "description" : "1 Liter",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "125c Fanta * 1,3",
+        "description" : "1 Liter",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "125d Sprite * 3",
+        "description" : "1 Liter",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "125e Mezzo Mix * 1,3,7",
+        "description" : "1 Liter",
+        "price" : 2.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "126 Mineralwasser",
+        "description" : "1 Liter (mit Kohlensäure)",
+        "price" : 2.20,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "127a Lycheesaft * J",
+        "description" : "(kein Pfand) 1,0L (Grundpreis 3,50 Euro pro 1,0L)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "127b Mangosaft * J",
+        "description" : "(kein Pfand) 1,0L (Grundpreis 3,50 Euro pro 1,0L)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "127c Guavesaft * J",
+        "description" : "(kein Pfand) 1,0L (Grundpreis 3,50 Euro pro 1,0L)",
+        "price" : 3.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Alkohlische Getränke",
+      "trais" : ["alcoholic-drinks"], "items" : [
+      {
+        "name" : "128a Helles Bier * A",
+        "description" : "Inkl. 0,08 Euro Pfand (0,5L)",
+        "price" : 1.80,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "128b Weißbier * A",
+        "description" : "Inkl. 0,08 Euro Pfand (0,5L)",
+        "price" : 1.70,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "128c Alkoholfreies Bier * A",
+        "description" : "Inkl. 0,08 Euro Pfand (0,5L)",
+        "price" : 1.70,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "129 Tsingtao Bier * A",
+        "description" : "(kein Pfand) China Bier (0,33L)",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "130 Singha * A",
+        "description" : "(kein Pfand) Thai Bier (0,33L)",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "131a Pinot Grigio * J",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "131b Chardonnay * J",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "131c Chianti * J",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "131d Merlot * J",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "131e Bordeaux * J",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "131f Bardolino * J",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "132 Prosecco",
+        "description" : "0,75 Liter (9,20 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "133a Pflaumenwein",
+        "description" : "0,5 Liter (Asiatisch) (15,00 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "133b Lycheewein",
+        "description" : "0,5 Liter (Asiatisch) (15,00 Euro pro 1,0L)",
+        "price" : 7.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "134 Sake",
+        "description" : "0,5 Liter (Asiatisch) (15,86 Euro pro 1,0L)",
+        "price" : 12.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] },
+    {"category" : "Extras",
+      "trais" : ["extras"], "items" : [
+      {
+        "name" : "400 Portion Reis",
+        "description" : "null",
+        "price" : 1.50,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "401a Gebratener Reis",
+        "description" : "null",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "401b Gebratene Nudeln",
+        "description" : "null",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "402a Kanton-Sauce",
+        "description" : "null",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "402b Hoisin-Sauce",
+        "description" : "null",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "402c Süß-sauer-Souce",
+        "description" : "null",
+        "price" : 2.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "403a Thai-Sauce",
+        "description" : "null",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "403b China-Curry-Sauce",
+        "description" : "null",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      },
+      {
+        "name" : "403c Erdnuß-Sauce",
+        "description" : "null",
+        "price" : 3.00,
+        "ingredients" : null,
+        "nutritionFacts" : {
+          "calories" : null,
+          "carbohydrate" : null,
+          "protein" : null,
+          "fat" : null},
+        "trais" : null,
+        "pics" : null
+      } ] }
   ]
 }

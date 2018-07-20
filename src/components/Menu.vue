@@ -8,8 +8,7 @@
                <DishListItem
                     v-for="(item, index) in category.items"
                     v-bind:item="item"
-                    :defaultImage="data.defaultImage"
-                    />
+                    :defaultImage="data.defaultImage" />
             </f7-list-group>
         </f7-list-item>
     </f7-list>

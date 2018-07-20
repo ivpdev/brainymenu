@@ -2,20 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import Framework7 from 'framework7'
 import Framework7Vue from 'framework7-vue'
+window.$ = window.jQuery = require('jquery')
+
 
 Vue.config.productionTip = false
 
 Vue.use(Framework7Vue, Framework7);
 
 const app = new Vue({
-  render: h => h(App)/*,
-  framework7: {
-    panel: {
-        swipe: 'left',
-        leftBreakpoint: 768,
-        rightBreakpoint: 1440,
-    }
-  }*/
+  render: h => h(App)
 })
 
 app.$mount('#app')

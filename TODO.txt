@@ -1,2 +1,4 @@
 - TODO color #ed421c
 npm
+
+- bug with rounding

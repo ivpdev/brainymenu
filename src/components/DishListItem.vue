@@ -1,7 +1,7 @@
 <template>
 <div class="item-content dish-list-item">
     <div class="item-media">
-      <img v-bind:src="thumbnail" class="thumbnail">
+      <img v-bind:src="thumbnail" class="thumbnail" ref="thumbnail">
     </div>
     <div class="item-inner">
       <div class="item-title-row">
@@ -10,7 +10,7 @@
             <f7-button fill round
                 color="orange"
                 icon-fa="cart-plus"
-                @click="addToCart(item)">
+                @click="addToCart(item, $event)">
                 {{item.price}} &euro;
             </f7-button>
         </div>
@@ -46,8 +46,35 @@ export default {
     }
   },
   methods: {
-    addToCart: function(item) {
+    addToCart: function(item, e) {
       store.dispatch("addToCart", item)
+
+      this.performFlyToCartAnimation()
+    },
+
+    performFlyToCartAnimation: function() {
+        const target = $('.fa-shopping-cart') //TODO avoid doing lookup every time
+        const targetPosition = target.offset()
+
+        const itemThumbnail = $(this.$refs.thumbnail)
+        const startPosition = itemThumbnail.offset()
+
+        const flyingItem = itemThumbnail.clone()
+        flyingItem.appendTo(itemThumbnail.parent())
+
+        flyingItem.css('position', 'fixed')
+        flyingItem.css('top', startPosition.top)
+        flyingItem.css('left', startPosition.left)
+        flyingItem.animate({
+            top: (targetPosition.top - 10) + 'px',
+            left: (targetPosition.left - 10) + 'px',
+            width: '40px',
+            height: '40px'
+        }, 700)
+
+        setTimeout(function() {
+            flyingItem.remove()
+        }, 700)
     }
   },
   props: {

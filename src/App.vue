@@ -39,13 +39,11 @@
                   <f7-icon fa="comments"></f7-icon>
               </f7-fab -->
           </f7-page>
-
       </f7-view>
 
       <f7-panel ref="chatPanel" right>
         <Chat></Chat>
       </f7-panel>
-
 
      <CartPanel ref="cartPanel"></CartPanel>
 

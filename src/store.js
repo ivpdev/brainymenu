@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import menuData from './menuData.json'
 import _ from 'lodash'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -25,7 +25,7 @@ const removeFromArray = (array, item) => {
 export default new Vuex.Store({
   state: {
     cartData: [],
-    menuData: menuData, //TODO move to config
+    menuData: appConfig.cafeData,
     minimalSum: null,
     checkoutForm: {
         name: {
@@ -114,6 +114,36 @@ export default new Vuex.Store({
 
     resetCheckoutForm: function({commit}, data) {
         commit('resetCheckoutForm', data)
+    },
+
+    submitOrder: function({commit}, data) {
+        //commit('API_DATA_PENDING')
+        var bodyFormData = new FormData();
+
+        bodyFormData.set('name', 'Fred');
+        bodyFormData.set('email', 'asd@asd.com');
+        bodyFormData.set('telefon', 'sds');
+        bodyFormData.set('address', 'iii');
+        bodyFormData.set('subject', 'hhh');
+        bodyFormData.set('message', 'oooo');
+
+
+        return axios.post('http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
+        bodyFormData, {
+             headers:{
+               "Content-Type": 'multipart/form-data'
+             }
+         }).then(response => {
+              // sets `state.loading` to false
+              // also sets `state.apiData to response`
+              commit('API_DATA_SUCCESS', response.data)
+            })
+            .catch(error => {
+              // set `state.loading` to false and do something with error
+
+              //commit('API_DATA_FAILURE', error)
+            })
+
     }
   }
 })

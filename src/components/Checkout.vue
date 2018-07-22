@@ -31,7 +31,7 @@
                 @change="onZipChange">
 
                 <option v-for="(zipData, index) in availableZipCodes">
-                    {{zipData.zip}} - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
+                    {{zipData.zip}}({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
 
                 <option value="14">1234 Mindestbestellwert 14</option>
                 <option value="15">1234 Mindestbestellwert 56</option>
@@ -43,7 +43,7 @@
                 @change="onZipChange">
                 <option v-for="(zipData, index) in availableZipCodes"
                         :value="zipData.zip">
-                                {{zipData.zip}} - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
+                                {{zipData.zip}} ({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
             </select>
 
           </f7-list-item>
@@ -66,9 +66,7 @@
 import store from '../store'
 import CheckoutSum from './CheckoutSum'
 import { f7Block, f7List, f7ListItem, f7Icon, f7Input, f7Label } from 'framework7-vue'
-import Vuex from 'vuex'
 import Dom7 from 'dom7'
-import orderingData from '../orderingData.json'
 
 const $$ = Dom7
 
@@ -77,7 +75,7 @@ export default {
   data: function() {
     return {
         cartData: store.state.cartData,
-        availableZipCodes: orderingData.availableZipCodes
+        availableZipCodes: appConfig.supportedZipCodes
     }
   },
   computed: {
@@ -136,7 +134,7 @@ export default {
     },
 
     validateOrderSum: function(zip) {
-        const zipData = orderingData.availableZipCodes.find(z => z.zip == zip)
+        const zipData = window.appConfig.supportedZipCodes.find(z => z.zip == zip)
         const minimalSum = zipData.minimalSum
 
         store.dispatch('updateCheckoutForm', { zip: {

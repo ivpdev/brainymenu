@@ -1,9 +1,0 @@
-{
-  "availableZipCodes": [{
-    "zip": 81735,
-    "minimalSum": 12
-  }, {
-    "zip": 81549,
-    "minimalSum": 10
-  }]
-}

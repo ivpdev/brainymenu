@@ -2,3 +2,6 @@
 npm
 
 - bug with rounding
+- tageskarte (time of the day)
+- gallery
+- get rid of console errors

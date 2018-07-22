@@ -43,7 +43,7 @@
                 <f7-actions-group>
                   <f7-actions-label>Zahlungspflichtig bestellen</f7-actions-label>
 
-                  <f7-actions-button>Ok</f7-actions-button>
+                  <f7-actions-button @click="submitOrder">Ok</f7-actions-button>
                 </f7-actions-group>
                 <f7-actions-group>
                   <f7-actions-button color="red" bold>Cancel</f7-actions-button>
@@ -130,7 +130,6 @@ export default {
         return this.canGoToCheckout() ? "red" : "gray"
     },
     fabToFinalConfirmation: function() {
-
         return this.canGoToFinalConfirmation() ? "red" : "gray"
     }
   },
@@ -174,6 +173,10 @@ export default {
 
     open: function() {
         this.$refs.cartPanel.open()
+    },
+
+    submitOrder: function() {
+        store.dispatch("submitOrder")
     }
   }
 }

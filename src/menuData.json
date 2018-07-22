@@ -446,7 +446,8 @@
         "pics" : null
       } ] },
     {"category" : "Tages Sushi",
-      "trais" : ["day_sushi"], "items" : [
+      "trais" : ["sushi", "day_menu"],
+      "items" : [
       {
         "name" : "S41 12 Röllchen",
         "description" : "3 Tekka-, 3 Kappa-, 3 Sake-, 3 Avokado-Maki",
@@ -456,9 +457,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S41.menu_02_05_2016_10_20_38.png"]
       },
       {
         "name" : "S42 12 Röllchen",
@@ -469,9 +471,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S42.menu_02_05_2016_10_21_48.png"]
       },
       {
         "name" : "S43 12 Röllchen",
@@ -482,9 +485,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S43.menu_02_05_2016_10_24_59.jpg"]
       },
       {
         "name" : "S44 18 Röllchen",
@@ -497,7 +501,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S44.menu_02_05_2016_10_29_13.jpg"]
       },
       {
         "name" : "S45 18 Röllchen",
@@ -508,9 +512,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S45.menu_02_05_2016_10_48_24.jpg"]
       },
       {
         "name" : "S46 12 Röllchen + 2 Nigiri",
@@ -521,9 +526,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S46.menu_02_05_2016_10_49_38.jpg"]
       },
       {
         "name" : "S47 18 Röllchen",
@@ -534,9 +540,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S47.menu_02_05_2016_10_55_28.jpg"]
       },
       {
         "name" : "S48 12 Röllchen + 3 Nigiri",
@@ -549,7 +556,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S48.menu_02_05_2016_11_01_55.jpg"]
       },
       {
         "name" : "S49 12 Röllchen + 2 Nigiri",
@@ -562,7 +569,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S49.menu_02_05_2016_11_02_54.jpg"]
       },
       {
         "name" : "S50 12 Röllchen + 2 Nigiri",
@@ -575,7 +582,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S50.menu_04_05_2016_09_05_19.jpg"]
       },
       {
         "name" : "S51 18 Röllchen",
@@ -588,7 +595,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S51.menu_04_05_2016_12_32_05.jpg"]
       },
       {
         "name" : "S52 6 Röllchen + 5 Nigiri",
@@ -601,7 +608,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S52.menu_04_05_2016_12_34_06.jpg"]
       },
       {
         "name" : "S53 12 Röllchen + 4 Nigiri",
@@ -614,7 +621,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S53.menu_04_05_2016_12_41_35.jpg"]
       },
       {
         "name" : "S54 12 Röllchen + 5 Nigiri",
@@ -627,7 +634,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S54.menu_04_05_2016_12_42_54.jpg"]
       },
       {
         "name" : "S55 12 Röllchen + 6 Nigiri",
@@ -638,9 +645,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S55.menu_04_05_2016_12_43_42.jpg"]
       },
       {
         "name" : "S56 12 Röllchen + 6 Nigiri",
@@ -651,9 +659,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S56.menu_06_05_2016_10_39_17.jpg"]
       },
       {
         "name" : "S57 12 Röllchen + 6 Nigiri",
@@ -664,9 +673,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S57.menu_06_05_2016_10_44_32.jpg"]
       },
       {
         "name" : "S58 24 Röllchen + 10 Nigiri (für 2 Personen)",
@@ -679,7 +689,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S58.menu_06_05_2016_10_41_19.jpg"]
       },
       {
         "name" : "S59 18 Röllchen + 14 Nigiri (für 2-3 Personen)",
@@ -692,7 +702,7 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S59.menu_06_05_2016_10_42_31.jpg"]
       },
       {
         "name" : "S60 18 Röllchen + 18 Nigiri (für 3 Personen)",
@@ -703,9 +713,10 @@
           "calories" : null,
           "carbohydrate" : null,
           "protein" : null,
-          "fat" : null},
+          "fat" : null
+        },
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S60.menu_06_05_2016_10_43_06.jpg"]
       },
       {
         "name" : "S61 36 Röllchen - 28 Nigiri (Familien-Glück f. 4 Per.)",
@@ -718,12 +729,13 @@
           "protein" : null,
           "fat" : null},
         "trais" : null,
-        "pics" : null
+        "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S61.menu_06_05_2016_10_43_41.jpg"]
       } ] },
-    {"category" : "Sushi - Nigir",
-      "trais" : ["sushi-nigir"], "items" : [
+    {"category" : "Sushi - Nigiri",
+      "trais" : ["sushi", "nigiri"],
+      "items" : [
       {
-        "name" : "301 Sushi Nigir - Avocado",
+        "name" : "301 Sushi Nigiri - Avocado",
         "description" : "Avocado (1 Stück)",
         "price" : 1.80,
         "ingredients" : null,
@@ -736,9 +748,9 @@
         "pics" : null
       },
       {
-        "name" : "302 Sushi Nigir - Ika",
+        "name" : "302 Sushi Nigiri - Ika",
         "description" : "Tintenfisch (1 Stück)",
-        "price" : 43375,
+        "price" : 2.1,
         "ingredients" : null,
         "nutritionFacts" : {
           "calories" : null,
@@ -749,7 +761,7 @@
         "pics" : null
       },
       {
-        "name" : "303 Sushi Nigir - Toka",
+        "name" : "303 Sushi Nigiri - Toka",
         "description" : "Oktopus (1 Stück)",
         "price" : 2.00,
         "ingredients" : null,
@@ -762,7 +774,7 @@
         "pics" : null
       },
       {
-        "name" : "304 Sushi Nigir - Kani",
+        "name" : "304 Sushi Nigiri - Kani",
         "description" : "Krebsfleisch (1 Stück)",
         "price" : 1.80,
         "ingredients" : null,
@@ -775,7 +787,7 @@
         "pics" : null
       },
       {
-        "name" : "305 Sushi Nigir - Sake",
+        "name" : "305 Sushi Nigiri - Sake",
         "description" : "Lachs (1 Stück)",
         "price" : 2.20,
         "ingredients" : null,
@@ -788,7 +800,7 @@
         "pics" : null
       },
       {
-        "name" : "306 Sushi Nigir - Ebi",
+        "name" : "306 Sushi Nigiri - Ebi",
         "description" : "Scampi (1 Stück)",
         "price" : 2.50,
         "ingredients" : null,
@@ -801,7 +813,7 @@
         "pics" : null
       },
       {
-        "name" : "307 Sushi Nigir - Maguro",
+        "name" : "307 Sushi Nigiri - Maguro",
         "description" : "Thunfisch (1 Stück)",
         "price" : 2.50,
         "ingredients" : null,
@@ -814,7 +826,7 @@
         "pics" : null
       },
       {
-        "name" : "308 Sushi Nigir - Tobiko",
+        "name" : "308 Sushi Nigiri - Tobiko",
         "description" : "Fliegender Fisch-Rogen (1 Stück)",
         "price" : 3.00,
         "ingredients" : null,
@@ -827,7 +839,7 @@
         "pics" : null
       },
       {
-        "name" : "309 Sushi Nigri - Ikura",
+        "name" : "309 Sushi Nigiri - Ikura",
         "description" : "Lachskaviar",
         "price" : 3.40,
         "ingredients" : null,
@@ -840,7 +852,8 @@
         "pics" : null
       } ] },
     {"category" : "Sushi - Nori Maki",
-      "trais" : ["sushi-nori-maki"], "items" : [
+      "trais" : ["sushi", "nori-maki"],
+      "items" : [
       {
         "name" : "311 Sushi Nori Maki - Kappa-Maki",
         "description" : "mit Gurgen und Sesam (6 Röllchen)",

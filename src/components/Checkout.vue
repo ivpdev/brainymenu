@@ -25,7 +25,7 @@
              @change="onStreetChange"></f7-input>
           </f7-list-item>
 
-          <f7-list-item>
+          <f7-list-item :class="zipInputClass">
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <!-- f7-label>PLZ</f7-label -->
             <!-- f7-input
@@ -47,6 +47,7 @@
                         :value="zipData.zip">
                                 {{zipData.zip}} ({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
             </select>
+            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht.</div>
 
           </f7-list-item>
 
@@ -54,7 +55,7 @@
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input type="email"
                       validate
-                      placeholder="Your e-mail"
+                      placeholder="E-mail"
                       :value="checkoutForm.email.value"
                       clear-button
                       @change="onEmailChange"></f7-input>
@@ -82,6 +83,19 @@ export default {
     }
   },
   computed: {
+    zipInputClass: function() {
+        //TODO merge with priceTotal...
+        const sum = store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+
+        const minimalSum = store.state.minimalSum
+
+        if (minimalSum && sum < minimalSum) {
+            return 'zip-code-input item-input-invalid'
+        } else {
+            return 'zip-code-input'
+        }
+    },
+
     checkoutForm: function() {
       return store.state.checkoutForm
     },
@@ -159,4 +173,9 @@ export default {
 .checkout-container .list .item-inner {
     border-bottom: none;
 }
+
+.zip-code-input.item-input-invalid {
+    margin-bottom: 10px;
+}
+
 </style>

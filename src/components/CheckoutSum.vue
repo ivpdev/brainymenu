@@ -1,7 +1,7 @@
 <template>
     <div class="checkout-sum">
         <h3 class="main-text">Summe total: {{sum}} &euro;</h3>
-        <h4 v-if="minimalSum && sum < minimalSum" class="error-message">Mindestbestellwert für Ihre Adresse ({{minimalSum}} &euro;) ist nicht erreicht.</h4>
+        <!-- h4 v-if="minimalSum && sum < minimalSum" class="error-message">Mindestbestellwert für Ihre Adresse ({{minimalSum}} &euro;) ist nicht erreicht.</h4 -->
     </div>
 </template>
 
@@ -36,5 +36,9 @@ export default {
 <style>
 .error-message {
     color: #f44336;
+}
+
+.checkout-sum h3 {
+    text-align: center;
 }
 </style>

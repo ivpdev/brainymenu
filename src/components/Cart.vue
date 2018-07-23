@@ -2,7 +2,6 @@
     <f7-block>
           <f7-block v-show="step.number==1">
               <f7-list media-list>
-                  {{cartData}}
                 <f7-list-item v-for="(item, index) in cartData">
                   <div class="item-title-row">
                     <div class="item-title">{{item.name}}</div>

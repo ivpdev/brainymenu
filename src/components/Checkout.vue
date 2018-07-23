@@ -7,6 +7,7 @@
             <f7-input
                 required
                 validate
+                :value="checkoutForm.name.value"
                 type="text" placeholder="" clear-button
                 @change="onNameChange"></f7-input>
           </f7-list-item>
@@ -19,6 +20,7 @@
              validate
              type="text"
              placeholder=""
+            :value="checkoutForm.street.value"
              clear-button
              @change="onStreetChange"></f7-input>
           </f7-list-item>
@@ -53,6 +55,7 @@
             <f7-input type="email"
                       validate
                       placeholder="Your e-mail"
+                      :value="checkoutForm.email.value"
                       clear-button
                       @change="onEmailChange"></f7-input>
           </f7-list-item>
@@ -79,9 +82,14 @@ export default {
     }
   },
   computed: {
+    checkoutForm: function() {
+      return store.state.checkoutForm
+    },
+
     priceTotalInCart: function() {
       return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
     },
+
     minimalSum: function() {
       return store.state.minimalSum
     }

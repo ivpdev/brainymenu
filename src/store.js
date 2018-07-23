@@ -22,29 +22,39 @@ const removeFromArray = (array, item) => {
     }
 }
 
-export default new Vuex.Store({
+const buildOrderMessage = (cartData) => {
+    //TODO refactor: move to separate service
+    const rows = cartData.map(item => `${item.name}: ${item.quantity} x ${item.price} = ${item.quantity * item.price}`)
+
+    return rows.join('\n')
+}
+
+const checkoutFormClearState = {
+   name: {
+       value: null,
+       valid: false
+   },
+   street: {
+       value: null,
+       valid: false
+   },
+   plz: {
+       value: null,
+       valid: false
+   },
+   email: {
+       value: null,
+       valid: false
+   }
+}
+
+const store = new Vuex.Store({
   state: {
     cartData: [],
     menuData: appConfig.cafeData,
     minimalSum: null,
-    checkoutForm: {
-        name: {
-            value: null,
-            valid: false
-        },
-        street: {
-            value: null,
-            valid: false
-        },
-        plz: {
-            value: null,
-            valid: false
-        },
-        email: {
-            value: null,
-            valid: false
-        }
-    }
+    orderSubmitPending: false,
+    checkoutForm: _.cloneDeep(checkoutFormClearState),
   },
   mutations: {
     addToCart: function(state, item) {
@@ -71,6 +81,10 @@ export default new Vuex.Store({
         }
     },
 
+    clearCart: function(state, item) {
+        state.cartData = []
+    },
+
     selectMinimalSum: function(state, minimalSum) {
         state.minimalSum = minimalSum
     },
@@ -80,15 +94,31 @@ export default new Vuex.Store({
     },
 
     resetCheckoutForm: function(state, data) {
-        state.checkoutForm = {
-            name: null,
-            street: null,
-            plz: null,
-            email: {
-                value: null,
-                valid: false
-            }
-        }
+        state.checkoutForm = _.cloneDeep(checkoutFormClearState)
+    },
+
+    setOrderSubmitPending: function(state, data) {
+        state.orderSubmitPending = true
+    },
+
+    unsetOrderSubmitPending: function(state, data) {
+        state.orderSubmitPending = false
+    },
+
+    setGlobalMessage: function(state, message) {
+        state.globalMessage = message
+    },
+
+    unsetGlobalMessage: function(state) {
+        state.globalMessage = null
+    },
+
+    setGlobalError: function(state, error) {
+        state.globalError = error
+    },
+
+    unsetGlobalError: function(state) {
+        state.globalMessage = null
     }
   },
   actions: {
@@ -116,34 +146,71 @@ export default new Vuex.Store({
         commit('resetCheckoutForm', data)
     },
 
-    submitOrder: function({commit}, data) {
-        //commit('API_DATA_PENDING')
-        var bodyFormData = new FormData();
+    submitOrder: function({commit, state, dispatch}, data) {
+        commit('setOrderSubmitPending')
 
-        bodyFormData.set('name', 'Fred');
-        bodyFormData.set('email', 'asd@asd.com');
-        bodyFormData.set('telefon', 'sds');
-        bodyFormData.set('address', 'iii');
-        bodyFormData.set('subject', 'hhh');
-        bodyFormData.set('message', 'oooo');
+        const self = this
 
+        const bodyFormData = new FormData()
 
-        return axios.post('http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
-        bodyFormData, {
-             headers:{
-               "Content-Type": 'multipart/form-data'
-             }
-         }).then(response => {
-              // sets `state.loading` to false
-              // also sets `state.apiData to response`
-              commit('API_DATA_SUCCESS', response.data)
-            })
-            .catch(error => {
-              // set `state.loading` to false and do something with error
+        bodyFormData.set('name', 'Bestellung');
+        bodyFormData.set('email', 'bestellung@littledragon-asiabistro.de')
+        bodyFormData.set('telefon', '-')
+        bodyFormData.set('address', '-')
+        bodyFormData.set('subject', '[Bestellung]')
+        bodyFormData.set('message', buildOrderMessage(state.cartData))
 
-              //commit('API_DATA_FAILURE', error)
-            })
+        return axios.post(
+                'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
+                bodyFormData,
+                {
+                    headers:{
+                       'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then(response => {
+                  // sets `state.loading` to false
+                  // also sets `state.apiData to response`
 
+                  dispatch('handleOrderSuccess')
+                  //response.data
+
+                })
+                .catch(error => {
+                  // set `state.loading` to false and do something with error
+
+                  commit('unsetOrderSubmitPending')
+
+                  dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)
+                  //commit('setGlobalError', 'Submit order failed. Reason: ' + error)
+
+                  //self.dispatch('processOrderSubmitError', )
+                })
+    },
+
+    showGlobalMessage: function(store, message) {
+        this.eventBus.$emit('showGlobalMessage', message);
+    },
+
+    showGlobalError: function(store, error) {
+        this.eventBus.$emit('showGlobalError', error);
+    },
+
+    handleOrderSuccess: function({commit, dispatch}) {
+        commit('unsetOrderSubmitPending')
+        //commit('clearCart')
+        //commit('resetCheckoutForm')
+
+        //TODO to step 1
+        //commit('setGlobalMessage', 'Erledigt')
+
+        this.eventBus.$emit('closeAllPanels');
+
+        dispatch('showGlobalMessage', 'Ihre Bestellung ist eingegangen')
     }
   }
 })
+
+store.eventBus = new Vue()
+
+export default store

@@ -5,3 +5,4 @@ npm
 - tageskarte (time of the day)
 - gallery
 - get rid of console errors
+- telefon

@@ -4,7 +4,7 @@
           <f7-page>
             <Menu v-bind:data="menuData"/>
 
-            <!-- f7-fab color="red"
+            <f7-fab color="red"
                 position="left-bottom"
                 ref="menuButton"
                 class="speed-dial-opened"
@@ -18,7 +18,7 @@
                   <f7-fab-button color="orange" @click="onButtonClick">B</f7-fab-button>
                   <f7-fab-button color="orange" @click="onButtonClick">C</f7-fab-button>
                 </f7-fab-buttons>
-              </f7-fab -->
+              </f7-fab>
 
               <f7-fab color="red"
                       position="center-bottom"
@@ -142,7 +142,23 @@ export default {
 
     goToCheckout: function() {
         this.$refs.cart.goToCheckout()
+    },
+
+    showGlobalMessage: function(message, title) {
+        this.$f7.dialog.alert(message, title || '', () => {
+            //TODO!!!!!!!!!
+            location.reload()
+        })
+    },
+
+    showGlobalError: function(error, title) {
+        this.$f7.dialog.alert(error, title || '')
     }
+  },
+
+  created: function() {
+        store.eventBus.$on('showGlobalMessage', this.showGlobalMessage)
+        store.eventBus.$on('showGlobalError', this.showGlobalError)
   }
 }
 </script>

@@ -55,6 +55,22 @@ const store = new Vuex.Store({
     minimalSum: null,
     orderSubmitPending: false,
     checkoutForm: _.cloneDeep(checkoutFormClearState),
+    chatMessages: [{
+        from: 'bot',
+        content: 'Hi can I help you?'
+    }, {
+        from: 'user',
+        content: 'I want something vegetarian'
+    }, {
+        from: 'bot',
+        content: [
+            'I found 3 dishes', {
+            type: 'button',
+            label: 'Show in menu',
+            event: 'filerMenu',
+            eventData: {}
+        }]
+    }]
   },
   mutations: {
     addToCart: function(state, item) {
@@ -161,31 +177,31 @@ const store = new Vuex.Store({
         bodyFormData.set('message', buildOrderMessage(state.cartData))
 
         return axios.post(
-                'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
-                bodyFormData,
-                {
-                    headers:{
-                       'Content-Type': 'multipart/form-data'
-                    }
-                })
-                .then(response => {
-                  // sets `state.loading` to false
-                  // also sets `state.apiData to response`
+        'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
+        bodyFormData,
+        {
+            headers:{
+               'Content-Type': 'multipart/form-data'
+            }
+        })
+        .then(response => {
+          // sets `state.loading` to false
+          // also sets `state.apiData to response`
 
-                  dispatch('handleOrderSuccess')
-                  //response.data
+          dispatch('handleOrderSuccess')
+          //response.data
 
-                })
-                .catch(error => {
-                  // set `state.loading` to false and do something with error
+        })
+        .catch(error => {
+          // set `state.loading` to false and do something with error
 
-                  commit('unsetOrderSubmitPending')
+          commit('unsetOrderSubmitPending')
 
-                  dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)
-                  //commit('setGlobalError', 'Submit order failed. Reason: ' + error)
+          dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)
+          //commit('setGlobalError', 'Submit order failed. Reason: ' + error)
 
-                  //self.dispatch('processOrderSubmitError', )
-                })
+          //self.dispatch('processOrderSubmitError', )
+        })
     },
 
     showGlobalMessage: function(store, message) {

@@ -3,8 +3,8 @@
         <f7-list-item v-for="(category, index) in data.menu" class="category-li"
             v-on:click="onCategoryHeaderClick(category, index, $event)">
             <li class="list-group-title">
-                <f7-icon :fa="collapsed[index] ? 'angle-down' : 'angle-up'"></f7-icon> {{category.category}}</li>
-            <f7-list-group :class="collapsed[index] ? 'category-collapsed' : 'category-expanded'">
+                <f7-icon :fa="expanded[index] ? 'angle-up' : 'angle-down'"></f7-icon> {{category.category}}</li>
+            <f7-list-group :class="expanded[index] ? 'category-expanded' : 'category-collapsed'">
                <DishListItem
                     v-for="(item, index) in category.items"
                     v-bind:item="item"
@@ -48,7 +48,7 @@ export default {
 
   data: function() {
     return {
-      collapsed: { }
+      expanded: { }
     }
   },
 
@@ -63,7 +63,7 @@ export default {
     },
 
     toggleCollapsed: function(categoryIndex) {
-        this.$set(this.collapsed, categoryIndex, !this.collapsed[categoryIndex])
+        this.$set(this.expanded, categoryIndex, !this.expanded[categoryIndex])
     }
   }
 }

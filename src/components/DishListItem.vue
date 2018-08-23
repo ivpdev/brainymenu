@@ -23,7 +23,6 @@
 <script>
 import store from '../store'
 import { f7Button } from 'framework7-vue'
-import Framework7 from 'framework7'
 
 export default {
   name: 'DishListItem',
@@ -46,7 +45,7 @@ export default {
     }
   },
   methods: {
-    addToCart: function(item, e) {
+    addToCart: function(item) {
       store.dispatch("addToCart", item)
 
       this.performFlyToCartAnimation()

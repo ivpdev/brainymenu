@@ -1,6 +1,6 @@
 <template>
     <f7-block>
-      <!-- f7-block-title>Bitte wählen Sie Ihre PLZ</f7-block-title -->
+      <f7-block-title>Bitte wählen Sie Ihre PLZ</f7-block-title>
 
       <select
             class="input-with-value"

@@ -82,10 +82,6 @@ import { f7Navbar, f7NavRight, f7Sheet,
     f7Link, f7View, f7Page, f7Icon, f7Badge,
     f7Fab, f7FabButtons, f7FabButton, f7Panel, f7Popup } from 'framework7-vue'
 
-const localState = {//TODO remove
-    cartOpened: false
-}
-
 export default {
   name: 'app',
   computed: {
@@ -150,14 +146,14 @@ export default {
     },
 
     showGlobalMessage: function(message, title) {
-        this.$f7.dialog.alert(message, title || '', () => {
+        this.$f7.dialog.alert(message, title ||'', () => {
             //TODO!!!!!!!!!
             location.reload()
         })
     },
 
     showGlobalError: function(error, title) {
-        this.$f7.dialog.alert(error, title || '')
+        this.$f7.dialog.alert(error, title ||'')
     },
 
     showZipPreselectionWindow: function() {

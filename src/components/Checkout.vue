@@ -42,8 +42,11 @@
             <select
                 class="input-with-value"
                 ref="zipSelect"
+                v-model="preselectedZip"
                 @change="onZipChange">
+
                 <option v-for="(zipData, index) in availableZipCodes"
+                        :key="index"
                         :value="zipData.zip">
                                 {{zipData.zip}} ({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
             </select>
@@ -73,6 +76,7 @@ import { f7Block, f7List, f7ListItem, f7Icon, f7Input, f7Label } from 'framework
 import Dom7 from 'dom7'
 
 const $$ = Dom7
+const appConfig = window.appConfig
 
 export default {
   name: 'Cart',
@@ -93,6 +97,18 @@ export default {
             return 'zip-code-input item-input-invalid'
         } else {
             return 'zip-code-input'
+        }
+    },
+
+    preselectedZip: {
+        get: function() {
+            return store.state.checkoutForm.zip.value
+                   || store.state.preselectedZip
+                   || appConfig.supportedZipCodes[0].zip
+        },
+
+        set: function() {
+
         }
     },
 
@@ -157,13 +173,16 @@ export default {
 
     validateOrderSum: function(zip) {
         const zipData = window.appConfig.supportedZipCodes.find(z => z.zip == zip)
-        const minimalSum = zipData.minimalSum
 
-        store.dispatch('updateCheckoutForm', { zip: {
-            value: zip,
-            valid: true }})
+        if (zipData) {
+            const minimalSum = zipData.minimalSum
 
-        store.dispatch('selectMinimalSum', minimalSum)
+            store.dispatch('updateCheckoutForm', { zip: {
+                value: zip,
+                valid: true }})
+
+            store.dispatch('selectMinimalSum', minimalSum)
+        }
     }
   }
 }

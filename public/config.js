@@ -1,4 +1,5 @@
 window.appConfig = {
+    mailServerUrl: 'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
     cafeData: {
         "id": 5,
         "name": "ASIA LITTLE DRAGON",

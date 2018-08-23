@@ -1,12 +1,14 @@
 <template>
     <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
         <f7-list-item v-for="(category, index) in data.menu" class="category-li"
+            :key="index"
             v-on:click="onCategoryHeaderClick(category, index, $event)">
             <li class="list-group-title">
                 <f7-icon :fa="expanded[index] ? 'angle-up' : 'angle-down'"></f7-icon> {{category.category}}</li>
             <f7-list-group :class="expanded[index] ? 'category-expanded' : 'category-collapsed'">
                <DishListItem
                     v-for="(item, index) in category.items"
+                    :key="index"
                     v-bind:item="item"
                     :defaultImage="data.defaultImage" />
             </f7-list-group>
@@ -20,7 +22,6 @@ import { f7Card, f7List, f7ListGroup,
     f7ListItem, f7Button, f7Accordion, f7AccordionItem,
     f7AccordionToggle, f7AccordionContent, f7Block,
     f7Icon } from 'framework7-vue'
-import Framework7 from 'framework7'
 import DishListItem from './DishListItem'
 import Dom7 from 'dom7'
 

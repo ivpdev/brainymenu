@@ -38,7 +38,7 @@ const checkoutFormClearState = {
        value: null,
        valid: false
    },
-   plz: {
+   zip: {
        value: null,
        valid: false
    },
@@ -52,6 +52,7 @@ const store = new Vuex.Store({
   state: {
     cartData: [],
     menuData: appConfig.cafeData,
+    preselectedZip: null,
     minimalSum: null,
     orderSubmitPending: false,
     checkoutForm: _.cloneDeep(checkoutFormClearState),
@@ -135,11 +136,29 @@ const store = new Vuex.Store({
 
     unsetGlobalError: function(state) {
         state.globalMessage = null
+    },
+
+    preselectZip: function(state, zip) {
+        state.preselectedZip = zip
     }
   },
+
   actions: {
-    addToCart: function({commit}, item) {
+
+    addToCart: function({commit, state, dispatch}, item) {
         commit('addToCart', item)
+
+        if (!state.preselectedZip) {
+            dispatch('requestZipPreselection')
+        }
+    },
+
+    requestZipPreselection: function() {
+        this.eventBus.$emit('requestZipPreselection')
+    },
+
+    preselectZip: function({commit}, zip) {
+        commit('preselectZip', zip)
     },
 
     removeFromCart: function({commit}, item) {
@@ -177,20 +196,18 @@ const store = new Vuex.Store({
         bodyFormData.set('message', buildOrderMessage(state.cartData))
 
         return axios.post(
-        'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
-        bodyFormData,
-        {
-            headers:{
-               'Content-Type': 'multipart/form-data'
-            }
-        })
+            appConfig.mailServerUrl,
+            bodyFormData,
+            {
+                headers:{
+                   'Content-Type': 'multipart/form-data'
+                }
+            })
         .then(response => {
           // sets `state.loading` to false
           // also sets `state.apiData to response`
 
           dispatch('handleOrderSuccess')
-          //response.data
-
         })
         .catch(error => {
           // set `state.loading` to false and do something with error

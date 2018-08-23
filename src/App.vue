@@ -46,6 +46,9 @@
       </f7-panel>
 
      <CartPanel ref="cartPanel"></CartPanel>
+    <f7-sheet ref="zipPreselectPanel">
+        <ZipPreselect @selected="closeZipPreselectPanel"/>
+    </f7-sheet>
 
       <!-- f7-popup ref="cartPanel" class="popup-chat">
         <f7-page class="cart-page">
@@ -73,9 +76,9 @@ import Menu from './components/Menu.vue'
 import Chat from './components/Chat.vue'
 import Cart from './components/Cart.vue'
 import CartPanel from './components/CartPanel.vue'
+import ZipPreselect from './components/ZipPreselect'
 import store from './store'
-import Framework7 from 'framework7'
-import { f7Navbar, f7NavRight,
+import { f7Navbar, f7NavRight, f7Sheet,
     f7Link, f7View, f7Page, f7Icon, f7Badge,
     f7Fab, f7FabButtons, f7FabButton, f7Panel, f7Popup } from 'framework7-vue'
 
@@ -110,6 +113,7 @@ export default {
     Menu,
     f7Navbar,
     f7NavRight,
+    f7Sheet,
     f7Link,
     f7View,
     f7Page,
@@ -122,7 +126,8 @@ export default {
     f7Popup,
     Chat,
     Cart,
-    CartPanel
+    CartPanel,
+    ZipPreselect
   },
   methods: {
     openCart: function() {
@@ -153,12 +158,21 @@ export default {
 
     showGlobalError: function(error, title) {
         this.$f7.dialog.alert(error, title || '')
+    },
+
+    showZipPreselectionWindow: function() {
+        this.$refs.zipPreselectPanel.open()
+    },
+
+    closeZipPreselectPanel: function() {
+        this.$refs.zipPreselectPanel.close()
     }
   },
 
   created: function() {
         store.eventBus.$on('showGlobalMessage', this.showGlobalMessage)
         store.eventBus.$on('showGlobalError', this.showGlobalError)
+        store.eventBus.$on('requestZipPreselection', this.showZipPreselectionWindow)
   }
 }
 </script>

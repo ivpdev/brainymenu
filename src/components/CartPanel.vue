@@ -11,7 +11,7 @@
                <f7-block v-show="step.number==1">
                   <f7-list media-list>
                       {{cartData}}
-                  <f7-list-item v-for="(item, index) in cartData">
+                  <f7-list-item v-for="(item, index) in cartData" :key="index">
                      <div class="item-title-row">
                          <div class="item-title">{{item.name}}</div>
 
@@ -86,9 +86,6 @@ import Checkout from './Checkout'
 import { f7Block, f7List, f7ListItem, f7Swiper, f7SwiperSlide, f7Popup, f7Fab,
  f7Page, f7Navbar, f7NavRight, f7Link, f7Popover, f7Sheet,
  f7Actions, f7ActionsGroup, f7ActionsButton, f7ActionsLabel } from 'framework7-vue'
-import Dom7 from 'dom7'
-
-const $$ = Dom7
 
 export default {
   name: 'Cart',

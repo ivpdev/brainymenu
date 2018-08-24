@@ -85,7 +85,7 @@ export default {
 
 <style>
 .thumbnail {
-    width: 6em;
+    width: 8em;
     height: 6em;
 }
 

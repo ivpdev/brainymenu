@@ -5,7 +5,7 @@
       <select
             class="input-with-value"
             ref="zipSelect"
-            @change="onZipChange">
+            @change="persistSelectedValue">
             <option v-for="(zipData, index) in availableZipCodes"
                     :key="index"
                     :value="zipData.zip">
@@ -38,11 +38,9 @@ export default {
     f7Label
   },
   methods: {
-    onZipChange: function(e) {
-        const value = e.target.value
-
+    persistSelectedValue: function() {
+        const value = this.$refs.zipSelect.value
         store.dispatch('preselectZip', value)
-
         this.$emit('selected', value)
     }
   },

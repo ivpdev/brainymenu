@@ -23,7 +23,7 @@
                             <span class="cart-item-quantity-button cart-item-quantity-plus badge color-blue"
                                   @click="plusItem(item)">+</span>
                           </div>
-                          <div class="cart-item-price">{{item.quantity * item.price}} &euro;</div>
+                          <div class="cart-item-price">{{toFixed(item.quantity * item.price, 2)}} &euro;</div>
                         </div>
                         <!-- div class="item-subtitle">item.note</div -->
                         <!-- div class="item-text">item.note</div -->
@@ -57,7 +57,7 @@
                     position="right-bottom"
                     popup-open=".popup-chat"
                     @click="goToCheckout">
-                Weiter (<b>{{priceTotalInCart}} &euro;</b>)
+                Weiter (<b>{{priceTotalInCartFormatted}} &euro;</b>)
             </f7-fab>
 
             <f7-fab v-show="step.number==2"
@@ -120,9 +120,10 @@ export default {
   },
 
   computed: {
-    priceTotalInCart: function() {
-      return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+    priceTotalInCartFormatted: function() {
+        return this.toFixed(this.priceTotalInCart(), 2)
     },
+
     fabToCheckout: function() {
         return this.canGoToCheckout() ? "red" : "gray"
     },
@@ -144,6 +145,20 @@ export default {
         return store.state.cartData.length > 0;
     },
 
+    toFixed: function(value, precision) {
+        var precision = precision || 0,
+            power = Math.pow(10, precision),
+            absValue = Math.abs(Math.round(value * power)),
+            result = (value < 0 ? '-' : '') + String(Math.floor(absValue / power));
+
+        if (precision > 0) {
+            var fraction = String(absValue % power),
+                padding = new Array(Math.max(precision - fraction.length, 0) + 1).join('0');
+            result += '.' + padding + fraction;
+        }
+        return result;
+    },
+
     goToCheckout: function() {
         if (this.canGoToCheckout()) {
             this.$set(this.step, 'number', 2)
@@ -155,11 +170,15 @@ export default {
         this.$set(this.step, 'number', 1 )
     },
 
+    priceTotalInCart: function() {
+        return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+    },
+
     canGoToFinalConfirmation: function() {
         return store.state.checkoutForm.name.valid &&
                store.state.checkoutForm.street.valid &&
                store.state.checkoutForm.email.valid &&
-               this.priceTotalInCart >= store.state.minimalSum
+               this.priceTotalInCart() >= store.state.minimalSum
     },
 
     goToFinalConfirmation: function() {

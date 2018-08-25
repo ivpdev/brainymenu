@@ -46,8 +46,8 @@
       </f7-panel>
 
      <CartPanel ref="cartPanel"></CartPanel>
-    <f7-sheet ref="zipPreselectPanel">
-        <ZipPreselect @selected="closeZipPreselectPanel"/>
+    <f7-sheet ref="zipPreselectPanel" @sheet:close="onZipPreselectPanelClose">
+        <ZipPreselect ref="zipPreselect" @selected="closeZipPreselectPanel"/>
     </f7-sheet>
 
       <!-- f7-popup ref="cartPanel" class="popup-chat">
@@ -147,7 +147,6 @@ export default {
 
     showGlobalMessage: function(message, title) {
         this.$f7.dialog.alert(message, title ||'', () => {
-            //TODO!!!!!!!!!
             location.reload()
         })
     },
@@ -162,6 +161,10 @@ export default {
 
     closeZipPreselectPanel: function() {
         this.$refs.zipPreselectPanel.close()
+    },
+
+    onZipPreselectPanelClose: function() {
+        this.$refs.zipPreselect.persistSelectedValue()
     }
   },
 

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import _ from 'lodash'
 import axios from 'axios'
+import OrderSubmittingService from './services/OrderSubmittingService'
 
 Vue.use(Vuex)
 
@@ -184,41 +185,14 @@ const store = new Vuex.Store({
     submitOrder: function({commit, state, dispatch}, data) {
         commit('setOrderSubmitPending')
 
-        const self = this
+        OrderSubmittingService
+            .submitOrder(state.cartData)
+                .then(() => {
+                    dispatch('handleOrderSuccess')})
+                .catch(error => {
+                    commit('unsetOrderSubmitPending')
 
-        const bodyFormData = new FormData()
-
-        bodyFormData.set('name', 'Bestellung');
-        bodyFormData.set('email', 'bestellung@littledragon-asiabistro.de')
-        bodyFormData.set('telefon', '-')
-        bodyFormData.set('address', '-')
-        bodyFormData.set('subject', '[Bestellung]')
-        bodyFormData.set('message', buildOrderMessage(state.cartData))
-
-        return axios.post(
-            appConfig.mailServerUrl,
-            bodyFormData,
-            {
-                headers:{
-                   'Content-Type': 'multipart/form-data'
-                }
-            })
-        .then(response => {
-          // sets `state.loading` to false
-          // also sets `state.apiData to response`
-
-          dispatch('handleOrderSuccess')
-        })
-        .catch(error => {
-          // set `state.loading` to false and do something with error
-
-          commit('unsetOrderSubmitPending')
-
-          dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)
-          //commit('setGlobalError', 'Submit order failed. Reason: ' + error)
-
-          //self.dispatch('processOrderSubmitError', )
-        })
+                    dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)})
     },
 
     showGlobalMessage: function(store, message) {

@@ -74,6 +74,7 @@ import store from '../store'
 import CheckoutSum from './CheckoutSum'
 import { f7Block, f7List, f7ListItem, f7Icon, f7Input, f7Label } from 'framework7-vue'
 import Dom7 from 'dom7'
+import utils from '../services/utils'
 
 const $$ = Dom7
 const appConfig = window.appConfig
@@ -117,7 +118,7 @@ export default {
     },
 
     priceTotalInCart: function() {
-      return store.state.cartData.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+      return utils.calculateTotalSumInCart(store.state.cartData)
     },
 
     minimalSum: function() {

@@ -145,8 +145,8 @@ export default {
         return store.state.cartData.length > 0;
     },
 
-    toFixed: function(value, precision) {
-        var precision = precision || 0,
+    toFixed: function(value, precisionArg) {
+        var precision = precisionArg || 0,
             power = Math.pow(10, precision),
             absValue = Math.abs(Math.round(value * power)),
             result = (value < 0 ? '-' : '') + String(Math.floor(absValue / power));

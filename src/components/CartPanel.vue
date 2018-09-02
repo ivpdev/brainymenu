@@ -175,7 +175,8 @@ export default {
     },
 
     canGoToFinalConfirmation: function() {
-        return store.state.checkoutForm.name.valid &&
+        return store.state.checkoutForm.firstname.valid &&
+               store.state.checkoutForm.lastname.valid &&
                store.state.checkoutForm.street.valid &&
                store.state.checkoutForm.email.valid &&
                this.priceTotalInCart() >= store.state.minimalSum

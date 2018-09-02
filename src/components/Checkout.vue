@@ -2,18 +2,49 @@
     <div class="checkout-container">
         <f7-list no-hairlines-md>
           <f7-list-item>
-            <f7-label>Name</f7-label>
+              <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
+              <f7-label>E-Mail *</f7-label>
+
+              <f7-input type="email"
+                        validate
+                        placeholder="E-mail"
+                        :value="checkoutForm.email.value"
+                        clear-button
+                        @change="onEmailChange"></f7-input>
+          </f7-list-item>
+
+          <f7-list-item>
+            <f7-label>Firma</f7-label>
+            <f7-input
+                :value="checkoutForm.firma.value"
+                type="text" placeholder="" clear-button
+                @change="onFirmaChange"></f7-input>
+          </f7-list-item>
+
+        <f7-list-item>
+            <f7-label>Vorname *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
                 required
                 validate
-                :value="checkoutForm.name.value"
+                :value="checkoutForm.firstname.value"
                 type="text" placeholder="" clear-button
-                @change="onNameChange"></f7-input>
+                @change="onFirstNameChange"></f7-input>
+          </f7-list-item>
+
+        <f7-list-item>
+            <f7-label>Nachname *</f7-label>
+            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
+            <f7-input
+                required
+                validate
+                :value="checkoutForm.lastname.value"
+                type="text" placeholder="" clear-button
+                @change="onLastNameChange"></f7-input>
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Strasse</f7-label>
+            <f7-label>Strasse *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
              required
@@ -26,19 +57,6 @@
           </f7-list-item>
 
           <f7-list-item :class="zipInputClass">
-            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
-            <!-- f7-label>PLZ</f7-label -->
-            <!-- f7-input
-                type="select"
-                @change="onZipChange">
-
-                <option v-for="(zipData, index) in availableZipCodes">
-                    {{zipData.zip}}({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
-
-                <option value="14">1234 Mindestbestellwert 14</option>
-                <option value="15">1234 Mindestbestellwert 56</option>
-            </f7-input -->
-
             <select
                 class="input-with-value"
                 ref="zipSelect"
@@ -48,20 +66,32 @@
                 <option v-for="(zipData, index) in availableZipCodes"
                         :key="index"
                         :value="zipData.zip">
-                                {{zipData.zip}} ({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
+                                {{zipData.zip}} ({{zipData.place}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
             </select>
-            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht.</div>
-
+            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht. ({{priceTotalInCart}}&euro; < {{currentMinimalSum}}&euro;)</div>
           </f7-list-item>
 
           <f7-list-item>
+            <f7-label>Telefonnummer *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
-            <f7-input type="email"
-                      validate
-                      placeholder="E-mail"
-                      :value="checkoutForm.email.value"
-                      clear-button
-                      @change="onEmailChange"></f7-input>
+            <f7-input
+                required
+                validate
+                :value="checkoutForm.phone.value"
+                type="text" placeholder="" clear-button
+                @change="onPhoneChange"></f7-input>
+          </f7-list-item>
+
+          <f7-list-item>
+            <f7-label>Bemerkung</f7-label>
+            <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
+            <f7-input
+                :value="checkoutForm.note.value"
+                type="text"
+                placeholder=""
+                @change="onNoteChange"
+                clear-button>
+            </f7-input>
           </f7-list-item>
         </f7-list>
 
@@ -123,6 +153,12 @@ export default {
 
     minimalSum: function() {
       return store.state.minimalSum
+    },
+
+    currentMinimalSum: function() {
+      const selectedZip = appConfig.supportedZipCodes.find(zip => store.state.checkoutForm.zip.value)
+
+      return selectedZip && selectedZip.minimalSum
     }
   },
   components: {
@@ -135,15 +171,36 @@ export default {
     CheckoutSum
   },
   methods: {
-    onNameChange: function(e) {
-        const name = e.target.value
+    onFirstNameChange: function(e) {
+        const firstname = e.target.value
         const isInvalid = $$(e.target).hasClass('input-invalid')
 
-        store.dispatch('updateCheckoutForm', { name: {
-            value: name,
+        store.dispatch('updateCheckoutForm', { firstname: {
+            value: firstname,
             valid: !isInvalid
-        } })
+        }})
     },
+
+    onLastNameChange: function(e) {
+        const lastname = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+
+        store.dispatch('updateCheckoutForm', { lastname: {
+            value: lastname,
+            valid: !isInvalid
+        }})
+    },
+
+    onPhoneChange: function(e) {
+        const phone = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+
+        store.dispatch('updateCheckoutForm', { phone: {
+            value: phone,
+            valid: !isInvalid
+        }})
+    },
+
     onStreetChange: function(e) {
         const street = e.target.value
         const isInvalid = $$(e.target).hasClass('input-invalid')
@@ -160,17 +217,29 @@ export default {
         const isInvalid = $$(e.target).hasClass('input-invalid')
         store.dispatch('updateCheckoutForm', { email: {
                 value: email,
-                valid: !isInvalid }})
-    },
+                valid: !isInvalid }})},
+
     onZipChange: function(e) {
         const value = e.target.value
 
-        this.validateOrderSum(value)
-    },
+        this.validateOrderSum(value)},
+
+    onFirmaChange: function(e) {
+        const company = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+        store.dispatch('updateCheckoutForm', { firma: {
+                value: company,
+                valid: !isInvalid }})},
+
+    onNoteChange: function(e) {
+        const note = e.target.value
+        const isInvalid = $$(e.target).hasClass('input-invalid')
+        store.dispatch('updateCheckoutForm', { note: {
+                value: note,
+                valid: !isInvalid }})},
 
     validate: function() {
-        this.validateOrderSum(this.$refs.zipSelect.value)
-    },
+        this.validateOrderSum(this.$refs.zipSelect.value)},
 
     validateOrderSum: function(zip) {
         const zipData = window.appConfig.supportedZipCodes.find(z => z.zip == zip)
@@ -182,9 +251,7 @@ export default {
                 value: zip,
                 valid: true }})
 
-            store.dispatch('selectMinimalSum', minimalSum)
-        }
-    }
+            store.dispatch('selectMinimalSum', minimalSum) }}
   }
 }
 </script>

@@ -2850,107 +2850,107 @@ window.appConfig = {
       supportedZipCodes: [
             {
                 zip: 80333,
-                label: "München",
+                place: "München",
                 minimalSum: 25
             }, {
                 zip: 80469,
-                label: "München",
+                place: "München",
                 minimalSum: 25
             }, {
                 zip: 80538,
-                label: "München Ludwig- / Isarvorstadt",
+                place: "München Ludwig- / Isarvorstadt",
                 minimalSum: 25
             }, {
                 zip: 80539,
-                label: "München",
+                place: "München",
                 minimalSum: 25
             }, {
                 zip: 81539,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81541,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81543,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81545,
-                label: "München",
+                place: "München",
                 minimalSum: 15
             }, {
                 zip: 81547,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81549,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81667,
-                label: "München",
+                place: "München",
                 minimalSum: 15
             }, {
                 zip: 81669,
-                label: "München",
+                place: "München",
                 minimalSum: 15
             }, {
                 zip: 81671,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81673,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81675,
-                label: "München",
+                place: "München",
                 minimalSum: 17
             }, {
                 zip: 81677,
-                label: "München",
+                place: "München",
                 minimalSum: 12
             }, {
                 zip: 81679,
-                label: "München",
+                place: "München",
                 minimalSum: 17
             }, {
                 zip: 81735,
-                label: "München Waldperlach",
+                place: "München Waldperlach",
                 minimalSum: 17
             }, {
                 zip: 81737,
-                label: "München Perlach",
+                place: "München Perlach",
                 minimalSum: 15
             }, {
                 zip: 81739,
-                label: "München",
+                place: "München",
                 minimalSum: 17
             }, {
                 zip: 81825,
-                label: "München",
+                place: "München",
                 minimalSum: 22
             }, {
                 zip: 81827,
-                label: "München",
+                place: "München",
                 minimalSum: 25
             }, {
                 zip: 81829,
-                label: "München",
+                place: "München",
                 minimalSum: 30
             }, {
                 zip: 82008,
-                label: "Unterhaching",
+                place: "Unterhaching",
                 minimalSum: 17
             }, {
                 zip: 85521,
-                label: "Ottobrunn",
+                place: "Ottobrunn",
                 minimalSum: 25
             }, {
                 zip: 85579,
-                label: "Neubiberg",
+                place: "Neubiberg",
                 minimalSum: 20
             }
           ]

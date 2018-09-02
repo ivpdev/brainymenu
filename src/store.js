@@ -31,7 +31,15 @@ const buildOrderMessage = (cartData) => {
 }
 
 const checkoutFormClearState = {
-   name: {
+   firma: {
+       value: null,
+       valid: false
+   },
+   firstname: {
+       value: null,
+       valid: false
+   },
+   lastname: {
        value: null,
        valid: false
    },
@@ -43,9 +51,17 @@ const checkoutFormClearState = {
        value: null,
        valid: false
    },
+   phone: {
+       value: null,
+       valid: false
+   },
    email: {
        value: null,
        valid: false
+   },
+   note: {
+       value: null,
+       valid: true
    }
 }
 
@@ -186,7 +202,7 @@ const store = new Vuex.Store({
         commit('setOrderSubmitPending')
 
         OrderSubmittingService
-            .submitOrder(state.cartData)
+            .submitOrder(state.cartData, state.checkoutForm)
                 .then(() => {
                     dispatch('handleOrderSuccess')})
                 .catch(error => {

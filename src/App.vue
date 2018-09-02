@@ -130,9 +130,11 @@ export default {
         this.$refs.cartPanel.open()
 
     },
+
     toggleMenuOpened: function() {
         this.state.menuOpened = !this.state.menuOpened //TODO
     },
+
     openChat: function() {
         this.$refs.chatPanel.open()
     },

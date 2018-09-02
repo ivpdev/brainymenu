@@ -7,18 +7,15 @@ const appConfig = window.appConfig
 const orderEmailTemplate = _.template(`
     <table width='750px'>
                    <tr><th colspan='2'>Bestellungsdaten</th></tr>
-                   <tr><td>Firma:</td><td>TODO</td></tr>
-                   <tr><td>Abteilung:</td><td>TODO</td></tr>
-                   <tr><td>Familienname:</td><td>TODO</td></tr>
-                   <tr><td>Vorname:</td><td>TODO</td></tr>
-                   <tr><td>Telefonnummer:</td><td>1234567</td></tr>
-                   <tr><td>Strasse:</td><td>Musterstr</td></tr>
-                   <tr><td>Nr:</td><td>123</td></tr>
-                   <tr><td>PLZ:</td><td>81549</td></tr>
-                   <tr><td>Ort:</td><td>München</td></tr>
-                   <tr><td>Etage:</td><td>7</td></tr>
-                   <tr><td>Email-Adresse:</td><td>ivan.v.panov@gmail.com</td></tr>
-                   <tr><td>Bemerkung</td><td>ERTT</td></tr>
+                   <tr><td>Firma:</td><td><%= firma %></td></tr>
+                   <tr><td>Familienname:</td><td><%= lastname %></td></tr>
+                   <tr><td>Vorname:</td><td><%= firstname %></td></tr>
+                   <tr><td>Telefonnummer:</td><td><%= phone %></td></tr>
+                   <tr><td>Addresse:</td><td><%= address %></td></tr>
+                   <tr><td>PLZ:</td><td><%= zip %></td></tr>
+                   <tr><td>Ort:</td><td><%= place %></td></tr>
+                   <tr><td>Email-Adresse:</td><td><%= email %></td></tr>
+                   <tr><td>Bemerkung</td><td><%= note %></td></tr>
                    <tr><td valign="top">Bestellung:</td>
                        <td><%= order %></td></tr>
    </table>`)
@@ -37,7 +34,33 @@ const orderRowTemplate = _.template(`<tr>
   </tr>`);
 
 const OrderSubmittingService = {
-    buildOrderMessage: function(cartData) {
+    getAddress: function(checkoutForm) {
+        const zip = checkoutForm.zip.value
+        const street = checkoutForm.street.value
+
+        return `${zip} ${street}`
+    },
+
+    getPlace: function(checkoutForm) {
+        const zip = checkoutForm.zip.value
+
+        const zipData = appConfig.supportedZipCodes.find(z => z.zip == zip)
+
+        return zipData.place
+    },
+
+    buildOrderMessage: function(cartData, checkoutForm) {
+        const email = checkoutForm.email.value
+        const firma = checkoutForm.firma.value
+        const firstname = checkoutForm.firstname.value
+        const lastname = checkoutForm.lastname.value
+        const phone = checkoutForm.phone.value
+        const note = checkoutForm.note.value
+        const zip = checkoutForm.zip.value
+        const place = this.getPlace(checkoutForm)
+
+        const address = this.getAddress(checkoutForm)
+
         const rowsHtml = cartData.map(item => orderRowTemplate({
             quantity: item.quantity,
             name: item.name,
@@ -50,22 +73,35 @@ const OrderSubmittingService = {
         })
 
         const emailHtml = orderEmailTemplate({
+            firma: firma,
+            firstname: firstname,
+            lastname: lastname,
+            address: address,
+            phone: phone,
+            email: email,
+            note: note,
+            zip: zip,
+            place: place,
+
             order: orderHtml
         })
 
         return emailHtml
     },
 
-    submitOrder: function(cartData) {
+    submitOrder: function(cartData, checkoutForm) {
         const self = this
         const bodyFormData = new FormData()
 
+        const phone = checkoutForm.phone.value
+        const address = this.getAddress(checkoutForm)
+
         bodyFormData.set('name', 'Bestellung');
         bodyFormData.set('email', 'bestellung@littledragon-asiabistro.de')
-        bodyFormData.set('telefon', '-')
-        bodyFormData.set('address', '-')
+        bodyFormData.set('telefon', phone)
+        bodyFormData.set('address', address)
         bodyFormData.set('subject', '[Bestellung]')
-        bodyFormData.set('message', this.buildOrderMessage(cartData))
+        bodyFormData.set('message', this.buildOrderMessage(cartData, checkoutForm))
 
         return axios.post(
             appConfig.mailServerUrl,

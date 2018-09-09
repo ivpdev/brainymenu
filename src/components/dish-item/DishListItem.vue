@@ -15,10 +15,14 @@
             </f7-button>
         </div>
       </div>
-      <div class="item-text">{{item.note || item.description}}
+
+     <Spiciness v-if="item.spiciness" :spiciness="item.spiciness"></Spiciness>
+
+      <div class="item-text">
+        {{item.note || item.description}}
       </div>
 
-    <!-- TODO check if nutrition facts are not empty -->
+     <!-- TODO check if nutrition facts are not empty -->
      <div v-if="item.nutritionFacts">
         <f7-button
             round
@@ -73,6 +77,7 @@ import { f7Button, f7Popover, f7Chip } from 'framework7-vue'
 import NutritionFacts from './NutritionFacts'
 import Allergens from './Allergens'
 import Additives from './Additives'
+import Spiciness from './Spiciness'
 
 export default {
   name: 'DishListItem',
@@ -82,7 +87,8 @@ export default {
     f7Chip,
     NutritionFacts,
     Allergens,
-    Additives
+    Additives,
+    Spiciness
   },
   computed: {
     thumbnail: function() {
@@ -160,5 +166,17 @@ export default {
     float: left;
     margin-right: 4px;
     margin-top: 3px;
+}
+
+.spicy-3 {
+    background: #7d0000;
+}
+
+.spicy-2 {
+    background: #ea2707;
+}
+
+.spicy-1 {
+    background: #ff5346;
 }
 </style>

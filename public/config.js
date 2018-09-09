@@ -18,6 +18,7 @@ window.appConfig = {
               "name" : "001 Gemüse-Suppe * 4,G",
               "description" : "mit frischem Gemüse & Glasnudeln",
               "price" : 2.50,
+              "spiciness": 1,
               "allergens": ["alerg1","alerg2","alerg2","alerg2","alerg2"],
               "additives": ["additiveA"],
               "ingredients" : null,

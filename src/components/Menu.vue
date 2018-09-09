@@ -22,7 +22,7 @@ import { f7Card, f7List, f7ListGroup,
     f7ListItem, f7Button, f7Accordion, f7AccordionItem,
     f7AccordionToggle, f7AccordionContent, f7Block,
     f7Icon } from 'framework7-vue'
-import DishListItem from './DishListItem'
+import DishListItem from './dish-item/DishListItem'
 import Dom7 from 'dom7'
 
 const $$ = Dom7

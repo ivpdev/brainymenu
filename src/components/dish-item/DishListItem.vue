@@ -15,19 +15,74 @@
             </f7-button>
         </div>
       </div>
-      <div class="item-text">{{item.note || item.description}}</div>
+      <div class="item-text">{{item.note || item.description}}
+      </div>
+
+    <!-- TODO check if nutrition facts are not empty -->
+     <div v-if="item.nutritionFacts">
+        <f7-button
+            round
+            small
+
+            color="green"
+            popover-open=".popover-nutrition-facts"
+            class="button-in-list-content">
+            Nährwerte
+        </f7-button>
+        <f7-popover ref="nutritionFactsPopover" class="popover-nutrition-facts">
+            <NutritionFacts v-bind:nutritionFacts="item.nutritionFacts"></NutritionFacts>
+        </f7-popover>
+     </div>
+
+     <div v-if="item.allergens">
+        <f7-button
+            round
+            small
+
+            color="red"
+            popover-open=".popover-allergens"
+            class="button-in-list-content">
+            Allergene
+        </f7-button>
+        <f7-popover class="popover-allergens">
+            <Allergens v-bind:allergens="item.allergens"></Allergens>
+        </f7-popover>
+     </div>
+
+     <div v-if="item.additives">
+        <f7-button
+            round
+            small
+
+            color="orange"
+            popover-open=".popover-additives"
+            class="button-in-list-content">
+            Zusatzstoffen
+        </f7-button>
+        <f7-popover class="popover-additives">
+            <Additives v-bind:additives="item.additives"></Additives>
+        </f7-popover>
+     </div>
     </div>
 </div>
 </template>
 
 <script>
-import store from '../store'
-import { f7Button } from 'framework7-vue'
+import store from '../../store'
+import { f7Button, f7Popover, f7Chip } from 'framework7-vue'
+import NutritionFacts from './NutritionFacts'
+import Allergens from './Allergens'
+import Additives from './Additives'
 
 export default {
   name: 'DishListItem',
   components: {
-    f7Button
+    f7Button,
+    f7Popover,
+    f7Chip,
+    NutritionFacts,
+    Allergens,
+    Additives
   },
   computed: {
     thumbnail: function() {
@@ -84,6 +139,8 @@ export default {
 </script>
 
 <style>
+/* TODO title no cut */
+
 .thumbnail {
     width: 8em;
     height: 6em;
@@ -92,7 +149,16 @@ export default {
 .thema-red .dish-list-item .item-inner {
     border-bottom: 1px solid #e28b8b;
 }
+
 .thema-red .item-title {
     /*color: #880707;*/
+}
+
+.button-in-list-content.button {
+    display: table;
+    border: solid 1px;
+    float: left;
+    margin-right: 4px;
+    margin-top: 3px;
 }
 </style>

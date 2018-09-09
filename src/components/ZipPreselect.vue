@@ -9,7 +9,7 @@
             <option v-for="(zipData, index) in availableZipCodes"
                     :key="index"
                     :value="zipData.zip">
-                            {{zipData.zip}} ({{zipData.label}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
+                            {{zipData.zip}} ({{zipData.place}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
         </select>
     </f7-block>
 </template>

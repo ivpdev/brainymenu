@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import store from '../store'
+import store from '../../store'
 import Checkout from './Checkout'
 import { f7Block, f7List, f7ListItem, f7Swiper, f7SwiperSlide, f7Popup, f7Fab,
  f7Page, f7Navbar, f7NavRight, f7Link, f7Popover, f7Sheet,

@@ -12,11 +12,14 @@ window.appConfig = {
         ],
         "menu": [
           {"category" : "Suppen",
-            "trais" : ["soup"], "items" : [
+            "trais" : ["soup"],
+            "items" : [
             {
               "name" : "001 Gemüse-Suppe * 4,G",
               "description" : "mit frischem Gemüse & Glasnudeln",
               "price" : 2.50,
+              "allergens": ["alerg1","alerg2","alerg2","alerg2","alerg2"],
+              "additives": ["additiveA"],
               "ingredients" : null,
               "nutritionFacts" : {
                 "calories" : null,

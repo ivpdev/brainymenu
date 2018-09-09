@@ -74,8 +74,8 @@
 <script>
 import Menu from './components/Menu.vue'
 import Chat from './components/Chat.vue'
-import Cart from './components/Cart.vue'
-import CartPanel from './components/CartPanel.vue'
+import Cart from './components/cart/Cart.vue'
+import CartPanel from './components/cart/CartPanel.vue'
 import ZipPreselect from './components/ZipPreselect'
 import store from './store'
 import { f7Navbar, f7NavRight, f7Sheet,

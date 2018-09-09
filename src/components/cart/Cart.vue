@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import store from '../store'
+import store from '../../store'
 import Checkout from './Checkout'
 import { f7Block, f7List, f7ListItem, f7Swiper, f7SwiperSlide } from 'framework7-vue'
 

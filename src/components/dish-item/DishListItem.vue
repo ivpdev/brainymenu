@@ -7,7 +7,9 @@
       <div class="item-title-row">
         <div class="item-title">{{item.name}}</div>
         <div class="item-after">
-            <f7-button fill round
+            <f7-button
+                fill
+                round
                 color="orange"
                 icon-fa="cart-plus"
                 @click="addToCart(item, $event)">
@@ -21,6 +23,8 @@
       <div class="item-text">
         {{item.note || item.description}}
       </div>
+
+      <!-- TODO vegan -->
 
      <!-- TODO check if nutrition facts are not empty -->
      <div v-if="item.nutritionFacts">
@@ -42,29 +46,31 @@
         <f7-button
             round
             small
-
             color="red"
-            popover-open=".popover-allergens"
+            @click="openAllergensPopover"
             class="button-in-list-content">
             Allergene
         </f7-button>
-        <f7-popover class="popover-allergens">
-            <Allergens v-bind:allergens="item.allergens"></Allergens>
+        <f7-popover
+            ref="allergensPopover"
+            class="popover-allergens">
+            <Allergens :allergens="item.allergens"></Allergens>
         </f7-popover>
      </div>
-
      <div v-if="item.additives">
         <f7-button
             round
             small
 
             color="orange"
-            popover-open=".popover-additives"
+            @click="openAdditivesPopover"
             class="button-in-list-content">
             Zusatzstoffen
         </f7-button>
-        <f7-popover class="popover-additives">
-            <Additives v-bind:additives="item.additives"></Additives>
+        <f7-popover
+            ref="additivesPopover"
+            class="popover-additives">
+            <Additives :additives="item.additives"></Additives>
         </f7-popover>
      </div>
     </div>
@@ -93,7 +99,6 @@ export default {
   computed: {
     thumbnail: function() {
         const pics = this.item.pics
-
         //TODO small size for thumbnail
 
         if (pics && pics.length && pics.length > 0) {
@@ -110,6 +115,14 @@ export default {
       store.dispatch("addToCart", item)
 
       this.performFlyToCartAnimation()
+    },
+
+    openAdditivesPopover: function(e) {
+      this.$refs.additivesPopover.open(e.target)
+    },
+
+    openAllergensPopover: function(e) {
+      this.$refs.allergensPopover.open(e.target)
     },
 
     performFlyToCartAnimation: function() {

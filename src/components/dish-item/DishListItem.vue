@@ -13,7 +13,7 @@
                 color="orange"
                 icon-fa="cart-plus"
                 @click="addToCart(item, $event)">
-                {{item.price}} &euro;
+                {{formattedPrice}} &euro;
             </f7-button>
         </div>
       </div>
@@ -79,6 +79,7 @@
 
 <script>
 import store from '../../store'
+import utils from '../../services/utils'
 import { f7Button, f7Popover, f7Chip } from 'framework7-vue'
 import NutritionFacts from './NutritionFacts'
 import Allergens from './Allergens'
@@ -108,6 +109,10 @@ export default {
         } else {
             return this.defaultImage || ''
         }
+    },
+
+    formattedPrice: function() {
+        return utils.toFixed(this.item.price, 2)
     }
   },
   methods: {

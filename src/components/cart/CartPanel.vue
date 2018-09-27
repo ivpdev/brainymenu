@@ -86,6 +86,7 @@ import Checkout from './Checkout'
 import { f7Block, f7List, f7ListItem, f7Swiper, f7SwiperSlide, f7Popup, f7Fab,
  f7Page, f7Navbar, f7NavRight, f7Link, f7Popover, f7Sheet,
  f7Actions, f7ActionsGroup, f7ActionsButton, f7ActionsLabel } from 'framework7-vue'
+import utils from '../../services/utils'
 
 export default {
   name: 'Cart',
@@ -121,7 +122,7 @@ export default {
 
   computed: {
     priceTotalInCartFormatted: function() {
-        return this.toFixed(this.priceTotalInCart(), 2)
+        return utils.toFixed(this.priceTotalInCart(), 2)
     },
 
     fabToCheckout: function() {
@@ -145,19 +146,7 @@ export default {
         return store.state.cartData.length > 0;
     },
 
-    toFixed: function(value, precisionArg) {
-        var precision = precisionArg || 0,
-            power = Math.pow(10, precision),
-            absValue = Math.abs(Math.round(value * power)),
-            result = (value < 0 ? '-' : '') + String(Math.floor(absValue / power));
-
-        if (precision > 0) {
-            var fraction = String(absValue % power),
-                padding = new Array(Math.max(precision - fraction.length, 0) + 1).join('0');
-            result += '.' + padding + fraction;
-        }
-        return result;
-    },
+    toFixed: utils.toFixed,
 
     goToCheckout: function() {
         if (this.canGoToCheckout()) {

@@ -40,6 +40,33 @@
 
 window.appConfig = {
     mailServerUrl: 'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
+    openAt: [{
+        day: 'Monday',
+        from: '11:00',
+        to: '14:30'
+    }, {
+        day: 'Monday',
+        from: '17:00',
+        to: '22:30'
+    },{
+        day: 'Tuesday',
+        from: '11:00',
+        to: '14:30'
+    }, {
+        day: 'Tuesday',
+        from: '17:00',
+        to: '22:30'
+    }, {
+        day: 'Wednesday',
+        from: '11:00',
+        to: '14:30'
+    }, {
+        day: 'Wednesday',
+        from: '17:00',
+        to: '22:30'
+    }
+    //TODO
+    ],
     closed: {
         closed: false,
         message: "wir sind am 22.09 zurück"
@@ -60,19 +87,17 @@ window.appConfig = {
             "mit Antioxidationsmittel": "Antioxidant"
         },
 
-        trais: {
+        traits: {
             "Vorspeizen": "appetizers",
             "vegetarisch": "vegetarian",
             "fleisch": "meat",
             "Hähnchen": "chicken",
             "Bambus": "bamboo",
             "Glasnudeln": "noodles",
-            "Pilze": "mushrooms",
+            "Pilze": "mushroom",
             "Kokos": "coconut",
             "japanisch": "japanese",
-            "Krebsfleisch": "crab",
             "Seetang": "seaweed",
-            "Garnelen": "shrimps",
             "Rind": "beef",
             "Spinat": "spinach",
             "Fisch": "fish",
@@ -84,15 +109,15 @@ window.appConfig = {
             "Garnelen": "shrimps",
             "Hauptspeise": "main-course",
             "Peperoni": "pepperoni",
-            "Zwiebel": "onion", //TODO Zwiebeln
+            "Zwiebel": "onion",
             "Ananas": "pineapple",
             "Nudeln": "noodels",
             "Reis": "rice",
-            "Ingwer": "TODO",
-            "Krabben": "TODO",
+            "Ingwer": "ginger",
+            "Krabben": "crab",
             "Honig": "honey",
-            "Banan": "TODO",
-            "Kaffein": "TODO",
+            "Banan": "banana",
+            "Koffein": "caffeine",
             "Saft": "juice",
             "Bier": "beer",
             "Wein": "wine"
@@ -195,7 +220,7 @@ window.appConfig = {
               "description" : "mit Krebsfleisch & Seetang (japanisch)",
               "price" : 3.50,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["japanisch", "Krebsfleisch", "Seetang"]
+              "trais" : ["japanisch", "Krabben", "Seetang"]
             },
             {
               "name" : "10 Little Dragon-Suppe",
@@ -615,9 +640,10 @@ window.appConfig = {
               "traits": ["seafood"]
             },
             {
-              "name" : "319 Sushi Nori Maki - Kani-Maki * 1",
+              "name" : "319 Sushi Nori Maki - Kani-Maki",
               "description" : "mit Krebsfleisch (6 Röllchen)",
               "price" : 2.60,
+              "additives": ["mit Farbstoffen"],
               "traits": ["seafood"]
             },
             {
@@ -858,7 +884,7 @@ window.appConfig = {
               "traits": ["Kokos"]
             },
             {
-              "name" : "218 Gebr. Hühnerfleisch - Thai Curry * 4,B,G",
+              "name" : "218 Gebr. Hühnerfleisch - Thai Curry",
               "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
               "price" : 7.50,
               "additives": ["mit Geschmacksverstärker"],
@@ -929,7 +955,7 @@ window.appConfig = {
               "traits": ["Nudeln"]
             },
             {
-              "name" : "227 Knusprige Hühnerkeule * 4,B,G",
+              "name" : "227 Knusprige Hühnerkeule",
               "description" : "mit Gemüse, Kokosmilch, Tamarinde, Koriander",
               "price" : 8.50,
               "additives": ["mit Geschmacksverstärker"],
@@ -955,7 +981,7 @@ window.appConfig = {
               "allergens": ["Soja oder Sojaerzeugnisse"]
             },
             {
-              "name" : "232 Gebr. Rindfleisch - Gung-Po * 4,E,G",
+              "name" : "232 Gebr. Rindfleisch - Gung-Po",
               "description" : "mit Gemüse, Cashew in Hoisin",
               "price" : 7.80,
               "additives": ["mit Geschmacksverstärker"],
@@ -986,7 +1012,7 @@ window.appConfig = {
               "traits": ["Kokos"]
             },
             {
-              "name" : "236 Gebr. Rindfleisch - Suki Yaki * 4,G",
+              "name" : "236 Gebr. Rindfleisch - Suki Yaki",
               "description" : "mit Gemüse und Glasnudeln",
               "price" : 7.80,
               "additives": ["mit Geschmacksverstärker"],
@@ -1023,15 +1049,15 @@ window.appConfig = {
               "price" : 7.80,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
-              "traits": ["Zwibel"]
+              "traits": ["Zwiebel"]
             },
             {
-              "name" : "240A Gebr. Rindfleisch - Bo Xao Hanh * 4,G",
+              "name" : "240A Gebr. Rindfleisch - Bo Xao Hanh",
               "description" : "mit Zwiebeln, Lauch und Austernsauce",
               "price" : 7.80,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
-              "traits": ["Zwibel"]
+              "traits": ["Zwiebel"]
             } ] },
           {"category" : "Schweinefleischgerichte (mit Reis)",
             "trais" : ["pork", "Reis"],
@@ -1083,7 +1109,7 @@ window.appConfig = {
               "traits": ["Nudeln"]
             },
             {
-              "name" : "247 Gebr. Schweinefleisch - Mu Tord Jieu Lhon *4,B,G",
+              "name" : "247 Gebr. Schweinefleisch - Mu Tord Jieu Lhon",
               "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 7.20,
               "additives": ["mit Geschmacksverstärker"],
@@ -1272,7 +1298,7 @@ window.appConfig = {
               "traits": ["Kokos"]
             },
             {
-              "name" : "295 Gebratener Tofu * 4,G",
+              "name" : "295 Gebratener Tofu",
               "description" : "mit Gemüse und Champignons",
               "price" : 7.20,
               "additives": ["mit Geschmacksverstärker"],
@@ -1335,7 +1361,7 @@ window.appConfig = {
               "traits": ["Krabben", "vegetarisch-NEG"]
             },
             {
-              "name" : "275 Gebratener Eierreis - Nasi-Goreng * 4,D,G",
+              "name" : "275 Gebratener Eierreis - Nasi-Goreng",
               "description" : "mit Gemüse, versch. Fleisch, Krabben und Curry",
               "price" : 8.20,
               "additives": ["mit Geschmacksverstärker"],
@@ -1468,7 +1494,7 @@ window.appConfig = {
                 "mit Farbstoffen",
                 "mit Antioxidationsmittel",
                 "Koffeinhaltig"],
-              "traits" : ["Kaffein"]
+              "traits" : ["Koffein"]
             },
             {
               "name" : "125b Coca Cola Light",

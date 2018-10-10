@@ -24,8 +24,6 @@
         {{item.note || item.description}}
       </div>
 
-      <!-- TODO vegan -->
-
      <!-- TODO check if nutrition facts are not empty -->
      <div v-if="item.nutritionFacts">
         <f7-button

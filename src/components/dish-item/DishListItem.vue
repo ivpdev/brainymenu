@@ -83,6 +83,7 @@ import NutritionFacts from './NutritionFacts'
 import Allergens from './Allergens'
 import Additives from './Additives'
 import Spiciness from './Spiciness'
+import OpeningTimeService from '../../services/OpeningTimeService'
 
 export default {
   name: 'DishListItem',
@@ -115,9 +116,14 @@ export default {
   },
   methods: {
     addToCart: function(item) {
-      store.dispatch("addToCart", item)
-
-      this.performFlyToCartAnimation()
+        this.$f7.dialog.alert("....", "Vorspeise wählen")
+        const openingInfo = OpeningTimeService.isOpenedNow() //TODO rename
+        if (openingInfo.open) {
+            store.dispatch("addToCart", item)
+            this.performFlyToCartAnimation()
+        } else {
+             this.$f7.dialog.alert(openingInfo.closedReason, "Wir sind geschlossen")
+        }
     },
 
     openAdditivesPopover: function(e) {

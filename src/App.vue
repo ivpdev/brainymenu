@@ -81,6 +81,7 @@ import store from './store'
 import { f7Navbar, f7NavRight, f7Sheet,
     f7Link, f7View, f7Page, f7Icon, f7Badge,
     f7Fab, f7FabButtons, f7FabButton, f7Panel, f7Popup } from 'framework7-vue'
+import OpeningTimeService from './services/OpeningTimeService'
 
 export default {
   name: 'app',
@@ -127,8 +128,12 @@ export default {
   },
   methods: {
     openCart: function() {
-        this.$refs.cartPanel.open()
-
+        const openingInfo = OpeningTimeService.isOpenedNow() //TODO rename
+        if (openingInfo.open) {
+            this.$refs.cartPanel.open()
+        } else {
+             this.$f7.dialog.alert(openingInfo.closedReason, "Wir sind geschlossen")
+        }
     },
 
     toggleMenuOpened: function() {
@@ -147,7 +152,7 @@ export default {
         this.$refs.cart.goToCheckout()
     },
 
-    showGlobalMessage: function(message, title) {
+    showGlobalMessage: function(message, title) {//TODO refactor
         this.$f7.dialog.alert(message, title ||'', () => {
             location.reload()
         })

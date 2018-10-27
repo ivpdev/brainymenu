@@ -156,7 +156,7 @@ export default {
     },
 
     currentMinimalSum: function() {
-      const selectedZip = appConfig.supportedZipCodes.find(zip => store.state.checkoutForm.zip.value)
+      const selectedZip = appConfig.supportedZipCodes.find(zip => zip === store.state.checkoutForm.zip.value)
 
       return selectedZip && selectedZip.minimalSum
     }

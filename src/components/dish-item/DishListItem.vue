@@ -12,17 +12,17 @@
                 round
                 color="orange"
                 icon-fa="cart-plus"
-                @click="addToCart(item, $event)">
+                @click="onAddToCartClick(item, $event)">
                 {{formattedPrice}} &euro;
             </f7-button>
         </div>
       </div>
 
-     <Spiciness v-if="item.spiciness" :spiciness="item.spiciness"></Spiciness>
+    <Spiciness v-if="item.spiciness" :spiciness="item.spiciness"></Spiciness>
 
-      <div class="item-text">
+    <div class="item-text">
         {{item.note || item.description}}
-      </div>
+    </div>
 
      <!-- TODO check if nutrition facts are not empty -->
      <div v-if="item.nutritionFacts">
@@ -72,13 +72,29 @@
         </f7-popover>
      </div>
     </div>
+
+    <f7-popover
+        ref="supplementPopover"
+        class="popover-menu">
+
+        <f7-block>{{item.supplementPrompt}}</f7-block>
+        <f7-block>
+            <f7-button
+                v-for="(supplement, index) in item.supplementedBy"
+                @click="onSupplementPicked(supplement)"
+                class="supplementButton"
+                round
+                fill
+                color="red">{{supplement.name}}</f7-button>
+        </f7-block>
+    </f7-popover>
 </div>
 </template>
 
 <script>
 import store from '../../store'
 import utils from '../../services/utils'
-import { f7Button, f7Popover, f7Chip } from 'framework7-vue'
+import { f7Button, f7Popover, f7Chip, f7Block } from 'framework7-vue'
 import NutritionFacts from './NutritionFacts'
 import Allergens from './Allergens'
 import Additives from './Additives'
@@ -88,6 +104,7 @@ import OpeningTimeService from '../../services/OpeningTimeService'
 export default {
   name: 'DishListItem',
   components: {
+    f7Block,
     f7Button,
     f7Popover,
     f7Chip,
@@ -114,20 +131,45 @@ export default {
         return utils.toFixed(this.item.price, 2)
     }
   },
+
   methods: {
+    onAddToCartClick: function(item, event) {
+        if (item.supplementedBy) {
+            this.openSupplementsPopover(event)
+        } else {
+            this.addToCart(item)
+        }
+    },
+
+    onSupplementPicked: function(supplement) {
+        this.closeSupplementsPopover()
+        this.performFlyToCartAnimation()
+
+        store.dispatch('addItemWithSupplementToCart', {
+            mainItem: this.item,
+            supplement: supplement
+        })
+    },
+
     addToCart: function(item) {
-        this.$f7.dialog.alert("....", "Vorspeise wählen")
-        const openingInfo = OpeningTimeService.isOpenedNow() //TODO rename
-        if (openingInfo.open) {
+       if (OpeningTimeService.isOpenNow()) {
             store.dispatch("addToCart", item)
             this.performFlyToCartAnimation()
         } else {
-             this.$f7.dialog.alert(openingInfo.closedReason, "Wir sind geschlossen")
+             this.$f7.dialog.alert(OpeningTimeService.whyClosed(), "Wir sind geschlossen")
         }
     },
 
     openAdditivesPopover: function(e) {
       this.$refs.additivesPopover.open(e.target)
+    },
+
+    openSupplementsPopover: function(e) {
+      this.$refs.supplementPopover.open(e.target)
+    },
+
+    closeSupplementsPopover: function() {
+      this.$refs.supplementPopover.close()
     },
 
     openAllergensPopover: function(e) {
@@ -180,6 +222,10 @@ export default {
 
 .thema-red .item-title {
     /*color: #880707;*/
+}
+
+.supplementButton {
+    margin-top: 10px;
 }
 
 .button-in-list-content.button {

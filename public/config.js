@@ -40,32 +40,56 @@
 
 window.appConfig = {
     mailServerUrl: 'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
-    openAt: [{
-        day: 'Monday',
-        from: '11:00',
-        to: '14:30'
-    }, {
-        day: 'Monday',
-        from: '17:00',
-        to: '22:30'
-    },{
-        day: 'Tuesday',
-        from: '11:00',
-        to: '14:30'
-    }, {
-        day: 'Tuesday',
-        from: '17:00',
-        to: '22:30'
-    }, {
-        day: 'Wednesday',
-        from: '11:00',
-        to: '14:30'
-    }, {
-        day: 'Wednesday',
-        from: '17:00',
-        to: '22:30'
-    }
-    //TODO
+    openAt: [
+    {
+            day: 'Monday',
+            from: '11:00',
+            to: '14:30'
+        }, {
+            day: 'Monday',
+            from: '17:00',
+            to: '22:30'
+        },{
+            day: 'Tuesday',
+            from: '11:00',
+            to: '14:30'
+        }, {
+            day: 'Tuesday',
+            from: '17:00',
+            to: '22:30'
+        }, {
+            day: 'Wednesday',
+            from: '11:00',
+            to: '14:30'
+        }, {
+            day: 'Wednesday',
+            from: '17:00',
+            to: '22:30'
+        }, {
+            day: 'Thursday',
+            from: '11:00',
+            to: '14:30'
+        }, {
+            day: 'Thursday',
+            from: '17:00',
+            to: '22:30'
+        }, {
+            day: 'Friday',
+            from: '11:00',
+            to: '14:30'
+        }, {
+            day: 'Friday',
+            from: '17:00',
+            to: '22:30'
+        },{
+            day: 'Saturday',
+            from: '9:00',
+            to: '22:30'
+        }, {
+            day: 'Sunday',
+            from: '12:00',
+            to: '22:00'
+        }
     ],
     closed: {
         closed: false,
@@ -121,12 +145,6 @@ window.appConfig = {
             "Saft": "juice",
             "Bier": "beer",
             "Wein": "wine"
-
-            //TODO Englisch oder deutsch
-            //TODO curry
-            //TODO Mark Gemuese
-            //TODO Paprika
-            //TODO Krabben>Seafood
         }
     },
 
@@ -142,6 +160,63 @@ window.appConfig = {
           }
         ],
         "menu": [
+            {
+                "category" : "Mittagsmenu", //TODO enforce unique category
+                "trais" : ["soup"],
+                "visibleAt": [{
+                    from: '11:00',
+                    to: '14:30'
+                }],
+                "supplementedBy": [{
+                    "reference": {
+                        "category": "Mittagsmenu",
+                        "item": "Frühlingsrollen"
+                    }
+                }, {
+                    "reference": {
+                        "category": "Mittagsmenu",
+                        "item": "TODO Suppe"
+                    }
+                }],
+                "supplementPrompt": "Bitte wählen Sie die Vorspeise",
+                "items" : [
+                {
+                  "name" : "M1 Gemüse-Suppe",
+                  "description" : "mit frischem Gemüse & Glasnudeln",
+                  "price" : 2.50,
+                  //"spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "trais" : ["vegetarisch"]
+                 // "ingredients" : null,
+                  //"nutritionFacts" : {
+                  //  "calories" : null,
+                  //  "carbohydrate" : null,
+                  //  "protein" : null,
+                 //   "fat" : null},
+
+                },
+                {
+                  "name" : "2 Peking-Suppe",
+                  "description" : "mit Gemüse (süß-sauer-scharf)",
+                  "price" : 2.50,
+                  "spiciness": 2,
+                  "additives": ["mit Geschmacksverstärker"],
+                  "trais" : ["vegetarisch"]
+                },
+                {
+                  "name" : "Frühlingsrollen",
+                  "description" : "TODO",
+                  "price" : 0,
+                  "onlyAsSupplement": true
+                },
+                {
+                  "name" : "TODO Suppe",
+                  "description" : "TODO",
+                  "price" : 0,
+                  "onlyAsSupplement": true
+                } ] },
+
           {"category" : "Suppen",
             "trais" : ["soup"],
             "items" : [
@@ -1660,6 +1735,48 @@ window.appConfig = {
               "price" : 12.00
             } ] },
           {"category" : "Extras",
+            "trais" : ["extras"],
+            "items" : [
+            {
+              "name" : "400 Portion Reis",
+              "price" : 1.50,
+              "traits": ["Reis"]
+            },
+            {
+              "name" : "401a Gebratener Reis",
+              "price" : 3.00,
+              "traits": ["Reis"]
+            },
+            {
+              "name" : "401b Gebratene Nudeln",
+              "price" : 3.00,
+              "traits": ["Nudeln"]
+            },
+            {
+              "name" : "402a Kanton-Sauce",
+              "price" : 2.00
+            },
+            {
+              "name" : "402b Hoisin-Sauce",
+              "price" : 2.00
+            },
+            {
+              "name" : "402c Süß-sauer-Souce",
+              "price" : 2.00
+            },
+            {
+              "name" : "403a Thai-Sauce",
+              "price" : 3.00
+            },
+            {
+              "name" : "403b China-Curry-Sauce",
+              "price" : 3.00
+            },
+            {
+              "name" : "403c Erdnuß-Sauce",
+              "price" : 3.00
+            } ] },
+          {"category" : "Allergene, Zusatzstoffe, Weitere Fragen",
             "trais" : ["extras"],
             "items" : [
             {

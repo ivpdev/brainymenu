@@ -1,6 +1,6 @@
 <template>
     <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
-        <f7-list-item v-for="(category, index) in data.menu" class="category-li"
+        <f7-list-item v-for="(category, index) in menuDataToDisplay" class="category-li"
             :key="index"
             v-on:click="onCategoryHeaderClick(category, index, $event)">
             <li class="list-group-title">
@@ -9,8 +9,8 @@
                <DishListItem
                     v-for="(item, index) in category.items"
                     :key="index"
-                    v-bind:item="item"
-                    :defaultImage="data.defaultImage" />
+                    :item="item"
+                    :defaultImage="defaultImage" />
             </f7-list-group>
         </f7-list-item>
     </f7-list>
@@ -44,12 +44,23 @@ export default {
     f7Icon
   },
   props: {
-    data: Object
+    menuData: Array,
+    defaultImage: String
   },
 
   data: function() {
     return {
       expanded: { }
+    }
+  },
+
+  computed: {
+    menuDataToDisplay: function() {
+        return this.menuData.map(category => { //TODO filter empty categories
+            const visibleItems = category.items.filter(item => !item.onlyAsSupplement)
+            category.items = visibleItems
+            return category
+        })
     }
   },
 

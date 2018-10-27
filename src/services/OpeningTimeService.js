@@ -44,7 +44,7 @@ const timeOfDateIsEarlierOrEqThan = (dateArg, refTimeStr) => {
 }
 
 const OpeningTimeService = {
-    isOpenedNow: function() {
+    isOpenNow: function() {
         const now = new Date()
         const dayOfWeek = daysOfWeek[now.getDay()]
         let open

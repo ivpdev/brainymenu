@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 import _ from 'lodash'
 import axios from 'axios'
 import OrderSubmittingService from './services/OrderSubmittingService'
+import OpeningTimeService from './services/OpeningTimeService'
+import MenuService from './services/MenuService'
 
 Vue.use(Vuex)
 
@@ -68,7 +70,8 @@ const checkoutFormClearState = {
 const store = new Vuex.Store({
   state: {
     cartData: [],
-    menuData: appConfig.cafeData,
+    menuData: MenuService.prepareMenu(appConfig.cafeData.menu),
+    defaultImage: appConfig.cafeData.defaultImage,
     preselectedZip: null,
     minimalSum: null,
     orderSubmitPending: false,
@@ -161,13 +164,25 @@ const store = new Vuex.Store({
   },
 
   actions: {
+    addToCart: function({dispatch}, item) {
+        dispatch('addItemsToCart', [item])
+    },
 
-    addToCart: function({commit, state, dispatch}, item) {
-        commit('addToCart', item)
+    addItemsToCart: function({commit, state, dispatch}, items) {
+        items.forEach(item => {
+            commit('addToCart', item)
+        })
 
         if (!state.preselectedZip) {
             dispatch('requestZipPreselection')
         }
+    },
+
+    addItemWithSupplementToCart: function({commit, state, dispatch}, payload, ) {
+        const mainItem = payload.mainItem
+        const supplement = payload.supplement
+
+        dispatch('addItemsToCart', [mainItem, supplement])
     },
 
     requestZipPreselection: function() {

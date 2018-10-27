@@ -2,7 +2,8 @@
     <div class="app thema-red">
       <f7-view main>
           <f7-page>
-            <Menu v-bind:data="menuData"/>
+            <Menu :menuData="menuData"
+                  :defaultImage="defaultImage"/>
 
             <!-- f7-fab color="red"
                 position="left-bottom"
@@ -90,6 +91,10 @@ export default {
         return store.state.menuData
     },
 
+    defaultImage: function() {
+        return store.state.defaultImage
+    },
+
     itemsInCartCount: function() {
         return store.state.cartData.reduce((acc, item) => acc + item.quantity, 0)
     },
@@ -128,11 +133,10 @@ export default {
   },
   methods: {
     openCart: function() {
-        const openingInfo = OpeningTimeService.isOpenedNow() //TODO rename
-        if (openingInfo.open) {
+        if (OpeningTimeService.isOpenNow()) {
             this.$refs.cartPanel.open()
         } else {
-             this.$f7.dialog.alert(openingInfo.closedReason, "Wir sind geschlossen")
+             this.$f7.dialog.alert(OpeningTimeService.whyClosed(), "Wir sind geschlossen")
         }
     },
 

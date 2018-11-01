@@ -14,7 +14,7 @@
             </f7-list-group>
         </f7-list-item>
         <FootNote :data="footNoteData"
-                  phone="TODO"/>
+                  :contact="footNoteContact"/>
     </f7-list>
 </template>
 
@@ -50,7 +50,8 @@ export default {
   props: {
     menuData: Array,
     defaultImage: String,
-    footNoteData: Object
+    footNoteData: Object,
+    footNoteContact: String
   },
 
   data: function() {

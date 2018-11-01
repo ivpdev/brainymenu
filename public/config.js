@@ -135,7 +135,9 @@ window.appConfig = {
             "mit Nitritpökelsalz": "14",
             "Taurin": "15",
             "Tartazin": "16"
-        }
+        },
+
+        contact: "TODO 123"
     },
     normalizationData: {
         allergens: {

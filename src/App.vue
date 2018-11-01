@@ -4,7 +4,8 @@
           <f7-page>
             <Menu :menuData="menuData"
                   :defaultImage="defaultImage"
-                  :footNoteData="footNoteData"/>
+                  :footNoteData="footNoteData"
+                  :footNoteContact="footNoteContact"/>
 
             <!-- f7-fab color="red"
                 position="left-bottom"
@@ -93,10 +94,11 @@ export default {
     },
 
     footNoteData: function() {
-        console.log("1")
-        console.log(store.state.footNoteData)
-        console.log(store.state)
         return store.state.footNoteData
+    },
+
+    footNoteContact: function() {
+        return store.state.footNoteContact
     },
 
     defaultImage: function() {

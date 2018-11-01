@@ -27,7 +27,7 @@
         <f7-popover
             ref="contactsPopover">
              <f7-block>
-                TTT
+                {{contact}}
              </f7-block>
         </f7-popover>
 
@@ -84,7 +84,7 @@ export default {
   },
   props: {
     data: Object,
-    phone: String
+    contact: String
   }
 }
 </script>

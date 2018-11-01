@@ -73,6 +73,7 @@ const store = new Vuex.Store({
     cartData: [],
     menuData: MenuService.prepareMenu(appConfig.cafeData.menu, appConfig.footNote),
     footNoteData: appConfig.footNote,
+    footNoteContact: appConfig.footNote.contact,
     defaultImage: appConfig.cafeData.defaultImage,
     preselectedZip: null,
     minimalSum: null,

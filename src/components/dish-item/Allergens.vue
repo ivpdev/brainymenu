@@ -4,6 +4,7 @@
         v-for="(allergen, index) in allergens"
         :text="allergen"
         color="red"
+        small
         class="allergen"></f7-chip>
   </f7-block>
 </template>

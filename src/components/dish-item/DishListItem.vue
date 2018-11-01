@@ -40,7 +40,7 @@
         </f7-popover>
      </div>
 
-     <div v-if="item.allergens">
+     <div v-if="item.allergens && showAllergens">
         <f7-button
             round
             small
@@ -55,7 +55,7 @@
             <Allergens :allergens="item.allergens"></Allergens>
         </f7-popover>
      </div>
-     <div v-if="item.additives">
+     <div v-if="item.additives && showAdditives">
         <f7-button
             round
             small
@@ -129,6 +129,14 @@ export default {
 
     formattedPrice: function() {
         return utils.toFixed(this.item.price, 2)
+    },
+
+    showAdditives: function() {
+        return false
+    },
+
+    showAllergens: function() {
+        return false
     }
   },
 

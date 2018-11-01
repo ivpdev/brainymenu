@@ -27,6 +27,7 @@ const removeFromArray = (array, item) => {
 
 const buildOrderMessage = (cartData) => {
     //TODO refactor: move to separate service
+    //TODO infer traits from description
     const rows = cartData.map(item => `${item.name}: ${item.quantity} x ${item.price} = ${item.quantity * item.price}`)
 
     return rows.join('\n')
@@ -70,7 +71,8 @@ const checkoutFormClearState = {
 const store = new Vuex.Store({
   state: {
     cartData: [],
-    menuData: MenuService.prepareMenu(appConfig.cafeData.menu),
+    menuData: MenuService.prepareMenu(appConfig.cafeData.menu, appConfig.footNote),
+    footNoteData: appConfig.footNote,
     defaultImage: appConfig.cafeData.defaultImage,
     preselectedZip: null,
     minimalSum: null,

@@ -91,9 +91,51 @@ window.appConfig = {
             to: '22:00'
         }
     ],
-    closed: {
+    closed: {//TODO move everything into cafeData
         closed: false,
         message: "wir sind am 22.09 zurück"
+    },
+
+    footNote: {
+        allergens: {
+            "Weizen": "A",
+            "Milcherzeugnis": "B",
+            "Sellerie": "C",
+            "Ei und Eierzeugnisse": "D",
+            "Haselnüße oder Nußerzeugnisse": "E",
+            "Erdnüße": "F",
+            "Soja oder Sojaerzeugnisse": "G",
+            "Walnuss": "H",
+            "Senf oder Senferzeugnisse": "I",
+            "Sulfit": "J",
+            "Sesam": "K",
+            "Fisch": "L",
+            "Krebstiere": "M",
+            "Weichtiere": "N",
+            "Lupinen": "O",
+            "Pecanuss": "P",
+            "Mandel": "Q",
+            "Roggen": "R"
+        },
+
+        additives: {
+            "mit Farbstoffen": "1",
+            "mit Konservierungsstoffen": "2",
+            "mit Antioxidationsmittel": "3",
+            "mit Geschmacksverstärker": "4",
+            "geschwefelt": "5",
+            "geswärtzt": "6",
+            "mit Phosphat": "7",
+            "mit Milcheiweiß": "8",
+            "Koffeinhaltig": "9",
+            "chininhaltig": "10",
+            "mit Süßungsmitteln": "11",
+            "enthält eine Phenylalaninquelle": "12",
+            "gewachst": "13",
+            "mit Nitritpökelsalz": "14",
+            "Taurin": "15",
+            "Tartazin": "16"
+        }
     },
     normalizationData: {
         allergens: {
@@ -161,8 +203,7 @@ window.appConfig = {
         ],
         "menu": [
             {
-                "category" : "Mittagsmenu", //TODO enforce unique category
-                "trais" : ["soup"],
+                "category" : "Mittagsmenu",
                 "visibleAt": [{
                     from: '11:00',
                     to: '14:30'
@@ -181,20 +222,181 @@ window.appConfig = {
                 "supplementPrompt": "Bitte wählen Sie die Vorspeise",
                 "items" : [
                 {
-                  "name" : "M1 Gemüse-Suppe",
-                  "description" : "mit frischem Gemüse & Glasnudeln",
-                  "price" : 2.50,
-                  //"spiciness": 1,
+                  "name" : "M1 Gebratenes Gemüse",
+                  "description" : "mit Champignons",
+                  "price" : 5.30,
                   "allergens": ["Soja oder Sojaerzeugnisse"],
                   "additives": ["mit Geschmacksverstärker"],
-                  "trais" : ["vegetarisch"]
-                 // "ingredients" : null,
-                  //"nutritionFacts" : {
-                  //  "calories" : null,
-                  //  "carbohydrate" : null,
-                  //  "protein" : null,
-                 //   "fat" : null},
-
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M2 Gebratenes Gemüse",
+                  "description" : "mit Erdnuss-Sauce und Kokosmilch",
+                  "price" : 5.60,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M3 Gebratenes Gemüse",
+                  "description" : "mit China-Curry und Kokosmilch",
+                  "price" : 5.60,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M4 Gebratenes Gemüse",
+                  "description" : "mit Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 5.60,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M5 Gebratener Tofu",
+                  "description" : "mit verschiedenen Gemüse und Champinions",
+                  "price" : 5.70,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M6 Gebratener Tofu",
+                  "description" : "mit Gemüse Erdnuss-Sauce und Kokosmilch",
+                  "price" : 5.70,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis", "Erdnüße"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M7 Gebratener Tofu",
+                  "description" : "mit Gemüse, China-Curry und Kokosmilch",
+                  "price" : 5.70,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M8 Gebratener Tofu",
+                  "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 5.70,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M9 Gebratener Eierreis",
+                  "description" : "mit versch. Gemüse",
+                  "price" : 5.30,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M10 Gebratene Eiernudeln",
+                  "description" : "mit versch. Gemüse",
+                  "price" : 5.50,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["vegetarisch"]
+                },
+                {
+                  "name" : "M11 Gebratener Eierreis",
+                  "description" : "mit Gemüse und Hühnerfleisch",
+                  "price" : 6.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M12 Gebratener Eierreis",
+                  "description" : "mit Gemüse und Rindfleisch",
+                  "price" : 6.20,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M13 Gebratene Eiernudeln",
+                  "description" : "mit Gemüse und Hühnerfleisch",
+                  "price" : 6.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M14 Gebratene Eiernudeln",
+                  "description" : "mit Gemüse und Rindfleisch",
+                  "price" : 6.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M15 Chop-Suey",
+                  "description" : "gebr. Hühnerfleisch mit versch. Gemüse",
+                  "price" : 6.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M16 Gung-Po",
+                  "description" : "gebr. Hühnerfl., Gemüse in Hoisin und Cashewnüssen",
+                  "price" : 6.00,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Haselnüße oder Nußerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M17 Bamboo",
+                  "description" : "gebr. Hühnerfleisch, Bambus, Pilze",
+                  "price" : 6.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen", "Bambus", "Pilze"]
+                },
+                {
+                  "name" : "M18 Ga Chua Ngot",
+                  "description" : "gebackenes Hühnerfleisch, Gemüse, Ananas, Bambus, in süß-sauer Sause",
+                  "price" : 6.00,
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen", "Bambus"]
+                },
+                {
+                  "name" : "M19 Sate",
+                  "description" : "gebr. Hühnerfleisch mit Gemüse Erdnuss-Sause und Kokosmlich",
+                  "price" : 6.00,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis", "Erdnüße"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M20 China-Curry",
+                  "description" : "gebr. Hühnerfleisch, Gemüse, China-Curry und Kokosmilch",
+                  "price" : 6.00,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M21 Thai-Curry",
+                  "description" : "gebr. Hühnerfleisch, Gemüse, Kokosmilch, Thai-Rot-Curry, Basilikum",
+                  "price" : 6.00,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
                 },
                 {
                   "name" : "2 Peking-Suppe",
@@ -202,7 +404,7 @@ window.appConfig = {
                   "price" : 2.50,
                   "spiciness": 2,
                   "additives": ["mit Geschmacksverstärker"],
-                  "trais" : ["vegetarisch"]
+                  "traits" : ["vegetarisch"]
                 },
                 {
                   "name" : "Frühlingsrollen",
@@ -218,7 +420,7 @@ window.appConfig = {
                 } ] },
 
           {"category" : "Suppen",
-            "trais" : ["soup"],
+            "traits" : ["soup"],
             "items" : [
             {
               "name" : "1 Gemüse-Suppe",
@@ -227,7 +429,7 @@ window.appConfig = {
               //"spiciness": 1,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["vegetarisch"]
+              "traits" : ["vegetarisch"]
              // "ingredients" : null,
               //"nutritionFacts" : {
               //  "calories" : null,
@@ -242,7 +444,7 @@ window.appConfig = {
               "price" : 2.50,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["vegetarisch"]
+              "traits" : ["vegetarisch"]
             },
             {
               "name" : "3 Wan-Tan-Suppe",
@@ -250,7 +452,7 @@ window.appConfig = {
               "price" : 3.00,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["fleisch"]
+              "traits" : ["fleisch"]
             },
             {
               "name" : "4 Glasnudel-Suppe",
@@ -258,7 +460,7 @@ window.appConfig = {
               "price" : 3.00,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["Hähnchen", "Bambus", "Glasnudeln"]
+              "traits" : ["Hähnchen", "Bambus", "Glasnudeln"]
             },
             {
               "name" : "5 Tom-Yam-Gai",
@@ -266,7 +468,7 @@ window.appConfig = {
               "price" : 3.20,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["Hähnchen", "Pilze"]
+              "traits" : ["Hähnchen", "Pilze"]
             },
             {
               "name" : "6 Tom-Kha-Gai",
@@ -275,37 +477,37 @@ window.appConfig = {
               "spiciness": 2,
               "allergens": ["Milcherzeugnis"],
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["Hänchen", "Pilze", "Kokos"]
+              "traits" : ["Hänchen", "Pilze", "Kokos"]
             },
             {
               "name" : "7 Tom-Yam-Gung",
               "description" : "mit Gemüse, Garnelen, Pilze in thail.Sauce, sauer-scharf",
               "price" : 3.90,
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["Garnelen", "Pilze"]
+              "traits" : ["Garnelen", "Pilze"]
             },
             {
               "name" : "8 Miso-Suppe",
               "description" : "mit Tofu & Seetang (japanisch)",
               "price" : 3.50,
-              "trais" : ["japanisch"]
+              "traits" : ["japanisch"]
             },
             {
               "name" : "9 Kani-Miso-Suppe",
               "description" : "mit Krebsfleisch & Seetang (japanisch)",
               "price" : 3.50,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["japanisch", "Krabben", "Seetang"]
+              "traits" : ["japanisch", "Krabben", "Seetang"]
             },
             {
               "name" : "10 Little Dragon-Suppe",
               "description" : "mit Gemüse, Schnellnudeln, Hühnerbrust & Koriander",
               "price" : 3.20,
               "additives": ["mit Geschmacksverstärker"],
-              "trais" : ["Nudeln", "Hähnchen"]
+              "traits" : ["Nudeln", "Hähnchen"]
             } ] },
           {"category" : "Vorspeisen",
-            "trais" : ["Vorspeisen"],
+            "traits" : ["Vorspeisen"],
             "items" : [
             {
               "name" : "11 Krupuk",
@@ -317,7 +519,7 @@ window.appConfig = {
               "name" : "12 Herbstrollen",
               "description" : "Vegetarische Minirolle",
               "price" : 2.50,
-              "trais" : ["vegetarian"]
+              "traits" : ["vegetarian"]
             },
             {
               "name" : "013a China-Frühlingsrollen",
@@ -328,7 +530,7 @@ window.appConfig = {
               "name" : "013b China-Frühlingsrollen",
               "description" : "mit Gemüse",
               "price" : 2.50,
-              "trais" : ["vegetarisch"]
+              "traits" : ["vegetarisch"]
             },
             {
               "name" : "14 Wan-Tan",
@@ -345,23 +547,23 @@ window.appConfig = {
               "description" : "Hühnerflügel, gebacken mit süßer Chilisauce",
               "spiciness": 1,
               "price" : 3.00,
-              "trais" : ["Hähnchen"]
+              "traits" : ["Hähnchen"]
             },
             {
               "name" : "17 Großgarnelen",
               "description" : "Gebacken mit süßer Chilisauce",
               "price" : 4.50,
               "spiciness": 1,
-              "trais" : ["Garnelen", "seafood"]
+              "traits" : ["Garnelen", "seafood"]
             } ] },
           {"category" : "Salate",
-            "trais" : ["salads"],
+            "traits" : ["salads"],
             "items" : [
             {
               "name" : "21 Gemischter Salat",
               "description" : "mit Gemüse der Saison (Bitte Dressing auswählen)",
               "price" : 3.00,
-              "trais" : ["vegetarisch"]
+              "traits" : ["vegetarisch"]
             },
             {
               "name" : "021a Develey-Dressing Balsamico",
@@ -405,7 +607,7 @@ window.appConfig = {
               "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
               "price" : 3.40,
               "allergens": ["Soja oder Sojaerzeugnisse"],
-              "trais" : ["Hähnchen"]
+              "traits" : ["Hähnchen"]
             },
             {
               "name" : "24 Tintenfisch Salat",
@@ -426,7 +628,7 @@ window.appConfig = {
               "description" : "Salat aus Spinat mit Sesam Sauce (Japanisch)",
               "price" : 4.90,
               "allergens": ["Soja oder Sojaerzeugnisse", "Sesam"],
-              "trais" : ["japanisch", "Spinat"]
+              "traits" : ["japanisch", "Spinat"]
             },
             {
               "name" : "27 Horenso-Gomaae Salat",
@@ -450,34 +652,34 @@ window.appConfig = {
               "traits" : ["seafood", "fisch", "japanisch"]
             } ] },
           {"category" : "Tages Sushi",
-            "trais" : ["sushi", "lunch-menu", "japanisch"],
+            "traits" : ["sushi", "lunch-menu", "japanisch"],
             "items" : [
             {
               "name" : "S41 12 Röllchen",
               "description" : "3 Tekka-, 3 Kappa-, 3 Sake-, 3 Avokado-Maki",
               "price" : 5.90,
-              "trais" : ["Avokado", "Fisch"],
+              "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S41.menu_02_05_2016_10_20_38.png"]
             },
             {
               "name" : "S42 12 Röllchen",
               "description" : "6 Sake-, 6 Tekka-Maki",
               "price" : 6.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S42.menu_02_05_2016_10_21_48.png"]
             },
             {
               "name" : "S43 12 Röllchen",
               "description" : "6 Salmon-Philadelphia-, 6 Sake-, 3 Avokado-Maki",
               "price" : 7.90,
-              "trais" : ["Avokado", "Fisch"],
+              "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S43.menu_02_05_2016_10_24_59.jpg"]
             },
             {
               "name" : "S44 18 Röllchen",
               "description" : "6 Kappa-, 6 Avokado-, 6 Avokado-Philadelphia-Maki",
               "price" : 8.90,
-              "trais" : ["Avokado", "vegetarisch"],
+              "traits" : ["Avokado", "vegetarisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S44.menu_02_05_2016_10_29_13.jpg"]
             },
             {
@@ -485,35 +687,35 @@ window.appConfig = {
               "description" : "3 Shinko[1]-, 3 Kampyo[1]-, 3 Avokado-, 3 Kappa-, 6 Horenso-Goaae-Maki",
               "price" : 8.90,
               "additives": ["mit Antioxidationsmittel"],
-              "trais" : ["Avokado", "vegetarisch"],
+              "traits" : ["Avokado", "vegetarisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S45.menu_02_05_2016_10_48_24.jpg"]
             },
             {
               "name" : "S46 12 Röllchen + 2 Nigiri",
               "description" : "3 Sake-, 3 Tekka-, 6 Kappa-Maki + 1 Thunfisch, 1 Lachs",
               "price" : 8.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S46.menu_02_05_2016_10_49_38.jpg"]
             },
             {
               "name" : "S47 18 Röllchen",
               "description" : "6 Sake-Kawa-, 3 Kappa-, 6 Sake-, 3 Avokado-Maki",
               "price" : 9.90,
-              "trais" : ["Avokado", "Fisch"],
+              "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S47.menu_02_05_2016_10_55_28.jpg"]
             },
             {
               "name" : "S48 12 Röllchen + 3 Nigiri",
               "description" : "3 Kappa-, 3 Sake-, 3 Kampyo[1]-, 3 Tekka-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstrich",
               "price" : 10.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S48.menu_02_05_2016_11_01_55.jpg"]
             },
             {
               "name" : "S49 12 Röllchen + 2 Nigiri",
               "description" : "6 Sake-, 6 Tekka-Maki + 1 Thunfisch, 1 Lachs",
               "price" : 10.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S49.menu_02_05_2016_11_02_54.jpg"]
             },
             {
@@ -521,7 +723,7 @@ window.appConfig = {
               "description" : "6 Sake-, 6 Alaska-Sesam-Maki + 1 Thunfisch, 1 Lachs",
               "price" : 11.90,
               "allergens": ["Sesam"],
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S50.menu_04_05_2016_09_05_19.jpg"]
             },
             {
@@ -529,7 +731,7 @@ window.appConfig = {
               "description" : "6 California Tobiko[1]-, 6 Sake-Kawa-, 6 Avocado-Philadelphia-Maki",
               "price" : 11.90,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["Fisch", "Avokado"],
+              "traits" : ["Fisch", "Avokado"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S51.menu_04_05_2016_12_32_05.jpg"]
             },
             {
@@ -537,7 +739,7 @@ window.appConfig = {
               "description" : "3 California Tobiko[1]-, 3 Alaska-Tobiko[1]-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstich, 1 Scampi, 1 Tintenfisch",
               "price" : 13.90,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["Avokado", "Fisch", "seafood"],
+              "traits" : ["Avokado", "Fisch", "seafood"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S52.menu_04_05_2016_12_34_06.jpg"]
             },
             {
@@ -545,7 +747,7 @@ window.appConfig = {
               "description" : "6 California[1]-Sesam-, 3 Avokado-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch",
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["Avokado", "Fisch", "seafood"],
+              "traits" : ["Avokado", "Fisch", "seafood"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S53.menu_04_05_2016_12_41_35.jpg"]
             },
             {
@@ -553,21 +755,21 @@ window.appConfig = {
               "description" : "3 Sake-, 3 Kampyo[1]-, 3 Tekka-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch, 1 Octopus",
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["Fisch", "seafood"],
+              "traits" : ["Fisch", "seafood"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S54.menu_04_05_2016_12_42_54.jpg"]
             },
             {
               "name" : "S55 12 Röllchen + 6 Nigiri",
               "description" : "6 Avokado-, 6 Tekka-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Octopus",
               "price" : 15.90,
-              "trais" : ["Avokado", "Fisch", "seafood"],
+              "traits" : ["Avokado", "Fisch", "seafood"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S55.menu_04_05_2016_12_43_42.jpg"]
             },
             {
               "name" : "S56 12 Röllchen + 6 Nigiri",
               "description" : "3 Kappa-, 3 Shinko-, 3 Ebi-, 3 Kani-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch",
               "price" : 15.90,
-              "trais" : ["Fisch", "seafood"],
+              "traits" : ["Fisch", "seafood"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S56.menu_06_05_2016_10_39_17.jpg"]
             },
             {
@@ -575,57 +777,57 @@ window.appConfig = {
               "description" : "3 Shinko-, 3 Kampyo[1]-, 3 Avokado-, 3 Kappa-Maki + 3 Thunfisch, 2 Lachs, 1 Lachskaviar",
               "price" : 16.90,
               "additives": ["mit Farbstoffen"],
-              "trais" : ["Avokado", "Fisch"],
+              "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S57.menu_06_05_2016_10_44_32.jpg"]
             },
             {
               "name" : "S58 24 Röllchen + 10 Nigiri (für 2 Personen)",
               "description" : "6 Kappa-, 6 Tekka-, 6 Alaska-, 6 Sake-Maki + 10 Nigiri",
               "price" : 29.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S58.menu_06_05_2016_10_41_19.jpg"]
             },
             {
               "name" : "S59 18 Röllchen + 14 Nigiri (für 2-3 Personen)",
               "description" : "6 California[1]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki + 14 Nigiri",
               "price" : 34.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S59.menu_06_05_2016_10_42_31.jpg"]
             },
             {
               "name" : "S60 18 Röllchen + 18 Nigiri (für 3 Personen)",
               "description" : "6 Sake-, 6 Tekka-, 6 Alaska-Tobiko[1]-Maki + 18 Nigiri",
               "price" : 44.90,
-              "trais" : ["Fisch"],
+              "traits" : ["Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S60.menu_06_05_2016_10_43_06.jpg"]
             },
             {
               "name" : "S61 36 Röllchen - 28 Nigiri (Familien-Glück f. 4 Per.)",
               "description" : "6 Shinko-, 6 Tekka-, 6 Sake-, 6 Avokado-, 6 Sake-Kawa-, 6 Alaska-Tobico-Maki + 28 Nigiri",
               "price" : 64.90,
-              "trais" : ["Avokado", "Fisch"],
+              "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://www.littledragon-asiabistro.de/images/foods/big/S61.menu_06_05_2016_10_43_41.jpg"]
             } ] },
           {"category" : "Sushi - Nigiri",
-            "trais" : ["sushi", "nigiri", "japanisch"],
+            "traits" : ["sushi", "nigiri", "japanisch"],
             "items" : [
             {
               "name" : "301 Sushi Nigiri - Avocado",
               "description" : "Avocado (1 Stück)",
               "price" : 1.80,
-              "trais" : ["Avokado", "vegetarisch"]
+              "traits" : ["Avokado", "vegetarisch"]
             },
             {
               "name" : "302 Sushi Nigiri - Ika",
               "description" : "Tintenfisch (1 Stück)",
               "price" : 2.1,
-              "trais" : ["seafood"]
+              "traits" : ["seafood"]
             },
             {
               "name" : "303 Sushi Nigiri - Toka",
               "description" : "Oktopus (1 Stück)",
               "price" : 2.00,
-              "trais" : ["seafood"]
+              "traits" : ["seafood"]
             },
             {
               "name" : "304 Sushi Nigiri - Kani",
@@ -636,19 +838,19 @@ window.appConfig = {
               "name" : "305 Sushi Nigiri - Sake",
               "description" : "Lachs (1 Stück)",
               "price" : 2.20,
-               "trais" : ["Fisch"]
+               "traits" : ["Fisch"]
             },
             {
               "name" : "306 Sushi Nigiri - Ebi",
               "description" : "Scampi (1 Stück)",
               "price" : 2.50,
-              "trais" : ["seafood"]
+              "traits" : ["seafood"]
             },
             {
               "name" : "307 Sushi Nigiri - Maguro",
               "description" : "Thunfisch (1 Stück)",
               "price" : 2.50,
-              "trais" : ["Fisch"]
+              "traits" : ["Fisch"]
             },
             {
               "name" : "308 Sushi Nigiri - Tobiko",
@@ -663,7 +865,7 @@ window.appConfig = {
               "traits": ["Fisch"]
             } ] },
           {"category" : "Sushi - Nori Maki",
-            "trais" : ["sushi", "maki"],
+            "traits" : ["sushi", "maki"],
             "items" : [
             {
               "name" : "311 Sushi Nori Maki - Kappa-Maki",
@@ -821,7 +1023,7 @@ window.appConfig = {
               "traits": ["Avokado", "Thunfisch", "Käse"]
             } ] },
           {"category" : "Sushi Temaki / Sashimi",
-            "trais" : ["sushi", "temaki"],
+            "traits" : ["sushi", "temaki"],
             "items" : [
             {
               "name" : "333 Sushi Temaki - Maguro",
@@ -902,7 +1104,7 @@ window.appConfig = {
               "traits": ["Lachs", "Thunfisch"]
             } ] },
           {"category" : "Hühnerfleischgerichte (mit Reis)",
-            "trais" : ["chicken", "rice", "Hauptspeise"],
+            "traits" : ["chicken", "rice", "Hauptspeise"],
             "items" : [
             {
               "name" : "211 Gebr. Hühnerfleisch - Chop-Suey",
@@ -982,7 +1184,7 @@ window.appConfig = {
               "traits": ["Ananas", "Bambus"]
             } ] },
           {"category" : "Hühnerkeule (o. Knochen, m. Reis)",
-            "trais" : ["Hähnchen"],
+            "traits" : ["Hähnchen"],
             "items" : [
             {
               "name" : "221 Knusprige Hühnerkeule",
@@ -1046,7 +1248,7 @@ window.appConfig = {
               "traits": ["Kokos"]
             } ] },
           {"category" : "Rindfleischgerichte (mit Reis)",
-            "trais" : ["beef", "Reis"],
+            "traits" : ["beef", "Reis"],
             "items" : [
             {
               "name" : "231 Gebr. Rindfleisch - Chop-Suey",
@@ -1135,7 +1337,7 @@ window.appConfig = {
               "traits": ["Zwiebel"]
             } ] },
           {"category" : "Schweinefleischgerichte (mit Reis)",
-            "trais" : ["pork", "Reis"],
+            "traits" : ["pork", "Reis"],
             "items" : [
             {
               "name" : "241 Gebr. Schweinefleisch - Chop-Suey",
@@ -1192,7 +1394,7 @@ window.appConfig = {
               "traits": ["Kokos"]
             } ] },
           {"category" : "Entenfleischgerichte (mit Reis)",
-            "trais" : ["duck", "Reis"],
+            "traits" : ["duck", "Reis"],
             "items" : [
             {
               "name" : "251 Gebr. Entenfleisch - Chop-Suey",
@@ -1265,7 +1467,7 @@ window.appConfig = {
               "traits": ["Bambus", "Ananas"]
             } ] },
           {"category" : "Meerfrüchtegerichte (mit Reis)",
-            "trais" : ["seafood", "Reis"],
+            "traits" : ["seafood", "Reis"],
             "items" : [
             {
               "name" : "261 Gebr. Tintenfisch - Muc Xan Gung",
@@ -1338,7 +1540,7 @@ window.appConfig = {
               "traits": ["Garnelen"]
             } ] },
           {"category" : "Vegetarische Gerichte (mit Reis)",
-            "trais" : ["vegetarisch", "Reis"],
+            "traits" : ["vegetarisch", "Reis"],
             "items" : [
             {
               "name" : "291 Gebratenes Gemüse",
@@ -1516,7 +1718,7 @@ window.appConfig = {
               "traits": ["Ente", "vegetarisch-NEG", "Nudeln"] //TODO reis-NEG
             } ] },
           {"category" : "Nachtisch",
-            "trais" : ["dessert"], //TODO test
+            "traits" : ["dessert"], //TODO test
             "items" : [
             {
               "name" : "121 Gebackene Banane",
@@ -1559,7 +1761,7 @@ window.appConfig = {
               "traits": ["Mango"]
             } ] },
           {"category" : "Nichtalkohlische Getränke",
-            "trais" : ["drinks"],
+            "traits" : ["drinks"],
             "items" : [
             {
               "name" : "125a Coca Cola",
@@ -1632,7 +1834,7 @@ window.appConfig = {
               "traits": ["Saft"]
             } ] },
           {"category" : "Alkohlische Getränke",
-            "trais" : ["alcohol", "drinks"],
+            "traits" : ["alcohol", "drinks"],
             "items" : [
             {
               "name" : "128a Helles Bier",
@@ -1735,7 +1937,7 @@ window.appConfig = {
               "price" : 12.00
             } ] },
           {"category" : "Extras",
-            "trais" : ["extras"],
+            "traits" : ["extras"],
             "items" : [
             {
               "name" : "400 Portion Reis",
@@ -1777,7 +1979,7 @@ window.appConfig = {
               "price" : 3.00
             } ] },
           {"category" : "Allergene, Zusatzstoffe, Weitere Fragen",
-            "trais" : ["extras"],
+            "traits" : ["extras"],
             "items" : [
             {
               "name" : "400 Portion Reis",

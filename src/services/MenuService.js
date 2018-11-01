@@ -1,5 +1,15 @@
 const _ = require('lodash')
 
+const mapDishes = (menu, func) => {
+    return menu.map(category => {//TODO check if not modifying
+         const newItems = _.map(category.items, func)
+         //const result = func(category)
+         category.items = newItems
+
+         return category
+    })
+}
+
 const MenuService = {
     findItemByReference: function(ref, menu) {
         const category = menu.find(category => category.category === ref.category)
@@ -27,10 +37,8 @@ const MenuService = {
         return item
     },
 
-    prepareMenu: function(menu) {
-        const result = _.cloneDeep(menu)
-
-        return result.map(category => {
+    propagateSupplementedBy: function(menu) {
+        return menu.map(category => {
             if (category.supplementedBy) {
                 const supplementedByItems = this.resolveSupplementedBy(category.supplementedBy, menu)
 
@@ -39,6 +47,41 @@ const MenuService = {
 
             return category
         })
+    },
+
+    amendItemItemNameWithFootNoteData: function(item, footNoteData) {
+        const allergensStr = _.map(item.allergens, (allergen => footNoteData.allergens[allergen])).join(', ')
+        const additivesStr = _.map(item.additives, (additive => footNoteData.additives[additive])).join(', ')
+        const nameExtension = []
+
+        if (allergensStr) {
+            nameExtension.push(allergensStr)
+        }
+
+        if (additivesStr) {
+            nameExtension.push(additivesStr)
+        }
+
+        item.name = item.name + ' ' + nameExtension.join(', ')
+
+        return item
+    },
+
+    amendItemsWithFootNoteData: function(menu, footNoteData) {
+        const self = this
+
+        return mapDishes(menu, dish => self.amendItemItemNameWithFootNoteData(dish, footNoteData))
+    },
+
+    prepareMenu: function(menu, footNoteData) {
+        let result = _.cloneDeep(menu)
+
+        result = this.propagateSupplementedBy(result)
+
+        //TODO if
+        result = this.amendItemsWithFootNoteData(result, footNoteData)
+
+        return result
     }
 }
 

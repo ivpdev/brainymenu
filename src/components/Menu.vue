@@ -13,6 +13,8 @@
                     :defaultImage="defaultImage" />
             </f7-list-group>
         </f7-list-item>
+        <FootNote :data="footNoteData"
+                  phone="TODO"/>
     </f7-list>
 </template>
 
@@ -23,6 +25,7 @@ import { f7Card, f7List, f7ListGroup,
     f7AccordionToggle, f7AccordionContent, f7Block,
     f7Icon } from 'framework7-vue'
 import DishListItem from './dish-item/DishListItem'
+import FootNote from './FootNote'
 import Dom7 from 'dom7'
 
 const $$ = Dom7
@@ -41,11 +44,13 @@ export default {
     f7AccordionToggle,
     f7AccordionContent,
     f7Block,
-    f7Icon
+    f7Icon,
+    FootNote
   },
   props: {
     menuData: Array,
-    defaultImage: String
+    defaultImage: String,
+    footNoteData: Object
   },
 
   data: function() {

@@ -3,7 +3,8 @@
       <f7-view main>
           <f7-page>
             <Menu :menuData="menuData"
-                  :defaultImage="defaultImage"/>
+                  :defaultImage="defaultImage"
+                  :footNoteData="footNoteData"/>
 
             <!-- f7-fab color="red"
                 position="left-bottom"
@@ -89,6 +90,13 @@ export default {
   computed: {
     menuData: function() {
         return store.state.menuData
+    },
+
+    footNoteData: function() {
+        console.log("1")
+        console.log(store.state.footNoteData)
+        console.log(store.state)
+        return store.state.footNoteData
     },
 
     defaultImage: function() {

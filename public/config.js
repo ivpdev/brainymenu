@@ -213,12 +213,12 @@ window.appConfig = {
                 "supplementedBy": [{
                     "reference": {
                         "category": "Mittagsmenu",
-                        "item": "Frühlingsrollen"
+                        "item": "Sauer-Scharf-Suppe"
                     }
                 }, {
                     "reference": {
                         "category": "Mittagsmenu",
-                        "item": "TODO Suppe"
+                        "item": "4 Mini Frühlingsrollen"
                     }
                 }],
                 "supplementPrompt": "Bitte wählen Sie die Vorspeise",
@@ -401,22 +401,239 @@ window.appConfig = {
                   "traits" : ["Hähnchen"]
                 },
                 {
-                  "name" : "2 Peking-Suppe",
-                  "description" : "mit Gemüse (süß-sauer-scharf)",
-                  "price" : 2.50,
-                  "spiciness": 2,
+                  "name" : "M22 Knusprige Hühnerkeule",
+                  "description" : "mit versch. Gemüse",
+                  "price" : 6.70,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
                   "additives": ["mit Geschmacksverstärker"],
-                  "traits" : ["vegetarisch"]
+                  "traits" : ["Hähnchen"]
                 },
                 {
-                  "name" : "Frühlingsrollen",
-                  "description" : "TODO",
+                  "name" : "M23 Kn. Hühnerkeulest",
+                  "description" : "mit Gemüse in Hoisin, Cashewnüsse",
+                  "price" : 6.70,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Haselnüße oder Nußerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M24 Knusprige Hühnerkeule",
+                  "description" : "mit Gemüse, Bambus und Pilze",
+                  "price" : 6.70,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M25 Knusprige Hühnerkeule",
+                  "description" : "mit Gemüse, Kokosmilch und Erdnuss-Sause",
+                  "price" : 6.70,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Erdnüße", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M26 Knusprige Hühnerkeule",
+                  "description" : "mit Gemüse, China-Curry und Kokosmilch",
+                  "price" : 6.70,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M27 Knusprige Hühnerkeule",
+                  "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 6.70,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Hähnchen"]
+                },
+                {
+                  "name" : "M28 Chop-Suey",
+                  "description" : "gebratenes Rindfleisch mit versch. Gemüse",
+                  "price" : 6.20,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M29 Gung-Po",
+                  "description" : "gebr. Rindfl., Gemüse in Hoisin und Cashewnüsse",
+                  "price" : 6.20,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Haselnüße oder Nußerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M30 Sate",
+                  "description" : "gebr. Rindfl., Gemüse in Hoisin und Cashewnüsse",
+                  "price" : 6.20,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis", "Erdnüße"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M31 China-Curry",
+                  "description" : "gebr. Rindfl, Gemüse, China-Curry und Kokosmilch",
+                  "price" : 6.20,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M32 Thai Curry",
+                  "description" : "gebratenes Rindfleisch, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 6.20,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M33 Nua Pad Bai",
+                  "description" : "gebratenes Rindfleisch, Thai Basilikum, rote Zwiebeln",
+                  "price" : 6.20,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Rind"]
+                },
+                {
+                  "name" : "M34 Sate",
+                  "description" : "gebratenes Schweinfleisch, Gemüse, Kokosmilch & Erdnuss-Sause",
+                  "price" : 6.00,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis", "Erdnüße"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Schwein"]
+                },
+                {
+                  "name" : "M35 China-Curry",
+                  "description" : "gebratenes Schweinfleisch, Gemüse, China-Curry, Kokosmilch",
+                  "price" : 6.00,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Schwein"]
+                },
+                {
+                  "name" : "M36 Thai-Curry",
+                  "description" : "gebratenes Schweinfleisch, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 6.00,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Schwein"]
+                },
+                {
+                  "name" : "M37 Knusprige Ente",
+                  "description" : "mit verschiedenem Gemüse",
+                  "price" : 7.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Ente"]
+                },
+                {
+                  "name" : "M38 Knusprige Ente",
+                  "description" : "mit Gemüse in Hoisin und Cashewnüsse",
+                  "price" : 7.00,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Haselnüße oder Nußerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Ente"]
+                },
+                {
+                  "name" : "M39 Knusprige Ente",
+                  "description" : "mit Gemüse Erdnuss-Sauce und Kokosmilch",
+                  "price" : 7.00,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Erdnüße", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Ente"]
+                },
+                {
+                  "name" : "M40 Knusprige Ente",
+                  "description" : "mit Gemuse, China-Curry und Kokosmilch",
+                  "price" : 7.00,
+                  "spiciness": 2,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Ente"]
+                },
+                {
+                  "name" : "M41 Knusprige Ente",
+                  "description" : "mit Gemuse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "spiciness": 3,
+                  "price" : 7.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Ente"]
+                },
+                {
+                  "name" : "M42 Knusprige Ente",
+                  "description" : "mit Gemuse, Ananas, Bambus in süßsauer Sauce",
+                  "price" : 7.00,
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["Ente"]
+                },
+                {
+                  "name" : "M43 Muc Thai Curry",
+                  "description" : "geb. Tintenfisch, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 6.20,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["seafood"]
+                },
+                {
+                  "name" : "M44 Ca Thai Curry",
+                  "description" : "gebackenes Fischfilet, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 6.20,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["seafood"]
+                },
+                {
+                  "name" : "M45 Tom Thai Curry",
+                  "description" : "gebr. Großgarnelen, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
+                  "price" : 7.00,
+                  "spiciness": 3,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["seafood"]
+                },
+                {
+                  "name" : "M46 Gung-Po",
+                  "description" : "gebr. Großgarnelen, Gemüse in Hoisin und Cashewnüsse",
+                  "price" : 7.00,
+                  "spiciness": 1,
+                  "allergens": ["Soja oder Sojaerzeugnisse", "Haselnüße oder Nußerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["seafood"]
+                },
+                {
+                  "name" : "M47 Chop-Suey",
+                  "description" : "gebr. Großgarnelen mit verschiedenem Gemüse",
+                  "price" : 7.00,
+                  "allergens": ["Soja oder Sojaerzeugnisse"],
+                  "additives": ["mit Geschmacksverstärker"],
+                  "traits" : ["seafood"]
+                },
+                {
+                  "name" : "4 Mini Frühlingsrollen",
                   "price" : 0,
                   "onlyAsSupplement": true
                 },
                 {
-                  "name" : "TODO Suppe",
-                  "description" : "TODO",
+                  "name" : "Sauer-Scharf-Suppe",
                   "price" : 0,
                   "onlyAsSupplement": true
                 } ] },

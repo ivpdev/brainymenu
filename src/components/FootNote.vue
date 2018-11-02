@@ -77,7 +77,7 @@ export default {
         this.$refs.contactsPopover.open(e.target)
     },
     onAllergensMouseOut: function() {
-        console.log("out")
+        //console.log("out")
         //this.$refs.allergensPopover.close()
     }
 

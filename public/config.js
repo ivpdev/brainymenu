@@ -137,7 +137,7 @@ window.appConfig = {
             "Tartazin": "16"
         },
 
-        contact: "TODO 123"
+        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 233 - 63508"
     },
     normalizationData: {
         allergens: {
@@ -197,7 +197,7 @@ window.appConfig = {
         "id": 5,
         "name": "ASIA LITTLE DRAGON",
         "about": "Bei uns können Sie bestellen, liefern lassen,\n selber abholen oder auch in unseren\n Räumlichkeiten Platz nehmen\n",
-        "defaultImage": "http://www.littledragon-asiabistro.de/images/skin/file-broken.png",
+        "defaultImage": "http://asia-littledragon.de/images_br/ld_seitback1.jpg",
         "points": [
           {
             "id": 51

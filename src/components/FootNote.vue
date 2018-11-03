@@ -8,7 +8,7 @@
               <div class="chip-label">Zusatzstoffen</div>
             </div>
             <div class="chip" @mouseover="onContactMouseIn">
-              <div class="chip-label">Kontakt</div>
+              <div class="chip-label">Für weitere Fragen</div>
             </div>
         </f7-block>
 
@@ -77,7 +77,6 @@ export default {
         this.$refs.contactsPopover.open(e.target)
     },
     onAllergensMouseOut: function() {
-        //console.log("out")
         //this.$refs.allergensPopover.close()
     }
 

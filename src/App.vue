@@ -26,10 +26,11 @@
               <f7-fab color="red"
                       position="center-bottom"
                       panel-open="left"
+                      class="cart-button"
                       ref="fabCart"
-
                       @click="openCart">
                   <f7-icon fa="shopping-cart"></f7-icon>
+                  Zur Kasse
                   <f7-icon f7="close"></f7-icon>
 
                   <f7-badge class="shopping-cart-count" color="orange">{{itemsInCartCount}}</f7-badge>
@@ -225,4 +226,12 @@ export default {
     padding-bottom: 56px;
 }
 
+.fab.cart-button a {
+    width: 118px;
+}
+
+.fab>a i.icon {
+    right: 11px;
+    left: unset;
+}
 </style>

@@ -217,16 +217,30 @@ const store = new Vuex.Store({
     },
 
     submitOrder: function({commit, state, dispatch}, data) {
-        commit('setOrderSubmitPending')
+        const availability = MenuService.checkDishesAvailability(dishes)
 
-        OrderSubmittingService
-            .submitOrder(state.cartData, state.checkoutForm)
-                .then(() => {
-                    dispatch('handleOrderSuccess')})
-                .catch(error => {
-                    commit('unsetOrderSubmitPending')
+        if (!openingTimeService.isOpenNow()) {
+            //TODO
+        }
 
-                    dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)})
+        if (availability.available) {
+            commit('setOrderSubmitPending')
+
+            OrderSubmittingService
+                .submitOrder(state.cartData, state.checkoutForm)
+                    .then(() => {
+                        dispatch('handleOrderSuccess')})
+                    .catch(error => {
+                        commit('unsetOrderSubmitPending')
+
+                        dispatch('showGlobalMessage', 'Submit order failed. Reason: ' + error)})
+        } else {
+            const errorMessage =
+                "Folgende Speisen können nicht bestellt werden:" +
+                availability.errors.map(error => error.dishName + ' - ' + error.reason)
+
+            dispatch('showGlobalError', errorMessage)
+        }
     },
 
     showGlobalMessage: function(store, message) {

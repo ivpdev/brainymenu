@@ -44,12 +44,26 @@ const timeOfDateIsEarlierOrEqThan = (dateArg, refTimeStr) => {
 }
 
 const OpeningTimeService = {
+    isAvailableNow: function(availableAt) {//TODO refactor: merge matching logic
+        const now = new Date()
+        const matchingSpan = availableAt && availableAt.find(timeSpan => timeOfDateIsLaterOrEqThan(now, timeSpan.from) && timeOfDateIsEarlierOrEqThan(now, timeSpan.to))
+        return !!matchingSpan
+    },
+
     isOpenNow: function() {
+        return this.getOpeningInfo().open
+    },
+
+    whyClosed: function() {
+        return this.getOpeningInfo().closedReason
+    },
+
+    getOpeningInfo: function() {
         const now = new Date()
         const dayOfWeek = daysOfWeek[now.getDay()]
         let open
         let closedReason
-        const defaultClosedReason = "Leider nehmen wir gerade keine Aufträge"
+        const defaultClosedReason = "Leider nehmen wir gerade keine Aufträge" //TODO i18n
 
         if (window.appConfig.closed.closed) {
             open = false

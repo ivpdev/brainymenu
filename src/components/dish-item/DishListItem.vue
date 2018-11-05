@@ -142,11 +142,15 @@ export default {
 
   methods: {
     onAddToCartClick: function(item, event) {
-        if (item.supplementedBy) {
-            this.openSupplementsPopover(event)
-        } else {
-            this.addToCart(item)
-        }
+         if (OpeningTimeService.isOpenNow()) {
+            if (item.supplementedBy) {
+                this.openSupplementsPopover(event)
+            } else {
+                this.addToCart(item)
+            }
+         } else {
+             this.$f7.dialog.alert(OpeningTimeService.whyClosed(), "Wir sind geschlossen")
+         }
     },
 
     onSupplementPicked: function(supplement) {
@@ -160,12 +164,8 @@ export default {
     },
 
     addToCart: function(item) {
-       if (OpeningTimeService.isOpenNow()) {
-            store.dispatch("addToCart", item)
-            this.performFlyToCartAnimation()
-        } else {
-             this.$f7.dialog.alert(OpeningTimeService.whyClosed(), "Wir sind geschlossen")
-        }
+       store.dispatch("addToCart", item)
+       this.performFlyToCartAnimation()
     },
 
     openAdditivesPopover: function(e) {

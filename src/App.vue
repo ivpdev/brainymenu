@@ -1,11 +1,12 @@
 <template>
     <div class="app thema-red">
       <f7-view main>
-          <f7-page>
+          <f7-page ref="page">
             <Menu :menuData="menuData"
                   :defaultImage="defaultImage"
                   :footNoteData="footNoteData"
-                  :footNoteContact="footNoteContact"/>
+                  :footNoteContact="footNoteContact"
+                  ref="menu"/>
 
             <!-- f7-fab color="red"
                 position="left-bottom"
@@ -22,6 +23,13 @@
                   <f7-fab-button color="orange" @click="onButtonClick">C</f7-fab-button>
                 </f7-fab-buttons>
               </f7-fab -->
+
+            <f7-fab color="orange"
+                position="left-bottom"
+                ref="backButton"
+                @click="onBackMenuClicked">
+                Zurück
+              </f7-fab>
 
               <f7-fab color="red"
                       position="center-bottom"
@@ -143,6 +151,17 @@ export default {
     ZipPreselect
   },
   methods: {
+    onBackMenuClicked: function() {
+        this.$refs.menu.collapseAllCategories()
+        this.scrollToTop()
+    },
+
+    scrollToTop: function() {
+        const page = this.$refs.page
+        const pageContent = page.$children.find(component => component.$el.className === 'page-content')
+        pageContent.$el.scrollTop = 0
+    },
+
     openCart: function() {
         if (OpeningTimeService.isOpenNow()) {
             this.$refs.cartPanel.open()

@@ -71,6 +71,14 @@ export default {
   },
 
   methods: {
+    collapseAllCategories: function() {
+        for (var key in this.expanded) {
+          if (this.expanded.hasOwnProperty(key)) {
+            this.$set(this.expanded, key, null)
+          }
+        }
+    },
+
     onCategoryHeaderClick: function(category, index, event) {
         const el = event.target
         const clickedOnHeader = $$(el).hasClass('list-group-title')

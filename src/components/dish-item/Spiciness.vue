@@ -19,7 +19,7 @@ export default {
         if (this.spiciness === 1) {
             return 'leicht scharf'
         } else if (this.spiciness === 2) {
-            return 'mittelscharf'
+            return 'scharf'
         } else if (this.spiciness === 3) {
             return 'sehr scharf'
         } else {

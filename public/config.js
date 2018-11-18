@@ -946,7 +946,7 @@ window.appConfig = {
             },
             {
               "name" : "S51 18 Röllchen",
-              "description" : "6 California Tobiko[1]-, 6 Sake-Kawa-, 6 Avocado-Philadelphia-Maki",
+              "description" : "6 California Tobiko[1,S]-, 6 Sake-Kawa-, 6 Avocado-Philadelphia-Maki",
               "price" : 13.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Fisch", "Avokado"],
@@ -954,7 +954,7 @@ window.appConfig = {
             },
             {
               "name" : "S52 6 Röllchen + 5 Nigiri",
-              "description" : "3 California Tobiko[1]-, 3 Alaska-Tobiko[1]-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstich, 1 Scampi, 1 Tintenfisch",
+              "description" : "3 California Tobiko[1,S]-, 3 Alaska-Tobiko[1]-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstich, 1 Scampi, 1 Tintenfisch",
               "price" : 13.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch", "seafood"],
@@ -962,7 +962,7 @@ window.appConfig = {
             },
             {
               "name" : "S53 12 Röllchen + 4 Nigiri",
-              "description" : "6 California[1]-Sesam-, 3 Avokado-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch",
+              "description" : "6 California[1,S]-Sesam-, 3 Avokado-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch",
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch", "seafood"],
@@ -985,7 +985,7 @@ window.appConfig = {
             },
             {
               "name" : "S56 12 Röllchen + 6 Nigiri",
-              "description" : "3 Kappa-, 3 Shinko-, 3 Ebi-, 3 Kani-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch",
+              "description" : "3 Kappa-, 3 Shinko-, 3 Ebi-, 3 Kani[S]-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch",
               "price" : 15.90,
               "traits" : ["Fisch", "seafood"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S56.menu_03_05_2016_15_18_17.jpg"]
@@ -1007,7 +1007,7 @@ window.appConfig = {
             },
             {
               "name" : "S59 18 Röllchen + 14 Nigiri (für 2-3 Personen)",
-              "description" : "6 California[1]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki + 14 Nigiri",
+              "description" : "6 California[1,S]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki + 14 Nigiri",
               "price" : 34.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S59.menu_03_05_2016_15_26_38.jpg"]
@@ -1194,15 +1194,18 @@ window.appConfig = {
             },
             {
               "name" : "327 Sushi Inside-Out Maki - California-Sesam-Maki",
-              "description" : "mit Surimi und Avokado, ummantelt und Sesam (6 Röllchen)",
+              "description" : "mit Surimi[1,S] und Avokado, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.50,
-              "allergens": ["Sesam"],
+              "additives": ["mit Farbstoffen"],
+              "allergens": ["Sesam", "Krebsfleisch-Imitat"],
               "traits": ["Avokado"]
             },
             {
               "name" : "328 Sushi Inside-Out Maki - California-Tobiko-Maki",
-              "description" : "mit Surimi und Avokado, ummantelt und Fliegender Fisch-Rogen (6 Röllchen)",
+              "description" : "mit Surimi[1,S] und Avokado, ummantelt und Fliegender Fisch-Rogen (6 Röllchen)",
               "price" : 5.00,
+              "additives": ["mit Farbstoffen"],
+              "allergens": ["Sesam", "Krebsfleisch-Imitat"],
               "traits": ["Fisch", "Avokado"]
             },
             {
@@ -1257,9 +1260,10 @@ window.appConfig = {
             },
             {
               "name" : "335 Sushi Temaki - California",
-              "description" : "mit Avokado, Surimi, Lachskaviar und Sesam (1 Stück)",
+              "description" : "mit Avokado, Surimi[1,S], Lachskaviar und Sesam (1 Stück)",
               "price" : 5.00,
-              "allergens": ["Sesam"],
+              "additives": ["mit Farbstoffen"],
+              "allergens": ["Sesam", "Krebsfleisch-Imitat"],
               "traits": ["Avokado", "Fisch"]
             },
             {

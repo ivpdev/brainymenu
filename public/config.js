@@ -115,7 +115,8 @@ window.appConfig = {
             "Lupinen": "O",
             "Pecanuss": "P",
             "Mandel": "Q",
-            "Roggen": "R"
+            "Roggen": "R",
+            "Krebsfleisch-Imitat": "S"
         },
 
         additives: {

@@ -5,6 +5,7 @@ import axios from 'axios'
 import OrderSubmittingService from './services/OrderSubmittingService'
 import OpeningTimeService from './services/OpeningTimeService'
 import MenuService from './services/MenuService'
+import UrlParamsService from './services/UrlParamsService'
 
 Vue.use(Vuex)
 
@@ -68,10 +69,13 @@ const checkoutFormClearState = {
    }
 }
 
+const filterTerm =  UrlParamsService.getFilterTerm()
+
 const store = new Vuex.Store({
   state: {
     cartData: [],
-    menuData: MenuService.prepareMenu(appConfig.cafeData.menu, appConfig.footNote),
+    filterTerm: filterTerm,
+    menuData: MenuService.prepareMenu(appConfig.cafeData.menu, appConfig.footNote, filterTerm),
     footNoteData: appConfig.footNote,
     footNoteContact: appConfig.footNote.contact,
     defaultImage: appConfig.cafeData.defaultImage,

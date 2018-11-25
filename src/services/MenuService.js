@@ -1,5 +1,6 @@
 const _ = require('lodash')
 import OpeningTimeService from './OpeningTimeService'
+const MenuFilterer = require('menu-filterer')
 
 const mapDishes = (menu, func) => {
     return menu.map(category => {//TODO check if not modifying
@@ -147,12 +148,19 @@ const MenuService = {
         return mapDishes(menu, dish => self.amendItemItemNameWithFootNoteData(dish, footNoteData))
     },
 
-    prepareMenu: function(menu, footNoteData) {
+    prepareMenu: function(menu, footNoteData, filterTerm) {
         let result = _.cloneDeep(menu)
+
+        /*let filterTerm = {
+            traits: ["vegetarisch"]
+        }*/
+
+        //TODO normalize menu
 
         result = this.propagateSupplementedBy(result)
         result = this.propagateAvailableAt(result)
         result = this.removeUnavailableItems(result)
+        result = MenuFilterer.filter(menu, filterTerm)
 
         //TODO if
         result = this.amendItemsWithFootNoteData(result, footNoteData)

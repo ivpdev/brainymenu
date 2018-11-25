@@ -31,7 +31,7 @@
                 Zurück
               </f7-fab>
 
-              <f7-fab color="red"
+              <!-- f7-fab color="red"
                       position="center-bottom"
                       panel-open="left"
                       class="cart-button"
@@ -42,7 +42,7 @@
                   <f7-icon f7="close"></f7-icon>
 
                   <f7-badge class="shopping-cart-count" color="orange">{{itemsInCartCount}}</f7-badge>
-              </f7-fab>
+              </f7-fab -->
 
               <!-- f7-fab color="red"
                       position="right-bottom"

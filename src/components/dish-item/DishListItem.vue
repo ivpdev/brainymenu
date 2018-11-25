@@ -1,7 +1,27 @@
 <template>
 <div class="item-content dish-list-item">
     <div class="item-media">
-      <img v-bind:src="thumbnail" class="thumbnail" ref="thumbnail">
+      <img v-bind:src="thumbnail"
+              class="thumbnail"
+              ref="thumbnail"
+              @click="openPhotoBrowser">
+
+      <div v-if="item.pics">
+        <div class="more-pictures-count">{{morePicturesLabel}}</div>
+        <f7-photo-browser
+          ref="pb"
+          :photos="picsForBrowser"
+          :routableModals="false"
+          theme="dark">
+        </f7-photo-browser>
+
+        <!--img class="dish-main-pic"
+             v-bind:src="thumbnail"
+             @click="openPhotoBrowser"></img>
+
+        <div class="more-pictures-count">{{morePicturesLabel}}</div -->
+     </div>
+
     </div>
     <div class="item-inner">
       <div class="item-title-row">
@@ -11,7 +31,6 @@
                 fill
                 round
                 color="orange"
-                icon-fa="cart-plus"
                 @click="onAddToCartClick(item, $event)">
                 {{formattedPrice}} &euro;
             </f7-button>
@@ -94,7 +113,7 @@
 <script>
 import store from '../../store'
 import utils from '../../services/utils'
-import { f7Button, f7Popover, f7Chip, f7Block } from 'framework7-vue'
+import { f7Button, f7Popover, f7Chip, f7Block, f7PhotoBrowser } from 'framework7-vue'
 import NutritionFacts from './NutritionFacts'
 import Allergens from './Allergens'
 import Additives from './Additives'
@@ -108,6 +127,7 @@ export default {
     f7Button,
     f7Popover,
     f7Chip,
+    f7PhotoBrowser,
     NutritionFacts,
     Allergens,
     Additives,
@@ -137,7 +157,28 @@ export default {
 
     showAllergens: function() {
         return false
-    }
+    },
+
+    morePicturesLabel: function() {
+        const pics = this.picsForBrowser
+        let picturesCount
+
+        if (pics && pics.length && pics.length > 1) {
+            picturesCount = pics.length - 1
+        } else {
+            picturesCount = 0
+        }
+
+        return picturesCount ? '+' + picturesCount : ''
+    },
+    picsForBrowser: function() {
+        return _.map(this.item.pics, (url) => {
+            return {
+                url: url,
+                caption: ''
+            }
+         })
+    },
   },
 
   methods: {
@@ -184,6 +225,10 @@ export default {
       this.$refs.allergensPopover.open(e.target)
     },
 
+    openPhotoBrowser: function () {
+      this.$refs.pb.open();
+    },
+
     performFlyToCartAnimation: function() {
         const target = $('.fa-shopping-cart') //TODO avoid doing lookup every time
         const targetPosition = target.offset()
@@ -222,6 +267,24 @@ export default {
 .thumbnail {
     width: 8em;
     height: 6em;
+}
+
+
+.more-pictures-count {
+    position: relative;
+    top: 22px;
+    right: 56px;
+    font-size: 40px;
+    text-align: right;
+    padding-right: 12px;
+    color: white;
+    float: right;
+    /* text-shadow: -1px 0 #B1B1A6, 0 1px #B1B1A6, 1px 0 #B1B1A6, 0 -1px #B1B1A6; */
+}
+
+
+.more-pictures-count:hover {
+    cursor: pointer;
 }
 
 .thema-red .dish-list-item .item-inner {

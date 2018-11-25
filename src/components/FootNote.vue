@@ -48,10 +48,10 @@ export default {
   },
   computed: {
     allergens: function() {
-        return this.mergeKeyAndTitle(this.data.allergens)
+        return this.data && this.mergeKeyAndTitle(this.data.allergens)
     },
     additives: function() {
-        return this.mergeKeyAndTitle(this.data.additives)
+        return this.data && this.mergeKeyAndTitle(this.data.additives)
     }
   },
   methods: {

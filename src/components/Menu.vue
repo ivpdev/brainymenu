@@ -13,8 +13,8 @@
                     :defaultImage="defaultImage" />
             </f7-list-group>
         </f7-list-item>
-        <FootNote :data="footNoteData"
-                  :contact="footNoteContact"/>
+        <!-- FootNote :data="footNoteData"
+                  :contact="footNoteContact"/ -->
     </f7-list>
 </template>
 

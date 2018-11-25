@@ -77,7 +77,7 @@ const store = new Vuex.Store({
     filterTerm: filterTerm,
     menuData: MenuService.prepareMenu(appConfig.cafeData.menu, appConfig.footNote, filterTerm),
     footNoteData: appConfig.footNote,
-    footNoteContact: appConfig.footNote.contact,
+    footNoteContact: appConfig.footNote && appConfig.footNote.contact, //TODO handle NPE
     defaultImage: appConfig.cafeData.defaultImage,
     preselectedZip: null,
     minimalSum: null,

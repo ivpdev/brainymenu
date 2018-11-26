@@ -27,6 +27,47 @@ const filterDishes = (menu, func) => {
     return result
 }
 
+const traitUtil = {//TODO duplicate with bot-app
+  negPostfix: "-NEG",
+
+  isNegative: function(trait) {
+    return trait.indexOf(this.negPostfix) != -1
+  },
+
+  invertTrait: function(trait) {
+    const isNegative = this.isNegative(trait)
+
+    if (!isNegative) {
+        return trait + this.negPostfix
+    } else {
+        return trait.substr(0,trait.length - this.negPostfix.length)
+    }
+  }
+}
+
+const hasTraitOrComplement = (arr, trait) => {//TODO duplicate with bot-app
+    return arr.indexOf(trait) !== -1 || arr.indexOf(traitUtil.invertTrait(trait)) !== -1
+}
+
+const combine = (arr1, arr2) => {//TODO duplicate with bot-app
+    if (arr1 === undefined && arr2 === undefined) return undefined
+
+    if (arr1 === undefined) return arr2
+
+    const notOverlapped = _.filter(arr2, arr2item => !hasTraitOrComplement(arr1, arr2item) )
+
+    return arr1.concat(notOverlapped)
+}
+
+const propagateCategoryTraits = (category) => {//TODO duplicate with bot-app
+    const result = _.cloneDeep(category)
+    result.items = _.map(category.items, (item) => {
+        item.traits = combine(item.traits, category.traits)
+        return item
+    })
+    return result
+}
+
 const MenuService = {
     findItemByReference: function(ref, menu) {
         const category = menu.find(category => category.category === ref.category)
@@ -154,6 +195,8 @@ const MenuService = {
         /*let filterTerm = {
             traits: ["vegetarisch"]
         }*/
+
+        result =_.map(menu, propagateCategoryTraits)
 
         //TODO normalize menu
 

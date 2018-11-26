@@ -8,7 +8,7 @@ const UrlParamsService = {
         const traitsParam = url.searchParams.get("traits")
 
         if (traitsParam) {//TODO validate
-            const urlDecoded = decodeURIComponent(traitsParam)
+            const urlDecoded = atob(traitsParam)
             const traits = JSON.parse(urlDecoded)
             result.traits = traits
         }

@@ -6,7 +6,7 @@
               ref="thumbnail"
               @click="openPhotoBrowser">
 
-      <div v-if="item.pics">
+      <div v-if="item.pics" class="more-pictures-count-container">
         <div class="more-pictures-count">{{morePicturesLabel}}</div>
         <f7-photo-browser
           ref="pb"
@@ -137,6 +137,7 @@ export default {
     thumbnail: function() {
         const pics = this.item.pics
         //TODO small size for thumbnail
+        //TODO fix styling more pic
 
         if (pics && pics.length && pics.length > 0) {
             const mainPic = pics[0]
@@ -270,10 +271,10 @@ export default {
 }
 
 
-.more-pictures-count {
-    position: relative;
-    top: 22px;
-    right: 56px;
+.more-pictures-count-container {
+    position: absolute;
+    //top: 22px;
+    left: 90px;
     font-size: 40px;
     text-align: right;
     padding-right: 12px;

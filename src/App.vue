@@ -38,7 +38,7 @@
                       ref="fabCart"
                       @click="openCart">
                   <f7-icon fa="shopping-cart"></f7-icon>
-                  Zur Kasse
+                  Zur Kasse gehen
                   <f7-icon f7="close"></f7-icon>
 
                   <f7-badge class="shopping-cart-count" color="orange">{{itemsInCartCount}}</f7-badge>
@@ -246,7 +246,7 @@ export default {
 }
 
 .fab.cart-button a {
-    width: 118px;
+    width: 150px;
 }
 
 .fab>a i.icon {

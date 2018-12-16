@@ -68,7 +68,7 @@
                         :value="zipData.zip">
                                 {{zipData.zip}} ({{zipData.place}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
             </select>
-            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht. ({{priceTotalInCart}}&euro; < {{currentMinimalSum}}&euro;)</div>
+            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht. ({{priceTotalInCartFormatted}}&euro; < {{currentMinimalSum}}&euro;)</div>
           </f7-list-item>
 
           <f7-list-item>
@@ -151,12 +151,18 @@ export default {
       return utils.calculateTotalSumInCart(store.state.cartData)
     },
 
+    priceTotalInCartFormatted: function() {
+      return utils.toFixed(utils.calculateTotalSumInCart(store.state.cartData), 2)
+    },
+
     minimalSum: function() {
       return store.state.minimalSum
     },
 
     currentMinimalSum: function() {
-      const selectedZip = appConfig.supportedZipCodes.find(zip => zip === store.state.checkoutForm.zip.value)
+      const selectedZip = appConfig.supportedZipCodes.find(zipConfig => {
+        return zipConfig.zip == store.state.checkoutForm.zip.value
+      })
 
       return selectedZip && selectedZip.minimalSum
     }

@@ -1,11 +1,14 @@
 <template>
     <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
-        <f7-list-item v-for="(category, index) in menuDataToDisplay" class="category-li"
+        <f7-list-item
+            v-if="shouldShowCategory(index)"
+            v-for="(category, index) in menuDataToDisplay"
+            class="category-li"
             :key="index"
             v-on:click="onCategoryHeaderClick(category, index, $event)">
             <li class="list-group-title">
                 <f7-icon :fa="expanded[index] ? 'angle-up' : 'angle-down'"></f7-icon> {{category.category}}</li>
-            <f7-list-group :class="expanded[index] ? 'category-expanded' : 'category-collapsed'">
+            <f7-list-group v-if="expanded[index]">
                <DishListItem
                     v-for="(item, index) in category.items"
                     :key="index"
@@ -27,6 +30,8 @@ import { f7Card, f7List, f7ListGroup,
 import DishListItem from './dish-item/DishListItem'
 import FootNote from './FootNote'
 import Dom7 from 'dom7'
+import _ from 'lodash'
+import store from '../store'
 
 const $$ = Dom7
 
@@ -90,6 +95,20 @@ export default {
 
     toggleCollapsed: function(categoryIndex) {
         this.$set(this.expanded, categoryIndex, !this.expanded[categoryIndex])
+    },
+
+    isAllCollapsed: function() {
+        const anyExpanded = _.findKey(this.expanded)
+
+        return !anyExpanded
+    },
+
+    shouldShowCategory: function(index) {
+        if (!store.state.features.menuShowOnlyOpenedCategory) return true
+
+        const isCurrentExpanded = this.expanded[index]
+
+        return isCurrentExpanded || this.isAllCollapsed()
     }
   }
 }

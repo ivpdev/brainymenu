@@ -68,8 +68,14 @@ const checkoutFormClearState = {
    }
 }
 
+
+const features = {
+    menuShowOnlyOpenedCategory: true
+}
+
 const store = new Vuex.Store({
   state: {
+    features: features,
     cartData: [],
     menuData: MenuService.prepareMenu(appConfig.cafeData.menu, appConfig.footNote),
     footNoteData: appConfig.footNote,

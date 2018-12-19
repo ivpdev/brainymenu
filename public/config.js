@@ -2488,7 +2488,11 @@ window.appConfig = {
         ]
       },
 
-      supportedZipCodes: [
+      supportedZipCodes: [ {
+                zip: 81549,
+                place: "München",
+                minimalSum: 12
+            },
             {
                 zip: 80333,
                 place: "München",
@@ -2523,10 +2527,6 @@ window.appConfig = {
                 minimalSum: 15
             }, {
                 zip: 81547,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81549,
                 place: "München",
                 minimalSum: 12
             }, {

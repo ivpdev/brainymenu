@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- TODO download font awesome-->
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,6 +7,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <script rel="icon" src="<%= BASE_URL %>config.js"></script>
+    <style>
+      .loading-caption {
+        font-size: 1.5rem;
+        padding: 20px;
+      }
+    </style>
     <link rel="stylesheet" href="<%= webpackConfig.output.publicPath %>framework7/css/framework7.min.css">
     <link rel="stylesheet" href="<%= webpackConfig.output.publicPath %>css/framework7-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -15,7 +22,11 @@
     <noscript>
       <strong>We're sorry but brainymenu-menu-standalone doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <p class="loading-caption">
+        Speisekarte wird geladen...
+      </p>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

@@ -53,11 +53,18 @@
 
             <f7-fab v-show="step.number==1"
                     class="checkout-fab"
-                    :color="fabToCheckout"
+                    :color="fabToCheckoutColor"
                     position="right-bottom"
-                    popup-open=".popup-chat"
                     @click="goToCheckout">
                 Weiter (<b>{{priceTotalInCartFormatted}} &euro;</b>)
+            </f7-fab>
+
+            <f7-fab v-show="step.number==1"
+                    class="checkout-fab"
+                    :color="fabToCheckoutColor"
+                    position="left-bottom"
+                    @click="closeCartPanel">
+                Zurück
             </f7-fab>
 
             <f7-fab v-show="step.number==2"
@@ -125,7 +132,7 @@ export default {
         return utils.toFixed(this.priceTotalInCart(), 2)
     },
 
-    fabToCheckout: function() {
+    fabToCheckoutColor: function() {
         return this.canGoToCheckout() ? "red" : "gray"
     },
     fabToFinalConfirmation: function() {
@@ -183,6 +190,10 @@ export default {
 
     submitOrder: function() {
         store.dispatch("submitOrder")
+    },
+
+    closeCartPanel: function() {
+        this.$refs.cartPanel.close()
     }
   }
 }

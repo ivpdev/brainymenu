@@ -98,11 +98,11 @@ const MenuService = {
     },
 
     checkDishesAvailability: function(dishes) {
-        const available = true
+        let available = true
         const errors = []
 
         dishes.forEach(dish => {
-            const dishAvailable = OpeningTimeService.isAvailableNow(dish.availableAt)
+            const dishAvailable = !dish.availableAt || OpeningTimeService.isAvailableNow(dish.availableAt)
 
             if (!dishAvailable) {
                 available = false

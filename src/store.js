@@ -15,6 +15,7 @@ const createItemForCart = (item) => {
         name: item.name,
         price: item.price,
         quantity: 1,
+        availableAt: item.availableAt
     }
 }
 
@@ -38,6 +39,10 @@ const checkoutFormClearState = {
        value: null,
        valid: false
    },
+   department: {
+       value: null,
+       valid: false
+   },
    firstname: {
        value: null,
        valid: false
@@ -47,6 +52,14 @@ const checkoutFormClearState = {
        valid: false
    },
    street: {
+       value: null,
+       valid: false
+   },
+   houseNumber: {
+       value: null,
+       valid: false
+   },
+   floor: {
        value: null,
        valid: false
    },
@@ -223,9 +236,9 @@ const store = new Vuex.Store({
     },
 
     submitOrder: function({commit, state, dispatch}, data) {
-        const availability = MenuService.checkDishesAvailability(dishes)
+        const availability = MenuService.checkDishesAvailability(state.cartData)
 
-        if (!openingTimeService.isOpenNow()) {
+        if (!OpeningTimeService.isOpenNow()) {
             //TODO
         }
 

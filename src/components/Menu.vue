@@ -146,8 +146,4 @@ export default {
     background-size: 13px 13px;
 }
 
-.category-collapsed {
-    display: none;
-}
-
 </style>

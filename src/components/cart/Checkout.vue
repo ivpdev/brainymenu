@@ -7,10 +7,10 @@
 
               <f7-input type="email"
                         validate
-                        placeholder="E-mail"
+                        placeholder=""
                         :value="checkoutForm.email.value"
                         clear-button
-                        @change="onEmailChange"></f7-input>
+                        @change="onFieldChange($event, 'email')"></f7-input>
           </f7-list-item>
 
           <f7-list-item>
@@ -18,7 +18,15 @@
             <f7-input
                 :value="checkoutForm.firma.value"
                 type="text" placeholder="" clear-button
-                @change="onFirmaChange"></f7-input>
+                @change="onFieldChange($event, 'firma')"></f7-input>
+          </f7-list-item>
+
+          <f7-list-item>
+            <f7-label>Abteilung</f7-label>
+            <f7-input
+                :value="checkoutForm.department.value"
+                type="text" placeholder="" clear-button
+                @change="onFieldChange($event, 'department')"></f7-input>
           </f7-list-item>
 
         <f7-list-item>
@@ -29,7 +37,7 @@
                 validate
                 :value="checkoutForm.firstname.value"
                 type="text" placeholder="" clear-button
-                @change="onFirstNameChange"></f7-input>
+                @change="onFieldChange($event, 'firstname')"></f7-input>
           </f7-list-item>
 
         <f7-list-item>
@@ -40,7 +48,7 @@
                 validate
                 :value="checkoutForm.lastname.value"
                 type="text" placeholder="" clear-button
-                @change="onLastNameChange"></f7-input>
+                @change="onFieldChange($event, 'lastname')"></f7-input>
           </f7-list-item>
 
           <f7-list-item>
@@ -53,7 +61,24 @@
              placeholder=""
             :value="checkoutForm.street.value"
              clear-button
-             @change="onStreetChange"></f7-input>
+             @change="onFieldChange($event, 'street')"></f7-input>
+          </f7-list-item>
+
+          <f7-list-item>
+            <f7-label>Hausnummer</f7-label>
+            <f7-input
+                required
+                :value="checkoutForm.houseNumber.value"
+                type="text" placeholder="" clear-button
+                @change="onFieldChange($event, 'houseNumber')"></f7-input>
+          </f7-list-item>
+
+          <f7-list-item>
+            <f7-label>Etage</f7-label>
+            <f7-input
+                :value="checkoutForm.floor.value"
+                type="text" placeholder="" clear-button
+                @change="onFieldChange($event, 'floor')"></f7-input>
           </f7-list-item>
 
           <f7-list-item :class="zipInputClass">
@@ -79,7 +104,7 @@
                 validate
                 :value="checkoutForm.phone.value"
                 type="text" placeholder="" clear-button
-                @change="onPhoneChange"></f7-input>
+                @change="onFieldChange($event, 'phone')"></f7-input>
           </f7-list-item>
 
           <f7-list-item>
@@ -89,7 +114,7 @@
                 :value="checkoutForm.note.value"
                 type="text"
                 placeholder=""
-                @change="onNoteChange"
+                @change="onFieldChange($event, 'note')"
                 clear-button>
             </f7-input>
           </f7-list-item>
@@ -177,72 +202,23 @@ export default {
     CheckoutSum
   },
   methods: {
-    onFirstNameChange: function(e) {
-        const firstname = e.target.value
-        const isInvalid = $$(e.target).hasClass('input-invalid')
-
-        store.dispatch('updateCheckoutForm', { firstname: {
-            value: firstname,
-            valid: !isInvalid
-        }})
-    },
-
-    onLastNameChange: function(e) {
-        const lastname = e.target.value
-        const isInvalid = $$(e.target).hasClass('input-invalid')
-
-        store.dispatch('updateCheckoutForm', { lastname: {
-            value: lastname,
-            valid: !isInvalid
-        }})
-    },
-
-    onPhoneChange: function(e) {
-        const phone = e.target.value
-        const isInvalid = $$(e.target).hasClass('input-invalid')
-
-        store.dispatch('updateCheckoutForm', { phone: {
-            value: phone,
-            valid: !isInvalid
-        }})
-    },
-
-    onStreetChange: function(e) {
-        const street = e.target.value
-        const isInvalid = $$(e.target).hasClass('input-invalid')
-
-        store.dispatch('updateCheckoutForm', { street: {
-            value: street,
-            valid: !isInvalid
-
-        } })
-    },
-    onEmailChange: function(e) {
-        //TODO validate
-        const email = e.target.value
-        const isInvalid = $$(e.target).hasClass('input-invalid')
-        store.dispatch('updateCheckoutForm', { email: {
-                value: email,
-                valid: !isInvalid }})},
-
     onZipChange: function(e) {
         const value = e.target.value
 
         this.validateOrderSum(value)},
 
-    onFirmaChange: function(e) {
-        const company = e.target.value
+    onFieldChange: function(e, fieldName) {
+        const value = e.target.value
         const isInvalid = $$(e.target).hasClass('input-invalid')
-        store.dispatch('updateCheckoutForm', { firma: {
-                value: company,
-                valid: !isInvalid }})},
+        const updateActionPayload = {}
 
-    onNoteChange: function(e) {
-        const note = e.target.value
-        const isInvalid = $$(e.target).hasClass('input-invalid')
-        store.dispatch('updateCheckoutForm', { note: {
-                value: note,
-                valid: !isInvalid }})},
+        updateActionPayload[fieldName] = {
+            value: value,
+            valid: !isInvalid
+        }
+
+        store.dispatch('updateCheckoutForm', updateActionPayload)
+    },
 
     validate: function() {
         this.validateOrderSum(this.$refs.zipSelect.value)},

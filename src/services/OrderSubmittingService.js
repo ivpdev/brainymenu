@@ -8,10 +8,12 @@ const orderEmailTemplate = _.template(`
     <table width='750px'>
                    <tr><th colspan='2'>Bestellungsdaten</th></tr>
                    <tr><td>Firma:</td><td><%= firma %></td></tr>
+                   <tr><td>Abteilung:</td><td><%= department %></td></tr>
                    <tr><td>Familienname:</td><td><%= lastname %></td></tr>
                    <tr><td>Vorname:</td><td><%= firstname %></td></tr>
                    <tr><td>Telefonnummer:</td><td><%= phone %></td></tr>
                    <tr><td>Addresse:</td><td><%= address %></td></tr>
+                   <tr><td>Etage:</td><td><%= floor %></td></tr>
                    <tr><td>PLZ:</td><td><%= zip %></td></tr>
                    <tr><td>Ort:</td><td><%= place %></td></tr>
                    <tr><td>Email-Adresse:</td><td><%= email %></td></tr>
@@ -37,8 +39,9 @@ const OrderSubmittingService = {
     getAddress: function(checkoutForm) {
         const zip = checkoutForm.zip.value
         const street = checkoutForm.street.value
+        const houseNumber = checkoutForm.houseNumber.value || ""
 
-        return `${zip} ${street}`
+        return `${zip} ${street} ${houseNumber}`
     },
 
     getPlace: function(checkoutForm) {
@@ -52,11 +55,13 @@ const OrderSubmittingService = {
     buildOrderMessage: function(cartData, checkoutForm) {
         const email = checkoutForm.email.value
         const firma = checkoutForm.firma.value
+        const department = checkoutForm.department.value
         const firstname = checkoutForm.firstname.value
         const lastname = checkoutForm.lastname.value
         const phone = checkoutForm.phone.value
         const note = checkoutForm.note.value
         const zip = checkoutForm.zip.value
+        const floor = checkoutForm.floor.value
         const place = this.getPlace(checkoutForm)
 
         const address = this.getAddress(checkoutForm)
@@ -74,6 +79,7 @@ const OrderSubmittingService = {
 
         const emailHtml = orderEmailTemplate({
             firma: firma,
+            department: department,
             firstname: firstname,
             lastname: lastname,
             address: address,
@@ -81,6 +87,7 @@ const OrderSubmittingService = {
             email: email,
             note: note,
             zip: zip,
+            floor: floor,
             place: place,
 
             order: orderHtml

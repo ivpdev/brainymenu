@@ -138,7 +138,7 @@ window.appConfig = {
             "Tartazin": "16"
         },
 
-        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 233 - 63508"
+        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 22 84 19 63"
     },
     normalizationData: {
         allergens: {

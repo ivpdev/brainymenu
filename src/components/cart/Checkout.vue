@@ -91,7 +91,7 @@
                 <option v-for="(zipData, index) in availableZipCodes"
                         :key="index"
                         :value="zipData.zip">
-                                {{zipData.zip}} ({{zipData.place}}) - Mindestbestellwert {{zipData.minimalSum}} &euro;</option>
+                                {{zipData.zip}} ({{zipData.place}})</option>
             </select>
             <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht. ({{priceTotalInCartFormatted}}&euro; < {{currentMinimalSum}}&euro;)</div>
           </f7-list-item>

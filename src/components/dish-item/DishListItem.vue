@@ -15,7 +15,18 @@
                 @click="onAddToCartClick(item, $event)">
                 {{formattedPrice}} &euro;
             </f7-button>
+
+            <f7-button
+                fill
+                round
+                v-if="editMode"
+                color="orange"
+                icon-fa="cart-plus"
+                @click="onAddToCartClick(item, $event)">
+                Edit
+            </f7-button>
         </div>
+
       </div>
 
     <Spiciness v-if="item.spiciness" :spiciness="item.spiciness"></Spiciness>
@@ -125,6 +136,10 @@ export default {
         } else {
             return this.defaultImage || ''
         }
+    },
+
+    editMode: function() {
+        return store.state.editMode;
     },
 
     formattedPrice: function() {

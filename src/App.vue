@@ -8,21 +8,29 @@
                   :footNoteContact="footNoteContact"
                   ref="menu"/>
 
-            <!-- f7-fab color="red"
-                position="left-bottom"
+            <f7-fab color="red"
+                position="right-bottom"
                 ref="menuButton"
                 class="speed-dial-opened"
+                v-if="editMode"
                 v-bind:class="{ 'fab-opened': state.menuOpened }"
                 @click="toggleMenuOpened">
 
                 <f7-icon f7="menu"></f7-icon>
 
                 <f7-fab-buttons ref="menuButtons" class="speed-dial-opened">
-                  <f7-fab-button color="orange" @click="onButtonClick">A</f7-fab-button>
-                  <f7-fab-button color="orange" @click="onButtonClick">B</f7-fab-button>
-                  <f7-fab-button color="orange" @click="onButtonClick">C</f7-fab-button>
+                  <f7-fab-button color="orange" class="export-json-button" @click="onButtonClick">Export JSON</f7-fab-button>
+                  <f7-fab-button color="orange" class="import-json-button" @click="onButtonClick">Import JSON</f7-fab-button>
                 </f7-fab-buttons>
-              </f7-fab -->
+              </f7-fab>
+
+            <f7-fab color="orange"
+                position="right-top"
+                ref="backButton"
+                v-if="editMode"
+                @click="onAddCategoryClick">
+                +
+              </f7-fab>
 
             <f7-fab color="orange"
                 position="left-bottom"
@@ -100,6 +108,10 @@ export default {
   computed: {
     menuData: function() {
         return store.state.menuData
+    },
+
+    editMode: function() {
+        return store.state.editMode
     },
 
     footNoteData: function() {
@@ -222,6 +234,16 @@ export default {
     right: -11px;
     top: -7px;
     z-index: 1;
+}
+
+.fab div.fab-buttons a.export-json-button {
+    width: 120px;
+    right: 77px;
+}
+
+.fab div.fab-buttons a.import-json-button {
+    width: 120px;
+    right: 77px;
 }
 
 .thema-red .brainymenu-navbar.navbar {

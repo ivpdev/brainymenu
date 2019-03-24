@@ -93,7 +93,7 @@ window.appConfig = {
     ],
     closed: {//TODO move everything into cafeData
         closed: false,
-        message: "wir sind am 22.09 zurück"
+        message: "Wir sind am 22.09 zurück"
     },
 
     footNote: {
@@ -135,7 +135,8 @@ window.appConfig = {
             "gewachst": "13",
             "mit Nitritpökelsalz": "14",
             "Taurin": "15",
-            "Tartazin": "16"
+            "Tartazin": "16",
+            //TODO Bambus
         },
 
         contact: "Wenden Sie sich bitte an die Rufnummer 089 / 22 84 19 63"

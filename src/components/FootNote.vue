@@ -14,21 +14,31 @@
 
         <f7-popover
             ref="allergensPopover">
-            <div @mouseout="onAllergensMouseOut">
+            <div class="block-in-popover"
+                @mouseleave="onAllergensMouseOut">
                 <Allergens :allergens="allergens"/>
             </div>
         </f7-popover>
 
         <f7-popover
             ref="additivesPopover">
-            <Additives :additives="additives"/>
+            <div class="block-in-popover"
+                 @mouseleave="onAdditivesMouseOut">
+
+                 <Additives :additives="additives" />
+            </div>
+
         </f7-popover>
 
         <f7-popover
             ref="contactsPopover">
-             <f7-block>
+             <div class="block-in-popover"
+                  @mouseleave="onContactMouseOut">
                 {{contact}}
-             </f7-block>
+             </div>
+             <!-- f7-block>
+                {{contact}}
+             </f7-block -->
         </f7-popover>
 
         <br/><br/><br/>
@@ -70,16 +80,21 @@ export default {
     onAllergensMouseIn: function(e) {
         this.$refs.allergensPopover.open(e.target)
     },
+    onAllergensMouseOut: function() {
+        this.$refs.allergensPopover.close()
+    },
     onAdditivesMouseIn: function(e) {
         this.$refs.additivesPopover.open(e.target)
+    },
+    onAdditivesMouseOut: function(e) {
+        this.$refs.additivesPopover.close()
     },
     onContactMouseIn: function(e) {
         this.$refs.contactsPopover.open(e.target)
     },
-    onAllergensMouseOut: function() {
-        //this.$refs.allergensPopover.close()
+    onContactMouseOut: function() {
+        this.$refs.contactsPopover.close()
     }
-
   },
   props: {
     data: Object,

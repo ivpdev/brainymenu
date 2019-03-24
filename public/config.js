@@ -1397,7 +1397,8 @@ window.appConfig = {
               "description" : "mit Gemüse, Bambus und Pilze",
               "price" : 8.90,
               "additives": ["mit Geschmacksverstärker"],
-              "allergens": ["Soja oder Sojaerzeugnisse", "Bambus", "Pilze"]
+              "allergens": ["Soja oder Sojaerzeugnisse"],
+              "traits": ["Bambus", "Pilze"]
             },
             {
               "name" : "224 Knusprige Hühnerkeule",

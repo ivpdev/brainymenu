@@ -31,6 +31,7 @@
         </f7-popover>
 
         <f7-popover
+            class="contacts-popover"
             ref="contactsPopover">
              <div class="block-in-popover"
                   @mouseleave="onContactMouseOut">
@@ -104,4 +105,8 @@ export default {
 </script>
 
 <style>
+.contacts-popover .block-in-popover {
+    padding: 12px;
+}
+
 </style>

@@ -87,7 +87,7 @@ export default {
     onAdditivesMouseIn: function(e) {
         this.$refs.additivesPopover.open(e.target)
     },
-    onAdditivesMouseOut: function(e) {
+    onAdditivesMouseOut: function() {
         this.$refs.additivesPopover.close()
     },
     onContactMouseIn: function(e) {

@@ -1,15 +1,24 @@
 <template>
     <div class="foot-note">
         <f7-block>
-            <div class="chip" @mouseover="onAllergensMouseIn">
-              <div class="chip-label">Allergene</div>
-            </div>
-            <div class="chip" @mouseover="onAdditivesMouseIn">
-              <div class="chip-label">Zusatzstoffen</div>
-            </div>
-            <div class="chip" @mouseover="onContactMouseIn">
-              <div class="chip-label">Für weitere Fragen</div>
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="chip footnote-button" @mouseover="onAllergensMouseIn">
+                          <div class="chip-label">Allergene</div>
+                        </div></td>
+                    <td>
+                        <div class="chip footnote-button" @mouseover="onAdditivesMouseIn">
+                          <div class="chip-label">Zusatzstoffen</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="chip footnote-button" @mouseover="onContactMouseIn">
+                          <div class="chip-label">Für weitere Fragen</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </f7-block>
 
         <f7-popover
@@ -109,4 +118,7 @@ export default {
     padding: 12px;
 }
 
+.footnote-button {
+    margin-right: 10px;
+}
 </style>

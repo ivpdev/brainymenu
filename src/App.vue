@@ -39,7 +39,7 @@
                 Zurück
               </f7-fab>
 
-              <f7-fab color="red"
+              <f7-fab color="green"
                       position="center-bottom"
                       panel-open="left"
                       class="cart-button"

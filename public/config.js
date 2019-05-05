@@ -2444,48 +2444,6 @@ window.appConfig = {
             {
               "name" : "403c Erdnuß-Sauce",
               "price" : 3.00
-            } ] },
-          {"category" : "Allergene, Zusatzstoffe, Weitere Fragen",
-            "traits" : ["extras"],
-            "items" : [
-            {
-              "name" : "400 Portion Reis",
-              "price" : 1.50,
-              "traits": ["Reis"]
-            },
-            {
-              "name" : "401a Gebratener Reis",
-              "price" : 3.00,
-              "traits": ["Reis"]
-            },
-            {
-              "name" : "401b Gebratene Nudeln",
-              "price" : 3.00,
-              "traits": ["Nudeln"]
-            },
-            {
-              "name" : "402a Kanton-Sauce",
-              "price" : 2.00
-            },
-            {
-              "name" : "402b Hoisin-Sauce",
-              "price" : 2.00
-            },
-            {
-              "name" : "402c Süß-sauer-Souce",
-              "price" : 2.00
-            },
-            {
-              "name" : "403a Thai-Sauce",
-              "price" : 3.00
-            },
-            {
-              "name" : "403b China-Curry-Sauce",
-              "price" : 3.00
-            },
-            {
-              "name" : "403c Erdnuß-Sauce",
-              "price" : 3.00
             } ] }
         ]
       },

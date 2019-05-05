@@ -157,15 +157,20 @@ export default {
 
   methods: {
     onAddToCartClick: function(item, event) {
-         if (OpeningTimeService.isOpenNow()) {
+        if (!OpeningTimeService.isOpenNow()) {
+             this.$f7.dialog.alert(OpeningTimeService.whyClosed(), "Wir sind geschlossen")
+             return
+        }
+
+        if (!store.state.preselectedZip) {
+            store.dispatch('requestZipPreselection')
+        } else {
             if (item.supplementedBy) {
                 this.openSupplementsPopover(event)
             } else {
                 this.addToCart(item)
             }
-         } else {
-             this.$f7.dialog.alert(OpeningTimeService.whyClosed(), "Wir sind geschlossen")
-         }
+        }
     },
 
     onSupplementPicked: function(supplement) {
@@ -181,6 +186,12 @@ export default {
     addToCart: function(item) {
        store.dispatch("addToCart", item)
        this.performFlyToCartAnimation()
+
+       /* store.eventBus.$once('itemAddedToCart', itemAdded => {
+            if (itemAdded === item) {
+                this.performFlyToCartAnimation()
+            }
+       }) */
     },
 
     openAdditivesPopover: function(e) {

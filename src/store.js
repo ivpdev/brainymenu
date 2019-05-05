@@ -196,9 +196,9 @@ const store = new Vuex.Store({
             commit('addToCart', item)
         })
 
-        if (!state.preselectedZip) {
+        /* if (!state.preselectedZip) {
             dispatch('requestZipPreselection')
-        }
+        } */
     },
 
     addItemWithSupplementToCart: function({commit, state, dispatch}, payload, ) {

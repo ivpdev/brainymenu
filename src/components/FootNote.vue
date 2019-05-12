@@ -22,6 +22,7 @@
         </f7-block>
 
         <f7-popover
+            class="allergens-popover"
             ref="allergensPopover">
             <div class="block-in-popover"
                 @mouseleave="onAllergensMouseOut">
@@ -30,6 +31,7 @@
         </f7-popover>
 
         <f7-popover
+            class="additives-popover"
             ref="additivesPopover">
             <div class="block-in-popover"
                  @mouseleave="onAdditivesMouseOut">
@@ -120,5 +122,13 @@ export default {
 
 .footnote-button {
     margin-right: 10px;
+}
+
+.allergens-popover {
+    width: 322px;
+}
+
+.additives-popover {
+    width: 322px;
 }
 </style>

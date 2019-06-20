@@ -93,7 +93,7 @@ window.appConfig = {
     ],
     closed: {//TODO move everything into cafeData
         closed: false,
-        message: "Wir sind am 22.09 zurück"
+        message: "wir sind am 22.09 zurück"
     },
 
     footNote: {
@@ -135,11 +135,10 @@ window.appConfig = {
             "gewachst": "13",
             "mit Nitritpökelsalz": "14",
             "Taurin": "15",
-            "Tartazin": "16",
-            //TODO Bambus
+            "Tartazin": "16"
         },
 
-        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 22 84 19 63"
+        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 233 - 63508"
     },
     normalizationData: {
         allergens: {
@@ -208,11 +207,10 @@ window.appConfig = {
         "menu": [
             {
                 "category" : "Mittagsmenu",
-                "description": "Zu jeden Menü inkl. Sauer-Scharf Suppe oder 4 Mini Frühlingsrollen",
                 "unavailableExcuse": 'Diese Speise ist nur währen Mittagspause verfügbar',
                 "availableAt": [{
                     from: '11:00',
-                    to: '23:50'
+                    to: '14:30'
                 }],
                 "supplementedBy": [{
                     "reference": {
@@ -255,7 +253,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M4 Gebratenes Gemüse",
-                  "description" : "mit Kokosmilch, Thai-Rot Curry",
+                  "description" : "mit Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 5.90,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -290,7 +288,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M8 Gebratener Tofu",
-                  "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 6.00,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -398,7 +396,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M21 Thai-Curry",
-                  "description" : "gebr. Hühnerfleisch, Gemüse, Kokosmilch, Thai-Rot-Curry",
+                  "description" : "gebr. Hühnerfleisch, Gemüse, Kokosmilch, Thai-Rot-Curry, Basilikum",
                   "price" : 6.90,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -450,7 +448,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M27 Knusprige Hühnerkeule",
-                  "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 7.50,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -494,7 +492,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M32 Thai Curry",
-                  "description" : "gebratenes Rindfleisch, Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "gebratenes Rindfleisch, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 7.50,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -503,7 +501,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M33 Nua Pad Bai",
-                  "description" : "gebratenes Rindfleisch, rote Zwiebeln",
+                  "description" : "gebratenes Rindfleisch, Thai Basilikum, rote Zwiebeln",
                   "price" : 7.50,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse"],
@@ -530,7 +528,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M36 Thai-Curry",
-                  "description" : "gebratenes Schweinfleisch, Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "gebratenes Schweinfleisch, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 6.90,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -556,7 +554,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M39 Knusprige Ente",
-                  "description" : "mit Gemüse, Erdnuss-Sauce und Kokosmilch",
+                  "description" : "mit Gemüse Erdnuss-Sauce und Kokosmilch",
                   "price" : 7.90,
                   "spiciness": 1,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Erdnüße", "Milcherzeugnis"],
@@ -574,7 +572,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M41 Knusprige Ente",
-                  "description" : "mit Gemuse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "mit Gemuse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "spiciness": 2,
                   "price" : 7.90,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -590,7 +588,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M43 Muc Thai Curry",
-                  "description" : "geb. Tintenfisch, Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "geb. Tintenfisch, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 7.90,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -599,7 +597,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M44 Ca Thai Curry",
-                  "description" : "gebackenes Fischfilet, Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "gebackenes Fischfilet, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 6.90,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -608,7 +606,7 @@ window.appConfig = {
                 },
                 {
                   "name" : "M45 Tom Thai Curry",
-                  "description" : "gebr. Großgarnelen, Gemüse, Kokosmilch, Thai-Rot Curry",
+                  "description" : "gebr. Großgarnelen, Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
                   "price" : 8.00,
                   "spiciness": 2,
                   "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
@@ -689,7 +687,7 @@ window.appConfig = {
               "name" : "5 Tom-Yam-Gai",
               "description" : "mit Gemüse, Hühnerbrust, Pilze in thail.Sauce, scharf",
               "price" : 3.50,
-              "spiciness": 1,
+              "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
               "traits" : ["Hähnchen", "Pilze"]
             },
@@ -697,16 +695,15 @@ window.appConfig = {
               "name" : "6 Tom-Kha-Gai",
               "description" : "mit Gemüse, Hühnerbrust, Pilze, Kokosmilch, sauer-scharf",
               "price" : 3.90,
-              "spiciness": 1,
+              "spiciness": 2,
               "allergens": ["Milcherzeugnis"],
               "additives": ["mit Geschmacksverstärker"],
               "traits" : ["Hänchen", "Pilze", "Kokos"]
             },
             {
               "name" : "7 Tom-Yam-Gung",
-              "description" : "mit Gemüse, Garnelen, Pilze in thailändischer Sauce",
+              "description" : "mit Gemüse, Garnelen, Pilze in thail.Sauce, sauer-scharf",
               "price" : 4.00,
-              "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
               "traits" : ["Garnelen", "Pilze"]
             },
@@ -718,7 +715,7 @@ window.appConfig = {
             },
             {
               "name" : "9 Kani-Miso-Suppe",
-              "description" : "Suppe mit Krebsfleisch[1] und Seetang (japanisch)",
+              "description" : "mit Krebsfleisch & Seetang (japanisch)",
               "price" : 3.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["japanisch", "Krabben", "Seetang"]
@@ -727,7 +724,6 @@ window.appConfig = {
               "name" : "10 Little Dragon-Suppe",
               "description" : "mit Gemüse, Schnellnudeln, Hühnerbrust & Koriander",
               "price" : 3.90,
-              "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
               "traits" : ["Nudeln", "Hähnchen"]
             } ] },
@@ -746,8 +742,13 @@ window.appConfig = {
               "price" : 2.50,
               "traits" : ["vegetarian"]
             },
+            /*{
+              "name" : "013a China-Frühlingsrollen",
+              "description" : "mit Fleisch",
+              "price" : 3.00
+            },*/
             {
-              "name" : "13 China-Frühlingsrollen",
+              "name" : "013 China-Frühlingsrollen",
               "description" : "mit Hühnerfleisch, Gemüse aus Reisblättern",
               "price" : 3.00
             },
@@ -769,12 +770,12 @@ window.appConfig = {
             },
             {
               "name" : "17 Großgarnelen",
-              "description" : "gebacken mit süßer Chilisauce",
+              "description" : "Gebacken mit süßer Chilisauce",
               "price" : 5.00,
+              "spiciness": 1,
               "traits" : ["Garnelen", "seafood"]
             } ] },
           {"category" : "Salate",
-            "description": "für diese gemischter Salat können Sie aus 6 verschiedenen Develey-Dressings wählen: Balsamico, Essig-Öl, French, Kräuter oder Sauerrahm",
             "traits" : ["salads"],
             "items" : [
             {//TODO add dressing as supplement
@@ -784,32 +785,32 @@ window.appConfig = {
               "traits" : ["vegetarisch"]
             },
             {
-              "name" : "21a Develey-Dressing Balsamico",
+              "name" : "021a Develey-Dressing Balsamico",
               "description" : "Je Salat nur ein Dressing auswählen",
               "price" : 0.00
             },
             {
-              "name" : "21b Develey-Dressing Essig-Öl",
+              "name" : "021b Develey-Dressing Essig-Öl",
               "description" : "Je Salat nur ein Dressing auswählen",
               "price" : 0.00
             },
             {
-              "name" : "21c Develey-Dressing French",
+              "name" : "021c Develey-Dressing French",
               "description" : "Je Salat nur ein Dressing auswählen",
               "price" : 0.00
             },
             {
-              "name" : "21d Develey-Dressing Joghurt",
+              "name" : "021d Develey-Dressing Joghurt",
               "description" : "Je Salat nur ein Dressing auswählen",
               "price" : 0.00
             },
             {
-              "name" : "21e Develey-Dressing Kräuter",
+              "name" : "021e Develey-Dressing Kräuter",
               "description" : "Je Salat nur ein Dressing auswählen",
               "price" : 0.00
             },
             {
-              "name" : "21f Develey-Dressing Sauerrahm",
+              "name" : "021f Develey-Dressing Sauerrahm",
               "description" : "Je Salat nur ein Dressing auswählen",
               "price" : 0.00
             },
@@ -824,7 +825,6 @@ window.appConfig = {
               "name" : "23 Hühnerbrust Salat",
               "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
               "price" : 4.00,
-              "spiciness": 1,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "traits" : ["Hähnchen"]
             },
@@ -832,7 +832,6 @@ window.appConfig = {
               "name" : "24 Tintenfisch Salat",
               "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
               "price" : 4.50,
-              "spiciness": 1,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "traits": ["seafood"]
             },
@@ -840,16 +839,14 @@ window.appConfig = {
               "name" : "25 Rindfleisch Salat",
               "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
               "price" : 4.50,
-              "spiciness": 1,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "traits": ["Rind"]
             },
             {
-              "name" : "26 Großgarnelen Salat",
-              "description" : "mit roten Zwiebeln, Gurken und Thai-Kräuter",
+              "name" : "26 Grossgarnelen Salat",
+              "description" : "Salat aus Spinat mit Sesam Sauce (Japanisch)",
               "price" : 5.00,
-              "spiciness": 1,
-              "allergens": ["Soja oder Sojaerzeugnisse"],
+              "allergens": ["Soja oder Sojaerzeugnisse", "Sesam"],
               "traits" : ["japanisch", "Spinat"]
             },
             {
@@ -870,11 +867,10 @@ window.appConfig = {
               "description" : "Oktopus, Krebse, Thunfisch, Lachs, fliegender Fisch-Rogen (Japanisch)",
               "price" : 9.90,
               "additives": ["mit Farbstoffen"],
-              "allergens": ["Fisch", "Krebstiere"],
+              "allergens": ["Fisch"],
               "traits" : ["seafood", "fisch", "japanisch"]
             } ] },
           {"category" : "Tages Sushi",
-            "description" : "Zu jedem Sushi Gericht gibt es eingelegten Ingwer(Gari), Grünen Meerrettich(Wasabi), Sojasause und Stäbchen",
             "traits" : ["sushi", "lunch-menu", "japanisch"],
             "items" : [
             {
@@ -886,14 +882,14 @@ window.appConfig = {
             },
             {
               "name" : "S42 12 Röllchen",
-              "description" : "6 Salmon Stick-Maki, 6 Tekka-Maki",
+              "description" : "6 Sake-, 6 Tekka-Maki",
               "price" : 6.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S42.menu_02_05_2016_09_57_22.png"]
             },
             {
               "name" : "S43 12 Röllchen",
-              "description" : "6 Salmon-Philadelphia-, 6 Sake-Kawa-Maki",
+              "description" : "6 Salmon-Philadelphia-, 6 Sake-, 3 Avokado-Maki",
               "price" : 8.90,
               "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S43.menu_02_05_2016_10_14_05.jpg"]
@@ -915,7 +911,7 @@ window.appConfig = {
             },
             {
               "name" : "S46 12 Röllchen + 2 Nigiri",
-              "description" : "2 Nigiri: 1 Thunfisch, 1 Lachs; 12 Röllchen: 3 Sake-, 3 Tekka-, 6 Kappa-Maki",
+              "description" : "3 Sake-, 3 Tekka-, 6 Kappa-Maki + 1 Thunfisch, 1 Lachs",
               "price" : 8.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S46.menu_02_05_2016_10_11_52.jpg"]
@@ -929,21 +925,21 @@ window.appConfig = {
             },
             {
               "name" : "S48 12 Röllchen + 3 Nigiri",
-              "description" : "3 Nigiri: 1 Thunfisch, 1 Lachs, 1 Oktopus; 12 Röllchen Maki: 3 Kappa-, 3 Sake-, 3 Kampyo[1]-, 3 Tekka-Maki",
+              "description" : "3 Kappa-, 3 Sake-, 3 Kampyo[1]-, 3 Tekka-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstrich",
               "price" : 10.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S48.menu_02_05_2016_11_04_56.jpg"]
             },
             {
               "name" : "S49 12 Röllchen + 2 Nigiri",
-              "description" : "2 Nigiri: 1 Thunfisch, 1 Lachs; 12 Röllchen: 6 Sake-, 6 Tekka-Maki",
+              "description" : "6 Sake-, 6 Tekka-Maki + 1 Thunfisch, 1 Lachs",
               "price" : 10.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S49.menu_02_05_2016_11_05_18.jpg"]
             },
             {
               "name" : "S50 12 Röllchen + 2 Nigiri",
-              "description" : "2 Nigiri: 1 Thunfisch, 1 Lachs; 12 Röllchen: 6 Sake-, 6 Alaska-Sesam-Maki",
+              "description" : "6 Sake-, 6 Alaska-Sesam-Maki + 1 Thunfisch, 1 Lachs",
               "price" : 11.90,
               "allergens": ["Sesam"],
               "traits" : ["Fisch"],
@@ -959,7 +955,7 @@ window.appConfig = {
             },
             {
               "name" : "S52 6 Röllchen + 5 Nigiri",
-              "description" : "5 Nigiri: 1 Thunfisch, 1 Oktopus, 1 Lachs, 1 Scampi, 1 Tintenfish, 6 Röllchen:  3 California[1,S]-, 3 Alaska-Tobiko[1]-Maki",
+              "description" : "3 California Tobiko[1,S]-, 3 Alaska-Tobiko[1]-Maki + 1 Thunfisch, 1 Lachs, 1 Eierstich, 1 Scampi, 1 Tintenfisch",
               "price" : 13.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch", "seafood"],
@@ -967,7 +963,7 @@ window.appConfig = {
             },
             {
               "name" : "S53 12 Röllchen + 4 Nigiri",
-              "description" : "4 Nigiri: 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch; 12 Röllchen: 6 California[1,S]-Sesam-, 3 Avokado-, 3 Kappa-Maki",
+              "description" : "6 California[1,S]-Sesam-, 3 Avokado-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch",
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch", "seafood"],
@@ -975,7 +971,7 @@ window.appConfig = {
             },
             {
               "name" : "S54 12 Röllchen + 5 Nigiri",
-              "description" : "5 Nigiri: 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch, 1 Octopus;  12 Röllchen: 3 Sake-, 3 Kampyo[1]-, 3 Tekka-, 3 Kappa-Maki",
+              "description" : "3 Sake-, 3 Kampyo[1]-, 3 Tekka-, 3 Kappa-Maki + 1 Thunfisch, 1 Lachs, 1 Scampi, 1 Tintenfisch, 1 Octopus",
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Fisch", "seafood"],
@@ -983,21 +979,21 @@ window.appConfig = {
             },
             {
               "name" : "S55 12 Röllchen + 6 Nigiri",
-              "description" : " 6 Nigiri: 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Octopus; 12 Röllchen: 6 Avokado-, 6 Tekka-Maki",
+              "description" : "6 Avokado-, 6 Tekka-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Octopus",
               "price" : 15.90,
               "traits" : ["Avokado", "Fisch", "seafood"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S55.menu_03_05_2016_15_09_58.jpg"]
             },
             {
               "name" : "S56 12 Röllchen + 6 Nigiri",
-              "description" : "6 Nigiri: 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch; 12 Röllchen: 3 Kappa-, 3 Shinko-, 3 Ebi-, 3 Kani[S]-Maki",
+              "description" : "3 Kappa-, 3 Shinko-, 3 Ebi-, 3 Kani[S]-Maki + 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch",
               "price" : 15.90,
               "traits" : ["Fisch", "seafood"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S56.menu_03_05_2016_15_18_17.jpg"]
             },
             {
               "name" : "S57 12 Röllchen + 6 Nigiri",
-              "description" : "6 Nigiri: 3 Thunfisch, 2 Lachs, 1 Lachskaviar; 12 Röllchen: 3 Shinko-, 3 Kampyo[1,S]-, 3 Avokado-, 3 Kappa-Maki",
+              "description" : "3 Shinko-, 3 Kampyo[1]-, 3 Avokado-, 3 Kappa-Maki + 3 Thunfisch, 2 Lachs, 1 Lachskaviar",
               "price" : 16.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch"],
@@ -1005,28 +1001,28 @@ window.appConfig = {
             },
             {
               "name" : "S58 24 Röllchen + 10 Nigiri (für 2 Personen)",
-              "description" : "10 Nigiri(versch. Sorte); 24 Röllchen: 6 Kappa-, 6 Tekka-, 6 Alaska-, 6 Sake-Maki",
+              "description" : "6 Kappa-, 6 Tekka-, 6 Alaska-, 6 Sake-Maki + 10 Nigiri",
               "price" : 29.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S58.menu_03_05_2016_15_23_46.jpg"]
             },
             {
               "name" : "S59 18 Röllchen + 14 Nigiri (für 2-3 Personen)",
-              "description" : "14 Nigiri(versch. Sorte); 18 Röllchen: 6 California[1,S]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki",
+              "description" : "6 California[1,S]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki + 14 Nigiri",
               "price" : 34.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S59.menu_03_05_2016_15_26_38.jpg"]
             },
             {
               "name" : "S60 18 Röllchen + 18 Nigiri (für 3 Personen)",
-              "description" : "18 Nigiri(versch. Sorte); 18 Röllchen: 6 Sake-, 6 Tekka-, 6 Alaska-Tobiko[1]-Maki",
+              "description" : "6 Sake-, 6 Tekka-, 6 Alaska-Tobiko[1]-Maki + 18 Nigiri",
               "price" : 44.90,
               "traits" : ["Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S60.menu_03_05_2016_15_27_55.jpg"]
             },
             {
               "name" : "S61 36 Röllchen - 28 Nigiri (Familien-Glück f. 4 Per.)",
-              "description" : "28 Nigiri(versch. Sorte); 36 Röllchen: 6 Shinko-, 6 Tekka-, 6 Sake-, 6 Avokado-, 6 Sake-Kawa-, 6 Alaska-Tobico-Maki",
+              "description" : "6 Shinko-, 6 Tekka-, 6 Sake-, 6 Avokado-, 6 Sake-Kawa-, 6 Alaska-Tobico-Maki + 28 Nigiri",
               "price" : 64.90,
               "traits" : ["Avokado", "Fisch"],
               "pics" : ["http://asia-littledragon.de/images/tagessushi/S61.menu_03_05_2016_15_28_43.jpg"]
@@ -1157,49 +1153,49 @@ window.appConfig = {
             "items" : [
             {
               "name" : "321 Sushi Inside-Out Maki - Horenso-Goaae-Maki",
-              "description" : "mit Spinat und Sesamsauce, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Spinat und Sesamsauce, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.30,
               "allergens": ["Sesam"],
               "traits": ["Spinat", "Sesam", "vegetarisch"]
             },
             {
               "name" : "322 Sushi Inside-Out Maki - Alaska-Sesam-Maki",
-              "description" : "mit Lachs, Avokado, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Lachs, Avokado, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.50,
               "allergens": ["Sesam"],
               "traits": ["Fisch", "Avokado"]
             },
             {
               "name" : "323 Sushi Inside-Out Maki - Alaska-Tobiko[1]-Maki",
-              "description" : "mit Lachs, Avokado, ummantelt mit Fliegender Fisch-Rogen (6 Röllchen)",
+              "description" : "mit Lachs, Avokado, ummantelt und Fliegender Fisch-Rogen (6 Röllchen)",
               "price" : 5.00,
               "additives": ["mit Farbstoffen"],
               "traits": ["Fisch", "Avokado"]
             },
             {
               "name" : "324 Sushi Inside-Out Maki - Sake-Kawa-Maki",
-              "description" : "mit Gegrillte Lachshaut, Gurken, Mayonnaise, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Gegrillte Lachshaut, Gurken und Mayonnaise, ummantelt und Sesam (6 Röllchen)",
               "price" : 5.00,
               "allergens": ["Sesam"],
               "traits": ["Fisch"]
             },
             {
               "name" : "325 Sushi Inside-Out Maki - Maguro-Maki",
-              "description" : "mit Ente, Zwiebeln, Mayonaise, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Ente, Gurken und Mayonaise, ummantelt und Sesam (6 Röllchen)",
               "price" : 5.50,
               "allergens": ["Sesam"],
               "traits": ["Ente"]
             },
             {
               "name" : "326 Sushi Inside-Out Maki - Tori-Karaage-Maki",
-              "description" : "mit fritierte Hühnerstücke, Gurken, Mayonnaise, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit fritierte Hühnerstücke, Gurken und Mayonnaise, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.80,
               "allergens": ["Sesam"],
               "traits": ["Hähnchen"]
             },
             {
               "name" : "327 Sushi Inside-Out Maki - California-Sesam-Maki",
-              "description" : "mit Surimi[1,S] und Avokado, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Surimi[1,S] und Avokado, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.50,
               "additives": ["mit Farbstoffen"],
               "allergens": ["Sesam", "Krebsfleisch-Imitat"],
@@ -1207,7 +1203,7 @@ window.appConfig = {
             },
             {
               "name" : "328 Sushi Inside-Out Maki - California-Tobiko-Maki",
-              "description" : "mit Surimi[1,S] und Avokado, ummantelt mit Fliegender Fisch-Rogen (6 Röllchen)",
+              "description" : "mit Surimi[1,S] und Avokado, ummantelt und Fliegender Fisch-Rogen (6 Röllchen)",
               "price" : 5.00,
               "additives": ["mit Farbstoffen"],
               "allergens": ["Sesam", "Krebsfleisch-Imitat"],
@@ -1215,40 +1211,40 @@ window.appConfig = {
             },
             {
               "name" : "329 Sushi Inside-Out Maki - Boston-Maki",
-              "description" : "mit Thunfisch und Avokado, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Thunfisch und Avokado, ummantelt und Sesam (6 Röllchen)",
               "price" : 5.00,
               "allergens": ["Sesam"],
               "traits": ["Avokado", "Thunfisch"]
             },
             {//TODO supplement
               "name" : "330a Sushi Inside-Out Maki - Salmon-Philadelphia-Maki",
-              "description" : "mit Frischkäse, Lachs und Gurken, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Frischkäse, Lachs und Gurken, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.90,
               "allergens": ["Sesam"],
               "traits": ["Avokado", "Lachs"]
             },
             {
               "name" : "330b Sushi Inside-Out Maki - Salmon-Philadelphia-Maki",
-              "description" : "mit Frischkäse, Lachs und Avokado, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Frischkäse, Lachs und Avokado, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.90,
               "allergens": ["Sesam"],
               "traits": ["Avokado", "Lachs", "Käse"]
             },
             {
               "name" : "331 Sushi Inside-Out Maki - Avokado-Philadelphia-Maki",
-              "description" : "mit Frischkäse und Avokado, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Frischkäse und Avokado, ummantelt und Sesam (6 Röllchen)",
               "price" : 4.20,
               "allergens": ["Sesam"],
               "traits": ["Avokado", "vegetarisch", "Käse"]
             },
             {
               "name" : "332 Sushi Inside-Out Maki - Tuna-Philadelphia-Maki",
-              "description" : "mit Frischkäse, Thunfisch und Gurken, ummantelt mit Sesam (6 Röllchen)",
+              "description" : "mit Frischkäse, Thunfisch und Gurken, ummantelt und Sesam (6 Röllchen)",
               "price" : 5.30,
               "allergens": ["Sesam"],
               "traits": ["Avokado", "Thunfisch", "Käse"]
             } ] },
-          {"category" : "Sushi Temaki",
+          {"category" : "Sushi Temaki / Sashimi",
             "traits" : ["sushi", "temaki"],
             "items" : [
             {
@@ -1280,34 +1276,30 @@ window.appConfig = {
             },
             {
               "name" : "337 Sushi Temaki - Ikura",
-              "description" : "mit Lachskaviar, Avokado (1 Stück)",
+              "description" : "mit Lachskaviar, Avokado und Sesam (1 Stück)",
               "price" : 5.00,
               "allergens": ["Sesam"],
               "traits": ["Avokado", "Lachs"]
             },
-           ] },
-
-           {"category" : "Sushi Sashimi",
-                      "traits" : ["sushi"],
-                      "items" : [ {
-                                   "name" : "338 Gemischte Sashimi",
-                                   "description" : "mit Lachs und Thunfisch",
-                                   "price" : 14.90,
-                                   "traits": ["Lachs", "Thunfisch"]
-                                 } ]},
+            {
+              "name" : "338 Gemischte Sashimi",
+              "description" : "mit Lachs und Thunfisch",
+              "price" : 14.90,
+              "traits": ["Lachs", "Thunfisch"]
+            } ] },
           {"category" : "Hühnerfleischgerichte (mit Reis)",
             "traits" : ["chicken", "rice", "Hauptspeise"],
             "items" : [
             {
               "name" : "211 Gebr. Hühnerfleisch - Chop-Suey",
-              "description" : "gebratenes Hühnerfleisch mit versch. Gemüse",
+              "description" : "mit Gemüse",
               "price" : 7.90,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"]
             },
             {
               "name" : "212 Gebr. Hühnerfleisch - Gung-Po",
-              "description" : "gebratenes Hühnerfleisch mit Gemüse, Cashew in Hoisin",
+              "description" : "mit Gemüse, Cashew in Hoisin",
               "price" : 7.90,
               "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
@@ -1315,7 +1307,7 @@ window.appConfig = {
             },
             {
               "name" : "213 Gebr. Hühnerfleisch - Bamboo",
-              "description" : "gebratenes Hühnerfleisch mit Bambus und Pilze",
+              "description" : "mit Bambus und Pilze",
               "price" : 7.90,
               "traits": ["Bambus", "Pilze"],
               "additives": ["mit Geschmacksverstärker"],
@@ -1323,7 +1315,7 @@ window.appConfig = {
             },
             {
               "name" : "214 Gebr. Hühnerfleisch - Sate",
-              "description" : "gebratenes Hühnerfleisch mit Gemüse, Kokosmilch in Erdnuss-Sauce",
+              "description" : "mit Gemüse, Kokosmilch in Erdnuss-Sauce",
               "price" : 7.90,
               "spiciness": 1,
               "traits": ["kokos"],
@@ -1332,16 +1324,16 @@ window.appConfig = {
             },
             {
               "name" : "215 Gebr. Hühnerfleisch - China-Curry",
-              "description" : "gebratenes Hühnerfleisch mit Gemüse, Kokosmilch und China-Curry",
+              "description" : "mit Gemüse, Kokosmilch und China-Curry",
               "price" : 7.90,
-              "spiciness": 1    ,
+              "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse", "Milcherzeugnis"],
               "traits": ["curry", "kokos"]
             },
             {
               "name" : "216 Gebr. Hühnerfleisch - Suki Yaki",
-              "description" : "gebratenes Hühnerfleisch mit Gemüse und Glasnudeln",
+              "description" : "mit Gemüse und Glasnudeln",
               "price" : 7.90,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
@@ -1349,7 +1341,7 @@ window.appConfig = {
             },
             {
               "name" : "217 Gebr. Hühnerfleisch - Gai Tord Jieu Lhon",
-              "description" : "gebratenes Hühnerfleisch mit Gemüse, Kokosmilch, Tamarinde, Koriander",
+              "description" : "mit Gemüse, Kokosmilch, Tamarinde, Koriander",
               "price" : 7.90,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1358,7 +1350,7 @@ window.appConfig = {
             },
             {
               "name" : "218 Gebr. Hühnerfleisch - Thai Curry",
-              "description" : "gebratenes Hühnerfleisch mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
               "price" : 7.90,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1367,7 +1359,7 @@ window.appConfig = {
             },
             {
               "name" : "219 Gebr. Hühnerfleisch - Gai Pad Bai Graprau",
-              "description" : "gebratenes Hühnerfleisch mit Peperoni, rote Zwiebeln",
+              "description" : "mit Peperoni, Thai Basilikum, rote Zwiebeln",
               "price" : 7.90,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1375,8 +1367,8 @@ window.appConfig = {
               "traits": ["Peperoni", "Zwiebel"]
             },
             {
-              "name" : "220 Gebackenes Hühnerfleisch - Ga Chua Ngot",
-              "description" : "gebackenes Hühnerfleisch mit Gemüse, Ananas, Bambus in süß-sauer Sauce",
+              "name" : "220 Gebr. Hühnerfleisch - Ga Chua Ngot",
+              "description" : "mit Gemüse, Ananas, Bambus in süß-sauer Sauce",
               "price" : 7.90,
               "additives": ["mit Geschmacksverstärker"],
               "traits": ["Ananas", "Bambus"]
@@ -1386,7 +1378,7 @@ window.appConfig = {
             "items" : [
             {
               "name" : "221 Knusprige Hühnerkeule",
-              "description" : "mit versch. Gemüse",
+              "description" : "mit Gemüse",
               "price" : 8.90,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"]
@@ -1404,8 +1396,7 @@ window.appConfig = {
               "description" : "mit Gemüse, Bambus und Pilze",
               "price" : 8.90,
               "additives": ["mit Geschmacksverstärker"],
-              "allergens": ["Soja oder Sojaerzeugnisse"],
-              "traits": ["Bambus", "Pilze"]
+              "allergens": ["Soja oder Sojaerzeugnisse", "Bambus", "Pilze"]
             },
             {
               "name" : "224 Knusprige Hühnerkeule",
@@ -1420,7 +1411,7 @@ window.appConfig = {
               "name" : "225 Knusprige Hühnerkeule",
               "description" : "mit Gemüse, Kokosmilch und China-Curry",
               "price" : 8.90,
-              "spiciness": 1,
+              "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Milcherzeugnis", "Soja oder Sojaerzeugnisse"],
               "traits": ["Kokos"]
@@ -1444,7 +1435,7 @@ window.appConfig = {
             },
             {
               "name" : "228 Knusprige Hühnerkeule",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry, Basilikum",
               "price" : 8.90,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1456,14 +1447,14 @@ window.appConfig = {
             "items" : [
             {
               "name" : "231 Gebr. Rindfleisch - Chop-Suey",
-              "description" : "mit versch. Gemüse",
+              "description" : "mit Gemüse",
               "price" : 8.50,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"]
             },
             {
               "name" : "232 Gebr. Rindfleisch - Gung-Po",
-              "description" : "mit Gemüse in Hoisin und Cashewnüsse",
+              "description" : "mit Gemüse, Cashew in Hoisin",
               "price" : 8.50,
               "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
@@ -1471,7 +1462,7 @@ window.appConfig = {
             },
             {
               "name" : "233 Gebr. Rindfleisch - Bamboo",
-              "description" : "mit Bambus und Pilze und Gemüse",
+              "description" : "mit Bambus und Pilze",
               "price" : 8.50,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
@@ -1490,7 +1481,7 @@ window.appConfig = {
               "name" : "235 Gebr. Rindfleisch - China-Curry",
               "description" : "mit Gemüse, Kokosmilch und China-Curry",
               "price" : 8.50,
-              "spiciness": 1,
+              "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Milcherzeugnis", "Soja oder Sojaerzeugnisse"],
               "traits": ["Kokos"]
@@ -1514,7 +1505,7 @@ window.appConfig = {
             },
             {
               "name" : "238 Gebr. Rindfleisch - Thai Curry",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 8.50,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1523,7 +1514,7 @@ window.appConfig = {
             },
             {
               "name" : "239 Gebr. Rindfleisch - Nua Pad Bai Graprau",
-              "description" : "mit Gemüse, Peperoni, rote Zwiebeln",
+              "description" : "mit Peperoni, Thai Basilikum, rote Zwiebeln",
               "price" : 8.50,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1532,7 +1523,7 @@ window.appConfig = {
             },
             {
               "name" : "240 Gebr. Rindfleisch - Bo Xa Ot",
-              "description" : "mit Gemüse, Paprika, Zwiebeln und Zitronengras",
+              "description" : "mit Paprika, Zwiebeln und Zitronengras",
               "price" : 8.50,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1541,7 +1532,7 @@ window.appConfig = {
             },
             {
               "name" : "240A Gebr. Rindfleisch - Bo Xao Hanh",
-              "description" : "mit Zwiebeln, Lauch und Hoisin-Sause",
+              "description" : "mit Zwiebeln, Lauch und Austernsauce",
               "price" : 8.50,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
@@ -1552,8 +1543,8 @@ window.appConfig = {
             "items" : [
             {
               "name" : "241 Gebr. Schweinefleisch - Chop-Suey",
-              "description" : "mit versch. Gemüse",
-              "price" : 7.50,
+              "description" : "mit Gemüse",
+              "price" : 7.550,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"]
             },
@@ -1586,7 +1577,7 @@ window.appConfig = {
               "name" : "245 Gebr. Schweinefleisch - China-Curry",
               "description" : "mit Gemüse, Kokosmilch und China-Curry",
               "price" : 7.90,
-              "spiciness": 1,
+              "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "traits": ["Kokos"]
@@ -1601,7 +1592,7 @@ window.appConfig = {
             },
             {
               "name" : "247 Gebr. Schweinefleisch - Mu Tord Jieu Lhon",
-              "description" : "mit Gemüse, Kokosmilch, Tamarinde, Koriander",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 7.90,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1610,7 +1601,7 @@ window.appConfig = {
             },
             {
               "name" : "248 Thai Curry",
-              "description" : "gebratenes Schweinfleisch, Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "gebratenes Schweinfleisch, Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 7.90,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1622,7 +1613,7 @@ window.appConfig = {
             "items" : [
             {
               "name" : "251 Gebr. Entenfleisch - Chop-Suey",
-              "description" : "mit versch. Gemüse",
+              "description" : "mit Gemüse",
               "price" : 11.00,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
@@ -1638,7 +1629,7 @@ window.appConfig = {
             },
             {
               "name" : "253 Gebr. Entenfleisch - Bamboo",
-              "description" : "mit Gemüse, Bambus und Pilze",
+              "description" : "mit Bambus und Pilze",
               "price" : 11.00,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Soja oder Sojaerzeugnisse"],
@@ -1657,7 +1648,7 @@ window.appConfig = {
               "name" : "255 Gebr. Entenfleisch - China-Curry",
               "description" : "mit Gemüse, Kokosmilch und China-Curry",
               "price" : 11.00,
-              "spiciness": 1,
+              "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Milcherzeugnis", "Erdnüße", "Soja oder Sojaerzeugnisse"],
               "traits": ["Kokos"]
@@ -1681,7 +1672,7 @@ window.appConfig = {
             },
             {
               "name" : "258 Gebr. Entenfleisch - Thai Curry",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 11.00,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1690,7 +1681,7 @@ window.appConfig = {
             },
             {
               "name" : "259 Gebr. Entenfleisch - Vit Chua Ngot",
-              "description" : "mit Gemüse, Ananas, Bambus, in süßsaurer Sauce",
+              "description" : "mit Gemüse, Ananas, Bambus, in süß-saurer Sauce",
               "price" : 11.00,
               "additives": ["mit Geschmacksverstärker"],
               "traits": ["Bambus", "Ananas"]
@@ -1709,7 +1700,7 @@ window.appConfig = {
             },
             {
               "name" : "262 Gebr. Tintenfisch - Muc Thai Curry",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry mit Basilikum",
               "price" : 8.50,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1725,7 +1716,7 @@ window.appConfig = {
             },
             {
               "name" : "264 Gebr. Fischfilet - Ca Thai Curry",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry mit Basilikum",
               "price" : 8.00,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1734,14 +1725,14 @@ window.appConfig = {
             },
             {
               "name" : "265 Gebr. Großgarnelen - Tom Chop-Suey",
-              "description" : "mit versch. Gemüse",
+              "description" : "mit Gemüse",
               "price" : 12.00,
               "additives": ["mit Geschmacksverstärker"],
               "traits": ["Garnelen"]
             },
             {
               "name" : "266 Gebr. Großgarnelen - Tom Thai Curry",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 12.00,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1766,9 +1757,8 @@ window.appConfig = {
             },
             {
               "name" : "269 Gebr. Großgarnelen - Gung-Po",
-              "description" : "mit Gemüse in Hoisin und Cashewnüsse",
+              "description" : "mit Gemüse, Cashewnüsse, in hoisin Sauce",
               "price" : 12.00,
-              "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
               "allergens": ["Haselnüße oder Nußerzeugnisse", "Soja oder Sojaerzeugnisse"],
               "traits": ["Garnelen"]
@@ -1778,14 +1768,14 @@ window.appConfig = {
             "traits" : ["Reis"],
             "items": [{
                 "name" : "271 Gebratener Eierreis",
-                "description" : "mit versch. Gemüse",
+                "description" : "mit Gemüse",
                 "price" : 7.00,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"]
               },
               {
                 "name" : "272 Gebratener Eierreis",
-                "description" : "mit versch. Gemüse und Hühnerfleisch",
+                "description" : "mit Gemüse und Hühnerfleisch",
                 "price" : 7.90,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1793,7 +1783,7 @@ window.appConfig = {
               },
               {
                 "name" : "273 Gebratener Eierreis",
-                "description" : "mit versch. Gemüse und Rindfleisch",
+                "description" : "mit Gemüse und Rindfleisch",
                 "price" : 8.00,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1801,7 +1791,7 @@ window.appConfig = {
               },
               {
                 "name" : "274 Gebratener Eierreis",
-                "description" : "mit versch. Gemüse und Krabben",
+                "description" : "mit Gemüse und Krabben",
                 "price" : 8.20,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1835,19 +1825,19 @@ window.appConfig = {
 
 
           {
-            "category" : "Gebratener Nudeln",
+            "category" : "Gebratener Reis",
             "traits" : ["Reis"],
             "items": [{
                 "name" : "277 Gebratene Eiernudeln",
-                "description" : "mit versch. Gemüse",
+                "description" : "mit Gemüse",
                 "price" : 7.0,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
-                "traits": ["Nudeln"]
+                "traits": ["Nudeln"] //TODO reis-NEG
               },
               {
                 "name" : "278 Gebratene Eiernudeln",
-                "description" : "mit versch. Gemüse und Hühnerfleisch",
+                "description" : "mit Gemüse und Hühnerfleisch",
                 "price" : 7.90,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1855,7 +1845,7 @@ window.appConfig = {
               },
               {
                 "name" : "279 Gebratene Eiernudeln",
-                "description" : "mit versch. Gemüse und Rindfleisch",
+                "description" : "mit Gemüse und Rindfleisch",
                 "price" : 8.00,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1863,7 +1853,7 @@ window.appConfig = {
               },
               {
                 "name" : "280 Gebratene Eiernudeln",
-                "description" : "mit versch. Gemüse und Krabben",
+                "description" : "mit Gemüse und Krabben",
                 "price" : 8.20,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1879,7 +1869,7 @@ window.appConfig = {
               },
               {
                 "name" : "282a Gebratene Eiernudeln",
-                "description" : "mit versch. Gemüse, knuspriges Entenfleisch (Hoisinsauce)",
+                "description" : "mit Gemüse, knuspriges Entenfleisch (Hoisinsauce)",
                 "price" : 11.90,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1887,7 +1877,7 @@ window.appConfig = {
               },
               {
                 "name" : "282b Gebratene Eiernudeln",
-                "description" : "mit versch. Gemüse, knuspriges Entenfleisch (Süß-sauer Sauce)",
+                "description" : "mit Gemüse, knuspriges Entenfleisch (Süß-sauer Sauce)",
                 "price" : 11.90,
                 "additives": ["mit Geschmacksverstärker"],
                 "allergens": ["Ei und Eierzeugnisse", "Soja oder Sojaerzeugnisse"],
@@ -1925,7 +1915,7 @@ window.appConfig = {
             },
             {
               "name" : "294 Gebratenes Gemüse",
-              "description" : "mit Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 7.20,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1960,7 +1950,7 @@ window.appConfig = {
             },
             {
               "name" : "298 Gebratener Tofu",
-              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry",
+              "description" : "mit Gemüse, Kokosmilch, Thai-Rot Curry und Basilikum",
               "price" : 7.50,
               "spiciness": 2,
               "additives": ["mit Geschmacksverstärker"],
@@ -1986,187 +1976,479 @@ window.appConfig = {
               "traits": ["Honig", "Ananas"]
             },
             {
-              "name" : "123 Mangocreme",
-              "price" : 3.00,
-              "traits": ["Mango"]
-            },
-            {
               "name" : "124a BEN & JERRY's Caramel Chew Chew",
-              "description" : "(500ml) (Grundpreis 15,60 Euro pro 1,0L)",
-              "price" : 7.80
+              "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+              "price" : 3.20
             },
             {
               "name" : "124b BEN & JERRY's Strawberry Cheesecake",
-              "description" : "(500ml) (Grundpreis 15,60 Euro pro 1,0L)",
-              "price" : 7.80
+              "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+              "price" : 3.20
             },
             {
               "name" : "124c BEN & JERRY's Cookie Dough",
-              "description" : "(500ml) (Grundpreis 15,60 Euro pro 1,0L)",
-              "price" : 7.80
+              "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+              "price" : 3.20
             },
             {
               "name" : "124d BEN & JERRY's Chunky Monkey",
-              "description" : "(500ml) (Grundpreis 15,60 Euro pro 1,0L)",
-              "price" : 7.80
+              "description" : "(150ml) (Grundpreis 21,30 Euro pro 1,0L)",
+              "price" : 3.20
+            },
+            {
+              "name" : "123 Mangocreme",
+              "description" : "null",
+              "price" : 3.00,
+              "traits": ["Mango"]
             } ] },
           {"category" : "Getränke",
             "traits" : ["drinks"],
             "items" : [
             {
-              "name" : "125a Coca Cola (1l)",
-              "price" : 2.70,
+              "name" : "801 Coca Cola (0.3l)",
+              "price" : 1.80,
               "additives": [
                 "mit Farbstoffen",
-                "mit Antioxidationsmittel","mit Phosphat"],
+                "mit Antioxidationsmittel",
+                "Koffeinhaltig"],
               "traits" : ["Koffein"]
             },
             {
-              "name" : "125b Coca Cola light (1l)",
-              "price" : 2.70,
+              "name" : "801 Coca Cola (0.4l)",
+              "price" : 2.40,
               "additives": [
-                  "mit Farbstoffen",
-                  "geschwefelt",
-                  "geswärtzt",
-                  "mit Phosphat"],
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel",
+                "Koffeinhaltig"],
               "traits" : ["Koffein"]
             },
             {
-              "name" : "125c Fanta (1l)",
-              "price" : 2.70,
+              "name" : "802 Coca Cola Light (0.3l)",
+              "price" : 1.80,
               "additives": [
-                   "mit Farbstoffen",
-                   "mit Antioxidationsmittel"]
+                "mit Farbstoffen",
+                "geschwefelt",
+                "geswärtzt",
+                "mit Phosphat"]
             },
             {
-              "name" : "125d Sprite (1l)",
-              "price" : 2.70,
-              "additives":  [ "mit Antioxidationsmittel"]
-            },
-            {
-              "name" : "125e Mezzo-Mix (1l)",
-              "price" : 2.70,
+              "name" : "802 Coca Cola Light (0.4l)",
+              "price" : 2.40,
               "additives": [
-                   "mit Farbstoffen",
-                   "mit Antioxidationsmittel",
-                   "mit Phosphat"]
+                "mit Farbstoffen",
+                "geschwefelt",
+                "geswärtzt",
+                "mit Phosphat"]
             },
             {
-              "name" : "125f Apfelsaftschorle (1l)",
-              "price" : 2.70
+              "name" : "802 Coca Cola Light (0.3l)",
+              "price" : 1.80,
+              "additives": [
+                "mit Farbstoffen",
+                "geschwefelt",
+                "geswärtzt",
+                "mit Phosphat"]
             },
             {
-              "name" : "126 Mineralwasser (1l)",
-              "description": "mit Kohlensäure",
-              "price" : 2.70
+              "name" : "802 Coca Cola Light (0.4l)",
+              "price" : 2.40,
+              "additives": [
+                "mit Farbstoffen",
+                "geschwefelt",
+                "geswärtzt",
+                "mit Phosphat"]
             },
             {
-              "name" : "127a Asiatische Säfte - Lychee-Saft (1l)",
-              "price" : 3.50
+              "name" : "803 Fanta (0.3l)",
+              "price" : 1.80,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel"]
             },
             {
-              "name" : "127b Asiatische Säfte - Mango-Saft (1l)",
-              "price" : 3.50
+              "name" : "803 Fanta (0.4l)",
+              "price" : 2.40,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel"]
             },
-            ]
+            {
+              "name" : "804 Sprite (0.3l)",
+              "price" : 1.80,
+              "additives": [
+                "mit Antioxidationsmittel"]
+            },
+            {
+              "name" : "804 Sprite (0.4l)",
+              "price" : 2.40,
+              "additives": [
+                "mit Antioxidationsmittel"]
+            },
+            {
+              "name" : "804 Mezzo Mix (0.3l)",
+              "price" : 1.80,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel",
+                "mit Phosphat"]
+            },
+            {
+              "name" : "804 Mezzo Mix (0.4l)",
+              "price" : 2.40,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel",
+                "mit Phosphat"]
+            },
+            {
+              "name" : "807 Mineralwasser (0.3l)",
+              "price" : 1.80
+            },
+            {
+              "name" : "807 Mineralwasser (0.4l)",
+              "price" : 2.40
+            },
+            {
+              "name" : "808 Apfelschorle (0.3l)",
+              "price" : 1.80
+            },
+            {
+              "name" : "808 Apfelschorle (0.4l)",
+              "price" : 2.40
+            },
+            {
+              "name" : "809 Johanisbeerschorle (0.3l)",
+              "additives": [
+                "mit Farbstoffen"
+              ],
+              "price" : 1.80
+            },
+            {
+              "name" : "809 Johanisbeerschorle (0.4l)",
+              "additives": [
+                "mit Farbstoffen"
+              ],
+              "price" : 2.40
+            },
+            {
+              "name" : "810 Alkoholfreis Bier (0.5l)",
+              "allergens": ["Weizen"],
+              "price" : 2.90
+            }]
           },
+
+
+          {"category" : "Flasche",
+            "traits" : ["drinks"],
+            "items" : [
+            {
+              "name" : "811 Coca Cola (1l)",
+              "price" : 3.90,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel",
+                "Koffeinhaltig"
+              ],
+              "traits" : ["Koffein"]
+            },
+            {
+              "name" : "811 Coca Cola Light (1l)",
+              "price" : 3.90,
+              "additives": [
+                "mit Farbstoffen",
+                "geschwefelt",
+                "geswärtzt",
+                "mit Phosphat"]
+            },
+            {
+              "name" : "812 Coca Cola Light (1l)",
+              "price" : 3.90,
+              "additives": [
+                "mit Farbstoffen",
+                "geschwefelt",
+                "geswärtzt",
+                "mit Phosphat"
+              ]
+            },
+            {
+              "name" : "813 Fanta (1l)",
+              "price" : 3.90,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel"]
+            },
+            {
+              "name" : "814 Sprite (1l)",
+              "price" : 3.90,
+              "additives": [
+                "mit Antioxidationsmittel"]
+            },
+            {
+              "name" : "815 Mezzo Mix (1l)",
+              "price" : 3.90,
+              "additives": [
+                "mit Farbstoffen",
+                "mit Antioxidationsmittel",
+                "mit Phosphat"]
+            },
+            {
+              "name" : "816 Mineralwasser (1l)",
+              "price" : 3.90
+            },
+            {
+              "name" : "817 Apfelschorle (1l)",
+              "price" : 3.90
+            }]
+          },
+
+          {"category" : "Asiatische Saft",
+          "items" : [{
+              "name" : "820 Lycheesaft (0.3l)",
+              "price" : 1.80,
+              "allergens": ["Sulfit"],
+              "traits": ["Saft"]
+            },{
+              "name" : "820 Lycheesaft (0.4l)",
+              "price" : 2.40,
+              "allergens": ["Sulfit"],
+              "traits": ["Saft"]
+            },
+            {
+              "name" : "821 Mangosaft (0.3l)",
+              "price" : 1.80,
+              "allergens": ["Sulfit"],
+              "traits": ["Saft"]
+            },
+            {
+              "name" : "821 Mangosaft (0.4l)",
+              "price" : 2.40,
+              "allergens": ["Sulfit"],
+              "traits": ["Saft"]
+            } ] },
+
+          {"category" : "Warme Getränke",
+          "items" : [{
+              "name" : "822 Espresso",
+              "price" : 2.10,
+              "traits": ["Kaffein"]
+            },{
+              "name" : "823 Kaffe",
+              "price" : 2.50,
+              "traits": ["Kaffein"]
+            },
+            {
+              "name" : "824 Jasmin Tee",
+              "price" : 2.90
+            },
+            {
+              "name" : "825 Grüner Tee",
+              "price" : 2.90
+            },
+            {
+              "name" : "826 Kamillentee",
+              "price" : 2.00
+            },
+            {
+              "name" : "827 Schwarztee",
+              "price" : 2.00
+            } ,
+            {
+              "name" : "828 Pfefferminztee",
+              "price" : 2.00
+            } ] },
           {"category" : "Bier",
             "traits" : ["alcohol", "drinks", "Bier"],
             "items" : [
             {
-              "name" : "128a Helles Bier (0,5L)",
-              "price" : 1.90,
+              "name" : "830 Helles Bier (0,5L)",
+              "price" : 2.90,
               "allergens": ["Weizen"]
             },
             {
-              "name" : "128b dukles Weißbier (0,5L)",
-              "price" : 1.90,
+              "name" : "831 Weißbier (0,5L)",
+              "price" : 2.90,
               "allergens": ["Weizen"]
             },
             {
-              "name" : "128c Weißbier (0,5L)",
-              "price" : 1.90,
+              "name" : "832 Dunkles Weißbier (0,5L)",
+              "price" : 2.90,
               "allergens": ["Weizen"]
             },
             {
-              "name" : "128d Alkoholfreies Bier (0,5L)",
-              "price" : 1.90,
+              "name" : "833 Pils (0,33L)",
+              "price" : 2.50,
               "allergens": ["Weizen"]
-            },{
-                "name" : "129 Tsingtao Bier (0,33L)",
-                "description" : "China Bier",
-                "price" : 2.30,
-                "allergens": ["Weizen"]
-              },
-              {
-                "name" : "130 Singha (0,33L)",
-                "description" : "Thai Bier",
-                "price" : 2.30,
-                "allergens": ["Weizen"]
-              }]
+            }]
+          },
+          {"category" : "Bier",
+            "traits" : ["alcohol", "drinks", "Bier"],
+            "items":[
+            {
+              "name" : "834 Tsingtao Bier (0,33L)",
+              "description" : "China Bier",
+              "price" : 2.50,
+              "allergens": ["Weizen"]
+            },
+            {
+              "name" : "835 Singha (0,33L)",
+              "description" : "Thai Bier",
+              "price" : 2.50,
+              "allergens": ["Weizen"]
+            }]
           },
           {
             "category" : "Weine",
             "traits": ["Wein"],
             "items": [
             {
-              "name" : "131a Pinot Grigio (Fl. 0,75l)",
-              "description" : "trocken aus Italien, IGT11% vol",
-              "price" : 9.00,
+              "name" : "840 Weiße Weinschorle (0.2l)",
+              "price" : 3.50,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131b Chardonnay (Fl. 0,75l)",
+              "name" : "841 Pinot Grigio (0,2l)",
               "description" : "trocken aus Italien, IGT11% vol",
-              "price" : 9.00,
+              "price" : 3.50,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131c Chianti (Fl. 0,75l)",
+              "name" : "841 Pinot Grigio (Fl. 0,75l)",
+              "description" : "trocken aus Italien, IGT11% vol",
+              "price" : 10.90,
+              "allergens": ["Sulfit"],
+            },
+            {
+              "name" : "842 Chardonnay (0,2l)",
+              "description" : "trocken aus Italien, IGT11% vol",
+              "price" : 3.50,
+              "allergens": ["Sulfit"],
+            },
+            {
+              "name" : "842 Chardonnay (Fl. 0,75l)",
+              "description" : "trocken aus Italien, IGT11% vol",
+              "price" : 10.90,
+              "allergens": ["Sulfit"],
+            },
+            {
+              "name" : "843 Chianti (0,2l)",
               "description" : "trocken aus Italien, 12% vol",
-              "price" : 9.00,
+              "price" : 3.50,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131d Bordeaux (Fl. 0,75l)",
+              "name" : "843 Chianti (Fl. 0,75l)",
+              "description" : "trocken aus Italien, 12% vol",
+              "price" : 10.90,
+              "allergens": ["Sulfit"],
+            },
+            {
+              "name" : "844 Bordeaux (0,2l)",
               "description" : "trocken aus Frankreich",
-              "price" : 9.00,
+              "price" : 3.50,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131d Bardolino (Fl. 0,75l)",
-              "description" : "aus Italien",
-              "price" : 9.00,
+              "name" : "844 Bordeaux (Fl. 0,75l)",
+              "description" : "trocken aus Frankreich",
+              "price" : 10.90,
               "allergens": ["Sulfit"],
-            },
-            {
-              "name" : "132 Sekt: Prosecco (Fl. 0,75l)",
-              "price" : 9.90,
-              "allergens": ["Sulfit"],
-            },
-            {
-              "name" : "133a Asiatischer Wein - Pflaumen (Fl. 0,5l)",
-              "price" : 9.90,
-              "allergens": ["Sulfit"],
-            },
-            {
-              "name" : "133b Asiatischer Wein - Lychee (Fl. 0,5l)",
-              "price" : 9.90,
-              "allergens": ["Sulfit"],
-            },
-            {
-              "name" : "134 Sake (Fl. 0,75l)",
-              "description" : "Reiswein - Japan",
-              "price" : 12.00,
-              "allergens": ["Sulfit"],
-            },]
+            }]
           },
+          {
+            "category" : "Brands-Spirituosen",
+            "traits": ["alcohol", "drinks"],
+            "items": [{
+                "name" : "Bambus Schnapp (2cl)",
+                "description" : "aus China, 45% vol",
+                "price" : 2.50,
+            },{
+                "name" : "Wodka Gorbatschow (2cl)",
+                "description" : "aus Deutschland, 37.5% vol",
+                "price" : 2.50,
+            }]
+           },
+          {
+            "category" : "Wein aus Asien",
+            "traits": ["Wein"],
+            "items": [
+            {
+              "name" : "860 Lycheewein (0.2l)",
+              "description" : "Deutschland, 10% vol",
+              "price" : 3.40
+            },
+            {
+              "name" : "860 Lycheewein (Fl. 0.5l)",
+              "description" : "Deutschland, 10% vol",
+              "price" : 7.50
+            },
+            {
+              "name" : "861 Pflaumenwein (0.2l)",
+              "description" : "Choya, Japan, 10% vol",
+              "price" : 3.40
+            },
+            {
+              "name" : "861 Pflaumenwein (Fl. 0.5l)",
+              "description" : "Choya, Japan, 10% vol",
+              "price" : 7.50
+            },
+            {
+              "name" : "862 Sake (0.2l)",
+              "description" : "Deutschland, 15% vol",
+              "price" : 3.80
+            },
+            {
+              "name" : "862 Sake (Fl. 0.5l)",
+              "description" : "Deutschland, 15% vol",
+              "price" : 12.90
+            }] },
           {"category" : "Extras",
             "traits" : ["extras"],
             "items" : [
             {
               "name" : "400 Portion Reis",
-              "price" : 1.70,
+              "price" : 1.50,
+              "traits": ["Reis"]
+            },
+            {
+              "name" : "401a Gebratener Reis",
+              "price" : 3.00,
+              "traits": ["Reis"]
+            },
+            {
+              "name" : "401b Gebratene Nudeln",
+              "price" : 3.00,
+              "traits": ["Nudeln"]
+            },
+            {
+              "name" : "402a Kanton-Sauce",
+              "price" : 2.00
+            },
+            {
+              "name" : "402b Hoisin-Sauce",
+              "price" : 2.00
+            },
+            {
+              "name" : "402c Süß-sauer-Souce",
+              "price" : 2.00
+            },
+            {
+              "name" : "403a Thai-Sauce",
+              "price" : 3.00
+            },
+            {
+              "name" : "403b China-Curry-Sauce",
+              "price" : 3.00
+            },
+            {
+              "name" : "403c Erdnuß-Sauce",
+              "price" : 3.00
+            } ] },
+          {"category" : "Allergene, Zusatzstoffe, Weitere Fragen",
+            "traits" : ["extras"],
+            "items" : [
+            {
+              "name" : "400 Portion Reis",
+              "price" : 1.50,
               "traits": ["Reis"]
             },
             {
@@ -2206,11 +2488,7 @@ window.appConfig = {
         ]
       },
 
-      supportedZipCodes: [ {
-                zip: 81549,
-                place: "München",
-                minimalSum: 12
-            },
+      supportedZipCodes: [
             {
                 zip: 80333,
                 place: "München",
@@ -2245,6 +2523,10 @@ window.appConfig = {
                 minimalSum: 15
             }, {
                 zip: 81547,
+                place: "München",
+                minimalSum: 12
+            }, {
+                zip: 81549,
                 place: "München",
                 minimalSum: 12
             }, {

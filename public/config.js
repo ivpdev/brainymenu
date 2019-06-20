@@ -212,7 +212,7 @@ window.appConfig = {
                 "unavailableExcuse": 'Diese Speise ist nur währen Mittagspause verfügbar',
                 "availableAt": [{
                     from: '11:00',
-                    to: '23:50'
+                    to: '14:30'
                 }],
                 "supplementedBy": [{
                     "reference": {

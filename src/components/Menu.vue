@@ -6,8 +6,12 @@
             class="category-li"
             :key="index"
             v-on:click="onCategoryHeaderClick(category, index, $event)">
+
             <li class="list-group-title">
                 <f7-icon :fa="expanded[index] ? 'angle-up' : 'angle-down'"></f7-icon> {{category.category}}</li>
+            <f7-list-item
+                v-if="category.description && expanded[index]">
+                {{category.description}}</f7-list-item>
             <f7-list-group v-if="expanded[index]">
                <DishListItem
                     v-for="(item, index) in category.items"

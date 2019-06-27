@@ -48,3 +48,11 @@ export default {
 }
 
 </script>
+
+<style>
+
+select.input-with-value {
+    margin-left: 20px !important;
+}
+
+</style>

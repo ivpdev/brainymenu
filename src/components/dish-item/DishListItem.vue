@@ -6,28 +6,31 @@
     <div class="item-inner">
       <div class="item-title-row">
         <div class="item-title">{{item.name}}</div>
-        <div class="item-after">
-            <f7-button
-                fill
-                round
-                color="orange"
-                icon-fa="cart-plus"
-                @click="onAddToCartClick(item, $event)">
-                {{formattedPrice}} &euro;
-            </f7-button>
 
-            <f7-button
-                fill
-                round
-                v-if="editMode"
-                color="orange"
-                icon-fa="cart-plus"
-                @click="onAddToCartClick(item, $event)">
-                Edit
-            </f7-button>
-        </div>
+        <div class="item-after">
+              <f7-button
+                  fill
+                  round
+                  color="orange"
+                  icon-fa="cart-plus"
+                  @click="onAddToCartClick(item, $event)">
+                  {{formattedPrice}} &euro;
+              </f7-button>
+
+              <f7-button
+                  fill
+                  round
+                  v-if="editMode"
+                  color="orange"
+                  icon-fa="cart-plus"
+                  @click="onAddToCartClick(item, $event)">
+                  Edit
+              </f7-button>
+          </div>
 
       </div>
+
+
 
     <Spiciness v-if="item.spiciness" :spiciness="item.spiciness"></Spiciness>
 
@@ -246,7 +249,7 @@ export default {
 /* TODO title no cut */
 
 .thumbnail {
-    width: 8em;
+    width: 9em;
     height: 6em;
 }
 
@@ -281,4 +284,35 @@ export default {
 .spicy-1 {
     background: #ff5346;
 }
+
+/* fix for small viewport width */
+
+@media only screen and (max-width: 350px) {
+     .list .item-content .dish-list-item div.item-title-row {
+         display: block;
+     }
+
+     .list .item-content .dish-list-item .item-title {
+         display: block;
+         float: left;
+         white-space: inherit;
+     }
+
+     .item-text {
+         float: left;
+         width: 100%;
+     }
+
+     .item-after {
+         float: right;
+     }
+}
+
+.list .item-content .dish-list-item .item-title {
+    text-overflow: inherit;
+    white-space: inherit;
+}
+
+/* END fix for small viewport width */
+
 </style>

@@ -102,6 +102,7 @@ const OrderSubmittingService = {
 
         const phone = checkoutForm.phone.value
         const address = this.getAddress(checkoutForm)
+        const email = checkoutForm.email.value
 
         bodyFormData.set('name', 'Bestellung');
         bodyFormData.set('email', email)

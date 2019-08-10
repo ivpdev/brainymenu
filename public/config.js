@@ -39,7 +39,7 @@
 */
 
 window.appConfig = {
-    mailServerUrl: 'http://gspz24agoapagjpy.myfritz.net:5000/contact_data.php',
+    mailServerUrl: 'https://littledragon-asiabistro.de/contact_data.php',
     openAt: [
     {
             day: 'Monday',

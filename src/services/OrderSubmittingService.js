@@ -104,7 +104,7 @@ const OrderSubmittingService = {
         const address = this.getAddress(checkoutForm)
 
         bodyFormData.set('name', 'Bestellung');
-        bodyFormData.set('email', 'bestellung@littledragon-asiabistro.de')
+        bodyFormData.set('email', email)
         bodyFormData.set('telefon', phone)
         bodyFormData.set('address', address)
         bodyFormData.set('subject', '[Bestellung]')

@@ -1,5 +1,7 @@
 <template>
-    <f7-list v-bind:media-list="true" v-bind:accordion="true" class="menu-root">
+    <f7-list v-bind:media-list="true" v-bind:accordion="true"
+        sortable
+        :sortabled-enabled="true" @sortable:sort="toggleCollapsed" class="menu-root">
         <f7-list-item
             v-if="shouldShowCategory(index)"
             v-for="(category, index) in menuDataToDisplay"
@@ -8,11 +10,29 @@
             v-on:click="onCategoryHeaderClick(category, index, $event)">
 
             <li class="list-group-title">
-                <f7-icon :fa="expanded[index] ? 'angle-up' : 'angle-down'"></f7-icon> {{category.category}}</li>
+                <f7-icon :fa="expanded[index] ? 'angle-up' : 'angle-down'"></f7-icon>
+                {{category.category}}
+
+                <CategoryTitleEditor
+                    v-if="editMode"
+                    :categoryTitle="category.category"
+                    @editButtonClick="openCategoryTitleEdition(category)"
+                    @submit="(categoryName) => onCategoryNameSubmit(category, categoryName)" />
+                <f7-link
+                    v-if="editMode"
+                    icon="delete"
+                    class="category-delete-button"
+                    @click="admin_deleteCategory(category)">Delete</f7-link>
+            </li>
+
             <f7-list-item
                 v-if="category.description && expanded[index]">
-                {{category.description}}</f7-list-item>
-            <f7-list-group v-if="expanded[index]">
+                {{category.description}}
+            </f7-list-item>
+            <f7-list-group v-if="expanded[index]"
+                :sortable="true"
+                :sortable-enabled="true">
+               <div class="sortable-handler"></div>
                <DishListItem
                     v-for="(item, index) in category.items"
                     :key="index"
@@ -27,11 +47,12 @@
 
 <script>
 
-import { f7Card, f7List, f7ListGroup,
+import { f7Card, f7List, f7ListGroup, f7Input,
     f7ListItem, f7Button, f7Accordion, f7AccordionItem,
     f7AccordionToggle, f7AccordionContent, f7Block,
-    f7Icon } from 'framework7-vue'
+    f7Icon, f7Link } from 'framework7-vue'
 import DishListItem from './dish-item/DishListItem'
+import CategoryTitleEditor from './CategoryTitleEditor'
 import FootNote from './FootNote'
 import Dom7 from 'dom7'
 import _ from 'lodash'
@@ -43,8 +64,10 @@ export default {
   name: 'Menu',
   components: {
     f7Card,
+    f7Link,
     f7List,
     f7ListItem,
+    f7Input,
     f7Button,
     f7ListGroup,
     DishListItem,
@@ -54,7 +77,8 @@ export default {
     f7AccordionContent,
     f7Block,
     f7Icon,
-    FootNote
+    FootNote,
+    CategoryTitleEditor
   },
   props: {
     menuData: Array,
@@ -76,6 +100,14 @@ export default {
             category.items = visibleItems
             return category
         })
+    },
+
+    editMode: function() {
+        return store.state.editMode
+    },
+
+    categoryExpanded: function() {
+        return store.state.categoryExpanded;
     }
   },
 
@@ -113,6 +145,23 @@ export default {
         const isCurrentExpanded = this.expanded[index]
 
         return isCurrentExpanded || this.isAllCollapsed()
+    },
+
+    onCategoryNameSubmit(category, newName) {
+        store.dispatch("admin_updateCategoryName", {category, newName});
+    },
+
+    openCategoryTitleEdition(category) {
+       this.categoryEditing[category] = true
+       console.log(this.categoryEditing);
+    },
+
+    isCategoryTitleEditing(category) {
+        return this.categoryEditing[category];
+    },
+
+    admin_deleteCategory(category) {
+        store.dispatch("admin_deleteCategory", category);
     }
   }
 }
@@ -143,6 +192,10 @@ export default {
     background: #b70a0a;
     color: white;
     border-bottom: 1px solid white;
+}
+
+.category-delete-button {
+    float: right;
 }
 
 .chevron-down {

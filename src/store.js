@@ -83,7 +83,8 @@ const checkoutFormClearState = {
 
 
 const features = {
-    menuShowOnlyOpenedCategory: true
+    menuShowOnlyOpenedCategory: true,
+    sortable: false
 }
 
 const store = new Vuex.Store({
@@ -183,7 +184,23 @@ const store = new Vuex.Store({
 
     preselectZip: function(state, zip) {
         state.preselectedZip = zip
-    }
+    },
+
+    admin_updateCategoryName(state, data) {
+        const targetCategory = data.category;
+        const newName = data.newName;
+        const category = state.menuData.find(category => category == targetCategory);
+        category.category = newName;
+    },
+
+    admin_deleteCategory(state, categoryArg) {
+        state.menuData = _.filter(state.menuData, category => category !== categoryArg);
+    },
+
+    admin_createCategory(state, name) {
+        state.menuData.push({ category: name, items: [] });
+    },
+
   },
 
   actions: {
@@ -201,7 +218,7 @@ const store = new Vuex.Store({
         } */
     },
 
-    addItemWithSupplementToCart: function({commit, state, dispatch}, payload, ) {
+    addItemWithSupplementToCart: function({commit, state, dispatch}, payload) {
         const mainItem = payload.mainItem
         const supplement = payload.supplement
 
@@ -282,6 +299,18 @@ const store = new Vuex.Store({
         this.eventBus.$emit('closeAllPanels');
 
         dispatch('showGlobalMessage', 'Ihre Bestellung ist eingegangen')
+    },
+
+    admin_updateCategoryName({commit}, data) {
+        commit('admin_updateCategoryName', data);
+    },
+
+    admin_deleteCategory({commit}, category) {
+        commit('admin_deleteCategory', category);
+    },
+
+    admin_createCategory({commit}, name) {
+        commit('admin_createCategory', name);
     }
   }
 })

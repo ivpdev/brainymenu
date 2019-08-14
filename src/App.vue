@@ -8,15 +8,14 @@
                   :footNoteContact="footNoteContact"
                   ref="menu"/>
 
-            <f7-fab color="red"
-                position="right-bottom"
+            <f7-fab color="green"
+                position="right-center"
                 ref="menuButton"
                 class="speed-dial-opened"
-                v-if="editMode"
-                v-bind:class="{ 'fab-opened': state.menuOpened }"
-                @click="toggleMenuOpened">
+                v-if="editMode">
 
                 <f7-icon f7="menu"></f7-icon>
+                <f7-icon f7="close"></f7-icon>
 
                 <f7-fab-buttons ref="menuButtons" class="speed-dial-opened">
                   <f7-fab-button color="orange" class="export-json-button" @click="onButtonClick">Export JSON</f7-fab-button>
@@ -24,12 +23,23 @@
                 </f7-fab-buttons>
               </f7-fab>
 
-            <f7-fab color="orange"
-                position="right-top"
-                ref="backButton"
+            <f7-fab color="green"
+                position="right-bottom"
+                ref="addFab"
                 v-if="editMode"
-                @click="onAddCategoryClick">
-                +
+                >
+
+                <f7-icon f7="add"></f7-icon>
+                <f7-icon f7="close"></f7-icon>
+
+                <f7-fab-buttons ref="menuButtons" class="speed-dial-opened">
+                <f7-fab-button
+                    color="green"
+                    class="export-json-button"
+                    @click="admin_onAddCategoryClick">Category</f7-fab-button>
+
+                  <f7-fab-button color="green" class="import-json-button" @click="onButtonClick">Item</f7-fab-button>
+                </f7-fab-buttons>
               </f7-fab>
 
             <f7-fab color="orange"
@@ -44,6 +54,7 @@
                       panel-open="left"
                       class="cart-button"
                       ref="fabCart"
+                      v-if="!editMode"
                       @click="openCart">
                   <f7-icon fa="shopping-cart"></f7-icon>
                   Zur Kasse gehen
@@ -137,8 +148,7 @@ export default {
   data() {
       return {
         state: {
-            cartOpened: false,
-            menuOpened: false
+            cartOpened: false
         }
       }
   },
@@ -182,10 +192,6 @@ export default {
         }
     },
 
-    toggleMenuOpened: function() {
-        this.state.menuOpened = !this.state.menuOpened //TODO
-    },
-
     openChat: function() {
         this.$refs.chatPanel.open()
     },
@@ -218,6 +224,16 @@ export default {
 
     onZipPreselectPanelClose: function() {
         this.$refs.zipPreselect.persistSelectedValue()
+    },
+
+    admin_onAddCategoryClick: function() {
+        const fabEl = this.$refs.addFab.$el.getElementsByTagName("a")[2];
+
+        const app = this.$f7;
+        app.dialog.prompt('New category', '', (name) => {
+            store.dispatch('admin_createCategory', name);
+            fabEl.click(); //close
+        });
     }
   },
 

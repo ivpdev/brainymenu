@@ -6,6 +6,7 @@
     <div class="item-inner">
       <div class="item-title-row">
         <div class="item-title">{{item.name}}</div>
+        <div class="sortable-handler"></div>
 
         <div class="item-after">
               <f7-button

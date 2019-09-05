@@ -1,42 +1,3 @@
-/* Zusatzstoffe
-[ 1] = mit Farbstoffen
-[ 2] = mit Konservierungsstoffen
-[ 3] = mit Antioxidationsmittel
-[ 4] = mit Geschmacksverstärker
-[ 5] = geschwefelt
-[ 6] = geswärtzt
-[ 7] = mit Phosphat
-[ 8] = mit Milcheiweiß
-[ 9] = Koffeinhaltig
-[10] = chininhaltig
-[11] = mit Süßungsmitteln
-[12] = enthält eine Phenylalaninquelle
-[13] = gewachst
-[14] = mit Nitritpökelsalz
-[15] = Taurin
-[16] = Tartazin
-
-
-* Allergene
-[A] = Weizen
-[B] = Milcherzeugnis
-[C] = Sellerie
-[D] = Ei und Eierzeugnisse
-[E] = Haselnüße oder Nußerzeugnisse
-[F] = Erdnüße
-[G] = Soja oder Sojaerzeugnisse
-[H] = Walnuss
-[I] = Senf oder Senferzeugnisse
-[J] = Sulfit
-[K] = Sesam
-[L] = Fisch
-[M] = Krebstiere
-[N] = Weichtiere
-[O] = Lupinen
-[P] = Pecanuss
-[Q] = Mandel
-[R] = Roggen
-*/
 
 window.appConfig = {
     mailServerUrl: 'https://littledragon-asiabistro.de/contact_data.php',
@@ -82,18 +43,14 @@ window.appConfig = {
             from: '17:00',
             to: '22:30'
         },{
-            day: 'Saturday',
-            from: '9:00',
-            to: '22:30'
-        }, {
             day: 'Sunday',
             from: '12:00',
             to: '22:00'
         }
     ],
-    closed: {//TODO move everything into cafeData
+    closed: {
         closed: false,
-        message: "Wir sind am 22.09 zurück"
+        message: "Aus technischen Grunden funktioniert die Bestellung auf dieser Seite heute nicht. Sie können über die Seite littledragon-m.de Bestellungen machen."
     },
 
     footNote: {
@@ -194,7 +151,6 @@ window.appConfig = {
         }
     },
 
-    //TODO gernelen > seafood
     cafeData: {
         "id": 5,
         "name": "ASIA LITTLE DRAGON",
@@ -2315,33 +2271,3 @@ window.appConfig = {
           ]
 
 }
-
-
-
-/*
-80333	München	ab 25,00 €
-80469	München	ab 25,00 €
-80538	München Ludwig- / Isarvorstadt	ab 25,00 €
-80539	München	ab 25,00 €
-81539	München	ab 12,00 €
-81541	München	ab 12,00 €
-81543	München	ab 12,00 €
-81545	München	ab 15,00 €
-81547	München	ab 12,00 €
-81549	München	ab 12,00 €
-81667	München	ab 15,00 €
-81669	München	ab 15,00 €
-81671	München	ab 12,00 €
-81673	München	ab 12,00 €
-81675	München	ab 17,00 €
-81677	München	ab 12,00 €
-81679	München	ab 17,00 €
-81735	München Waldperlach	ab 17,00 €
-81737	München Perlach	ab 15,00 €
-81739	München	ab 17,00 €
-81825	München	ab 22,00 €
-81827	München	ab 25,00 €
-81829	München	ab 30,00 €
-82008	Unterhaching	ab 17,00 €
-85521	Ottobrunn	ab 25,00 €
-85579	Neubiberg	ab 20,00 € */

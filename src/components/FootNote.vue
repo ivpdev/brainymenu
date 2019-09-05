@@ -4,16 +4,22 @@
             <table>
                 <tr>
                     <td>
-                        <div class="chip footnote-button" @mouseover="onAllergensMouseIn">
+                        <div class="chip footnote-button"
+                            @mouseover="onAllergensMouseIn"
+                            @click="onAllergensClick">
                           <div class="chip-label">Allergene</div>
                         </div></td>
                     <td>
-                        <div class="chip footnote-button" @mouseover="onAdditivesMouseIn">
+                        <div class="chip footnote-button"
+                             @mouseover="onAdditivesMouseIn"
+                             @click="onAdditivesClick">
                           <div class="chip-label">Zusatzstoffen</div>
                         </div>
                     </td>
                     <td>
-                        <div class="chip footnote-button" @mouseover="onContactMouseIn">
+                        <div class="chip footnote-button"
+                             @mouseover="onContactMouseIn"
+                             @click="onContactClick">
                           <div class="chip-label">Für weitere Fragen</div>
                         </div>
                     </td>
@@ -90,22 +96,31 @@ export default {
         return result
     },
     onAllergensMouseIn: function(e) {
+       // this.$refs.allergensPopover.open(e.target)
+    },
+    onAllergensClick: function(e) {
         this.$refs.allergensPopover.open(e.target)
     },
     onAllergensMouseOut: function() {
-        this.$refs.allergensPopover.close()
+        //this.$refs.allergensPopover.close()
     },
     onAdditivesMouseIn: function(e) {
+        //this.$refs.additivesPopover.open(e.target)
+    },
+    onAdditivesClick: function(e) {
         this.$refs.additivesPopover.open(e.target)
     },
     onAdditivesMouseOut: function() {
-        this.$refs.additivesPopover.close()
+        //this.$refs.additivesPopover.close()
     },
     onContactMouseIn: function(e) {
+        //this.$refs.contactsPopover.open(e.target)
+    },
+    onContactClick: function(e) {
         this.$refs.contactsPopover.open(e.target)
     },
     onContactMouseOut: function() {
-        this.$refs.contactsPopover.close()
+        //this.$refs.contactsPopover.close()
     }
   },
   props: {

@@ -3,10 +3,9 @@
         <f7-list no-hairlines-md>
           <f7-list-item>
               <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
-              <f7-label>E-Mail *</f7-label>
+              <f7-label>E-Mail</f7-label>
 
               <f7-input type="email"
-                        validate
                         placeholder=""
                         :value="checkoutForm.email.value"
                         clear-button

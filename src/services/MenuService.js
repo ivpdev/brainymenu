@@ -126,17 +126,18 @@ const MenuService = {
     amendItemItemNameWithFootNoteData: function(item, footNoteData) {
         const allergensStr = _.map(item.allergens, (allergen => footNoteData.allergens[allergen])).join(', ')
         const additivesStr = _.map(item.additives, (additive => footNoteData.additives[additive])).join(', ')
-        const nameExtension = []
+        const superscript = []
 
         if (allergensStr) {
-            nameExtension.push(allergensStr)
+            superscript.push(allergensStr)
         }
 
         if (additivesStr) {
-            nameExtension.push(additivesStr)
+            superscript.push(additivesStr)
         }
 
-        item.name = item.name + ' ' + nameExtension.join(', ')
+        item.name = item.name
+        item.superscript = superscript.join(', ')
 
         return item
     },

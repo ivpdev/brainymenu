@@ -5,7 +5,7 @@
     </div>
     <div class="item-inner">
       <div class="item-title-row">
-        <div class="item-title">{{item.name}}</div>
+        <div class="item-title">{{item.name}}<span class="item-superscript">{{item.superscript}}</span></div>
         <div class="sortable-handler"></div>
 
         <div class="item-after">
@@ -115,6 +115,7 @@ import Allergens from './Allergens'
 import Additives from './Additives'
 import Spiciness from './Spiciness'
 import OpeningTimeService from '../../services/OpeningTimeService'
+import Framework7 from 'framework7'
 
 export default {
   name: 'DishListItem',
@@ -156,6 +157,10 @@ export default {
 
     showAllergens: function() {
         return false
+    },
+
+    superscript: function() {
+        return "superscript, 1,4"
     }
   },
 
@@ -214,8 +219,36 @@ export default {
       this.$refs.allergensPopover.open(e.target)
     },
 
+    iosFlyToCartAnimationFallback() {
+        const itemsCount = $('.fab-center-bottom .shopping-cart-count')
+        const fab = $('.fab-center-bottom a')
+        itemsCount.animate({
+            fontSize: '15px'
+        }, 10)
+
+        fab.animate({
+            width: '180px'
+        }, 10)
+
+        setTimeout(function() {
+             itemsCount.animate({
+                fontSize: '10px'
+            }, 10)
+
+            fab.animate({
+                width: '150px'
+            }, 10)
+        }, 300);
+    },
+
     performFlyToCartAnimation: function() {
-        const target = $('.fa-shopping-cart') //TODO avoid doing lookup every time
+        //FIXME on iOS when the screen is scrolled position of the flying item is calculated incorrectly
+        if (Framework7.device.ios) {
+            this.iosFlyToCartAnimationFallback();
+            return;
+        }
+
+        const target = $('.fa-shopping-cart')
         const targetPosition = target.offset()
 
         const itemThumbnail = $(this.$refs.thumbnail)
@@ -284,6 +317,12 @@ export default {
 
 .spicy-1 {
     background: #ff5346;
+}
+
+.item-title .item-superscript {
+    font-size: 60%;
+    position: relative;
+    top: -10px;
 }
 
 /* fix for small viewport width */

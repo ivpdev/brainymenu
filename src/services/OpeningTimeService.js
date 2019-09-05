@@ -46,7 +46,16 @@ const timeOfDateIsEarlierOrEqThan = (dateArg, refTimeStr) => {
 const OpeningTimeService = {
     isAvailableNow: function(availableAt) {//TODO refactor: merge matching logic
         const now = new Date()
-        const matchingSpan = availableAt && availableAt.find(timeSpan => timeOfDateIsLaterOrEqThan(now, timeSpan.from) && timeOfDateIsEarlierOrEqThan(now, timeSpan.to))
+        const dayOfWeek = daysOfWeek[now.getDay()]
+
+        if (!availableAt) return true;
+
+        const timeSpans = availableAt.filter(timeSpan => {
+            const noDayLimit = !timeSpan.day;
+            return noDayLimit || timeSpan.day === dayOfWeek
+        });
+
+        const matchingSpan = timeSpans.find(timeSpan => timeOfDateIsLaterOrEqThan(now, timeSpan.from) && timeOfDateIsEarlierOrEqThan(now, timeSpan.to))
         return !!matchingSpan
     },
 

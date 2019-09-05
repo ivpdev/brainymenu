@@ -1,4 +1,3 @@
-
 window.appConfig = {
     mailServerUrl: 'https://littledragon-asiabistro.de/contact_data.php',
     openAt: [
@@ -32,7 +31,7 @@ window.appConfig = {
             to: '14:30'
         }, {
             day: 'Thursday',
-            from: '17:00',
+            from: '15:00',
             to: '22:30'
         }, {
             day: 'Friday',
@@ -152,21 +151,32 @@ window.appConfig = {
     },
 
     cafeData: {
-        "id": 5,
         "name": "ASIA LITTLE DRAGON",
         "about": "Bei uns können Sie bestellen, liefern lassen,\n selber abholen oder auch in unseren\n Räumlichkeiten Platz nehmen\n",
         "defaultImage": "http://asia-littledragon.de/images_br/ld_seitback1.jpg",
-        "points": [
-          {
-            "id": 51
-          }
-        ],
         "menu": [
             {
                 "category" : "Mittagsmenu",
                 "description": "Zu jeden Menü inkl. Sauer-Scharf Suppe oder 4 Mini Frühlingsrollen",
                 "unavailableExcuse": 'Diese Speise ist nur währen Mittagspause verfügbar',
                 "availableAt": [{
+                    day: 'Monday',
+                    from: '11:00',
+                    to: '14:30'
+                }, {
+                    day: 'Tuesday',
+                    from: '11:00',
+                    to: '14:30'
+                }, {
+                    day: 'Wednesday',
+                    from: '11:00',
+                    to: '14:30'
+                }, {
+                    day: 'Thursday',
+                    from: '11:00',
+                    to: '14:30'
+                }, {
+                    day: 'Friday',
                     from: '11:00',
                     to: '14:30'
                 }],
@@ -2163,111 +2173,110 @@ window.appConfig = {
       },
 
       supportedZipCodes: [ {
-                zip: 81549,
-                place: "München",
-                minimalSum: 12
-            },
-            {
-                zip: 80333,
-                place: "München",
-                minimalSum: 25
-            }, {
-                zip: 80469,
-                place: "München",
-                minimalSum: 25
-            }, {
-                zip: 80538,
-                place: "München Ludwig- / Isarvorstadt",
-                minimalSum: 25
-            }, {
-                zip: 80539,
-                place: "München",
-                minimalSum: 25
-            }, {
-                zip: 81539,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81541,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81543,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81545,
-                place: "München",
-                minimalSum: 15
-            }, {
-                zip: 81547,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81667,
-                place: "München",
-                minimalSum: 15
-            }, {
-                zip: 81669,
-                place: "München",
-                minimalSum: 15
-            }, {
-                zip: 81671,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81673,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81675,
-                place: "München",
-                minimalSum: 17
-            }, {
-                zip: 81677,
-                place: "München",
-                minimalSum: 12
-            }, {
-                zip: 81679,
-                place: "München",
-                minimalSum: 17
-            }, {
-                zip: 81735,
-                place: "München Waldperlach",
-                minimalSum: 17
-            }, {
-                zip: 81737,
-                place: "München Perlach",
-                minimalSum: 15
-            }, {
-                zip: 81739,
-                place: "München",
-                minimalSum: 17
-            }, {
-                zip: 81825,
-                place: "München",
-                minimalSum: 22
-            }, {
-                zip: 81827,
-                place: "München",
-                minimalSum: 25
-            }, {
-                zip: 81829,
-                place: "München",
-                minimalSum: 30
-            }, {
-                zip: 82008,
-                place: "Unterhaching",
-                minimalSum: 17
-            }, {
-                zip: 85521,
-                place: "Ottobrunn",
-                minimalSum: 25
-            }, {
-                zip: 85579,
-                place: "Neubiberg",
-                minimalSum: 20
-            }
-          ]
-
+            zip: 81549,
+            place: "München",
+            minimalSum: 12
+        },
+        {
+            zip: 80333,
+            place: "München",
+            minimalSum: 25
+        }, {
+            zip: 80469,
+            place: "München",
+            minimalSum: 25
+        }, {
+            zip: 80538,
+            place: "München Ludwig- / Isarvorstadt",
+            minimalSum: 25
+        }, {
+            zip: 80539,
+            place: "München",
+            minimalSum: 25
+        }, {
+            zip: 81539,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81541,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81543,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81545,
+            place: "München",
+            minimalSum: 15
+        }, {
+            zip: 81547,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81667,
+            place: "München",
+            minimalSum: 15
+        }, {
+            zip: 81669,
+            place: "München",
+            minimalSum: 15
+        }, {
+            zip: 81671,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81673,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81675,
+            place: "München",
+            minimalSum: 17
+        }, {
+            zip: 81677,
+            place: "München",
+            minimalSum: 12
+        }, {
+            zip: 81679,
+            place: "München",
+            minimalSum: 17
+        }, {
+            zip: 81735,
+            place: "München Waldperlach",
+            minimalSum: 17
+        }, {
+            zip: 81737,
+            place: "München Perlach",
+            minimalSum: 15
+        }, {
+            zip: 81739,
+            place: "München",
+            minimalSum: 17
+        }, {
+            zip: 81825,
+            place: "München",
+            minimalSum: 22
+        }, {
+            zip: 81827,
+            place: "München",
+            minimalSum: 25
+        }, {
+            zip: 81829,
+            place: "München",
+            minimalSum: 30
+        }, {
+            zip: 82008,
+            place: "Unterhaching",
+            minimalSum: 17
+        }, {
+            zip: 85521,
+            place: "Ottobrunn",
+            minimalSum: 25
+        }, {
+            zip: 85579,
+            place: "Neubiberg",
+            minimalSum: 20
+        }
+      ]
 }

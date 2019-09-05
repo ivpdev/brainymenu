@@ -69,8 +69,8 @@ const OrderSubmittingService = {
         const rowsHtml = cartData.map(item => orderRowTemplate({
             quantity: item.quantity,
             name: item.name,
-            totalPrice: item.quantity * item.price
-       }))
+            totalPrice: utils.toFixed(item.quantity * item.price, 2)
+        }))
 
         const orderHtml = orderTemplate({
             totalSum: utils.calculateTotalSumInCart(cartData),

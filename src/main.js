@@ -10,7 +10,10 @@ Vue.config.productionTip = false
 Vue.use(Framework7Vue, Framework7);
 
 const app = new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  framework7: {
+    theme: 'md'
+  }
 })
 
 app.$mount('#app')

@@ -108,6 +108,7 @@ import Chat from './components/Chat.vue'
 import Cart from './components/cart/Cart.vue'
 import CartPanel from './components/cart/CartPanel.vue'
 import ZipPreselect from './components/ZipPreselect'
+import Framework7 from 'framework7'
 import store from './store'
 import { f7Navbar, f7NavRight, f7Sheet,
     f7Link, f7View, f7Page, f7Icon, f7Badge,
@@ -216,6 +217,15 @@ export default {
 
     showZipPreselectionWindow: function() {
         this.$refs.zipPreselectPanel.open()
+        if (Framework7.device.ios) {
+            this.iosHackSelectDropdown()
+        }
+    },
+
+    /* without this hack one should click select twice to open the dropdown */
+    iosHackSelectDropdown: function() {
+        const selectEl = $(".input-with-value")
+        selectEl.focus()
     },
 
     closeZipPreselectPanel: function() {

@@ -174,7 +174,7 @@ export default {
         return store.state.checkoutForm.firstname.valid &&
                store.state.checkoutForm.lastname.valid &&
                store.state.checkoutForm.street.valid &&
-               store.state.checkoutForm.email.valid &&
+               store.state.checkoutForm.phone.valid &&
                this.priceTotalInCart() >= store.state.minimalSum
     },
 

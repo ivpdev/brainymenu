@@ -1,5 +1,5 @@
 window.appConfig = {
-    mailServerUrl: 'https://littledragon-asiabistro.de/contact_data.php',
+    mailServerUrl: '/contact_data.php',
     openAt: [
     {
             day: 'Monday',
@@ -95,8 +95,7 @@ window.appConfig = {
             "gewachst": "13",
             "mit Nitritpökelsalz": "14",
             "Taurin": "15",
-            "Tartazin": "16",
-            //TODO Bambus
+            "Tartazin": "16"
         },
 
         contact: "Wenden Sie sich bitte an die Rufnummer 089 / 22 84 19 63"
@@ -115,48 +114,10 @@ window.appConfig = {
             "mit Geschmacksverstärker": "flavor-enhancer",
             "mit Farbstoffen": "dye",
             "mit Antioxidationsmittel": "Antioxidant"
-        },
-
-        traits: {
-            "Vorspeizen": "appetizers",
-            "vegetarisch": "vegetarian",
-            "fleisch": "meat",
-            "Hähnchen": "chicken",
-            "Bambus": "bamboo",
-            "Glasnudeln": "noodles",
-            "Pilze": "mushroom",
-            "Kokos": "coconut",
-            "japanisch": "japanese",
-            "Seetang": "seaweed",
-            "Rind": "beef",
-            "Spinat": "spinach",
-            "Fisch": "fish",
-            "Lachs": "salmon",
-            "Avokado": "avocado",
-            "Ente": "duck",
-            "Thunfisch": "tuna",
-            "Käse": "cheese",
-            "Garnelen": "shrimps",
-            "Hauptspeise": "main-course",
-            "Peperoni": "pepperoni",
-            "Zwiebel": "onion",
-            "Ananas": "pineapple",
-            "Nudeln": "noodels",
-            "Reis": "rice",
-            "Ingwer": "ginger",
-            "Krabben": "crab",
-            "Honig": "honey",
-            "Banan": "banana",
-            "Koffein": "caffeine",
-            "Saft": "juice",
-            "Bier": "beer",
-            "Wein": "wine"
         }
     },
 
     cafeData: {
-        "name": "ASIA LITTLE DRAGON",
-        "about": "Bei uns können Sie bestellen, liefern lassen,\n selber abholen oder auch in unseren\n Räumlichkeiten Platz nehmen\n",
         "defaultImage": "http://asia-littledragon.de/images_br/ld_seitback1.jpg",
         "menu": [
             {
@@ -2140,37 +2101,27 @@ window.appConfig = {
               "traits": ["Reis"]
             },
             {
-              "name" : "401a Gebratener Reis",
-              "price" : 3.00,
-              "traits": ["Reis"]
-            },
-            {
-              "name" : "401b Gebratene Nudeln",
-              "price" : 3.00,
-              "traits": ["Nudeln"]
-            },
-            {
-              "name" : "402a Kanton-Sauce",
+              "name" : "401 Kanton-Sauce",
               "price" : 2.00
             },
             {
-              "name" : "402b Hoisin-Sauce",
+              "name" : "401b Hoisin-Sauce",
               "price" : 2.00
             },
             {
-              "name" : "402c Süß-sauer-Souce",
+              "name" : "401c Süß-sauer-Souce",
               "price" : 2.00
             },
             {
-              "name" : "403a Thai-Sauce",
+              "name" : "402a Thai-Sauce",
               "price" : 3.00
             },
             {
-              "name" : "403b China-Curry-Sauce",
+              "name" : "402b China-Curry-Sauce",
               "price" : 3.00
             },
             {
-              "name" : "403c Erdnuß-Sauce",
+              "name" : "402c Erdnuß-Sauce",
               "price" : 3.00
             } ] }
         ]

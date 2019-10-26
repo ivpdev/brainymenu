@@ -3,48 +3,52 @@ window.appConfig = {
     openAt: [
     {
             day: 'Monday',
-            from: '11:00',
-            to: '14:30'
+            from: '10:45',
+            to: '14:15'
         }, {
             day: 'Monday',
-            from: '17:00',
-            to: '22:30'
+            from: '16:45',
+            to: '22:15'
         },{
             day: 'Tuesday',
-            from: '11:00',
-            to: '14:30'
+            from: '10:45',
+            to: '14:15'
         }, {
             day: 'Tuesday',
-            from: '17:00',
-            to: '22:30'
+            from: '16:45',
+            to: '22:15'
         }, {
             day: 'Wednesday',
-            from: '11:00',
-            to: '14:30'
+            from: '10:45',
+            to: '14:15'
         }, {
             day: 'Wednesday',
-            from: '17:00',
-            to: '22:30'
+            from: '16:45',
+            to: '22:15'
         }, {
             day: 'Thursday',
-            from: '11:00',
-            to: '14:30'
+            from: '10:45',
+            to: '14:15'
         }, {
             day: 'Thursday',
-            from: '15:00',
-            to: '22:30'
+            from: '16:45',
+            to: '22:15'
         }, {
             day: 'Friday',
-            from: '11:00',
-            to: '14:30'
+            from: '10:45',
+            to: '14:15'
         }, {
             day: 'Friday',
-            from: '17:00',
-            to: '22:30'
+            from: '16:45',
+            to: '22:15'
         },{
             day: 'Sunday',
-            from: '12:00',
-            to: '22:00'
+            from: '11:45',
+            to: '21:45'
+        },{
+            day: 'Saturday',
+            from: '11:45',
+            to: '21:45'
         }
     ],
     closed: {
@@ -2076,52 +2080,52 @@ window.appConfig = {
             "traits": ["Wein"],
             "items": [
             {
-              "name" : "131a Pinot Grigio (Fl. 0,75l)",
+              "name" : "131a Pinot Grigio (Fl. 0,75l) (1l - 12€)",
               "description" : "trocken aus Italien, IGT11% vol",
               "price" : 9.00,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131b Chardonnay (Fl. 0,75l)",
+              "name" : "131b Chardonnay (Fl. 0,75l) (1l - 12€)",
               "description" : "trocken aus Italien, IGT11% vol",
               "price" : 9.00,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131c Chianti (Fl. 0,75l)",
+              "name" : "131c Chianti (Fl. 0,75l) (1l - 12€)",
               "description" : "trocken aus Italien, 12% vol",
               "price" : 9.00,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131d Bordeaux (Fl. 0,75l)",
+              "name" : "131d Bordeaux (Fl. 0,75l) (1l - 12€)",
               "description" : "trocken aus Frankreich",
               "price" : 9.00,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "131d Bardolino (Fl. 0,75l)",
+              "name" : "131d Bardolino (Fl. 0,75l) (1l - 12€)",
               "description" : "aus Italien",
               "price" : 9.00,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "132 Sekt: Prosecco (Fl. 0,75l)",
+              "name" : "132 Sekt: Prosecco (Fl. 0,75l) (1l - 13.20€)",
               "price" : 9.90,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "133a Asiatischer Wein - Pflaumen (Fl. 0,5l)",
+              "name" : "133a Asiatischer Wein - Pflaumen (Fl. 0,5l) (1l - 19.80€)",
               "price" : 9.90,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "133b Asiatischer Wein - Lychee (Fl. 0,5l)",
+              "name" : "133b Asiatischer Wein - Lychee (Fl. 0,5l) (1l - 19.80€)",
               "price" : 9.90,
               "allergens": ["Sulfit"],
             },
             {
-              "name" : "134 Sake (Fl. 0,75l)",
+              "name" : "134 Sake (Fl. 0,75l) (1l - 16.80€)",
               "description" : "Reiswein - Japan",
               "price" : 12.00,
               "allergens": ["Sulfit"],

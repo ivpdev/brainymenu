@@ -64,9 +64,10 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Hausnummer</f7-label>
+            <f7-label>Hausnummer *</f7-label>
             <f7-input
                 required
+                validate
                 :value="checkoutForm.houseNumber.value"
                 type="text" placeholder="" clear-button
                 @change="onFieldChange($event, 'houseNumber')"></f7-input>
@@ -244,6 +245,10 @@ export default {
 
 .zip-code-input.item-input-invalid {
     margin-bottom: 10px;
+}
+
+.item-title.item-label {
+    font-weight: bold;
 }
 
 </style>

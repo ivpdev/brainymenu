@@ -137,6 +137,7 @@ export default {
 
 .footnote-button {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .allergens-popover {

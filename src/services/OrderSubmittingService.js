@@ -37,7 +37,6 @@ const orderRowTemplate = _.template(`<tr>
 
 const OrderSubmittingService = {
     getAddress: function(checkoutForm) {
-        const zip = checkoutForm.zip.value
         const street = checkoutForm.street.value
         const houseNumber = checkoutForm.houseNumber.value || ""
 
@@ -73,7 +72,7 @@ const OrderSubmittingService = {
         }))
 
         const orderHtml = orderTemplate({
-            totalSum: his.toFixed(utils.calculateTotalSumInCart(cartData), 2),
+            totalSum: utils.toFixed(utils.calculateTotalSumInCart(cartData), 2),
             rows: rowsHtml.join('')
         })
 
@@ -97,7 +96,6 @@ const OrderSubmittingService = {
     },
 
     submitOrder: function(cartData, checkoutForm) {
-        const self = this
         const bodyFormData = new FormData()
 
         const phone = checkoutForm.phone.value

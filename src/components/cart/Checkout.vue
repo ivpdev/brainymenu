@@ -93,7 +93,7 @@
                         :value="zipData.zip">
                                 {{zipData.zip}} ({{zipData.place}})</option>
             </select>
-            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht. ({{priceTotalInCartFormatted}}&euro; < {{currentMinimalSum}}&euro;)</div>
+            <div class="item-input-error-message">Mindestbestellwert ist nicht erreicht. ({{priceTotalInCartFormatted}}&euro; &lt; {{currentMinimalSum}}&euro;)</div>
           </f7-list-item>
 
           <f7-list-item>

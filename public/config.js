@@ -51,9 +51,12 @@ window.appConfig = {
             to: '21:45'
         }
     ],
+
     closed: {
         closed: false,
-        message: "Aus technischen Grunden funktioniert die Bestellung auf dieser Seite heute nicht. Sie können über die Seite littledragon-m.de Bestellungen machen."
+        //fromDate: "20.10.2019",
+        //toDate: "29.10.2019",
+        message: "Wir sind im Urlaub"
     },
 
     footNote: {

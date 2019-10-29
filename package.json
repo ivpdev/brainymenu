@@ -7,7 +7,8 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec -r esm",
+    "test-debug": "./node_modules/.bin/mocha --inspect-brk --reporter spec -r esm"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -18,6 +19,7 @@
     "http-server": "^0.11.1",
     "jquery": "^3.3.1",
     "mocha": "^5.2.0",
+    "moment": "^2.24.0",
     "vue": "^2.5.16",
     "vuex": "^3.0.1"
   },
@@ -27,7 +29,9 @@
     "@vue/cli-service": "^3.0.0-beta.10",
     "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.1",
     "@vue/test-utils": "^1.0.0-beta.10",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "sinon": "^7.5.0",
+    "esm": "^3.2.25"
   },
   "babel": {
     "presets": [

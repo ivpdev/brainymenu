@@ -45,10 +45,6 @@ window.appConfig = {
             day: 'Sunday',
             from: '11:45',
             to: '21:45'
-        },{
-            day: 'Saturday',
-            from: '11:45',
-            to: '21:45'
         }
     ],
 

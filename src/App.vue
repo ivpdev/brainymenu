@@ -46,7 +46,7 @@
                 position="left-bottom"
                 ref="backButton"
                 @click="onBackMenuClicked">
-                Zurück
+                {{ $t("back") }}
               </f7-fab>
 
               <f7-fab color="green"
@@ -57,7 +57,7 @@
                       v-if="!editMode"
                       @click="openCart">
                   <f7-icon fa="shopping-cart"></f7-icon>
-                  Zur Kasse gehen
+                  {{ $t("go_to_checkout") }}
                   <f7-icon f7="close"></f7-icon>
 
                   <f7-badge class="shopping-cart-count" color="orange">{{itemsInCartCount}}</f7-badge>
@@ -198,7 +198,7 @@ export default {
     },
 
     onButtonClick: function() {
-        console.log('AAA')
+        //console.log('AAA')
     },
 
     goToCheckout: function() {
@@ -224,7 +224,7 @@ export default {
 
     /* without this hack one should click select twice to open the dropdown */
     iosHackSelectDropdown: function() {
-        const selectEl = $(".input-with-value")
+        const selectEl = window.$(".input-with-value")
         selectEl.focus()
     },
 

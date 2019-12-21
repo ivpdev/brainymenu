@@ -3,7 +3,7 @@
         <f7-list no-hairlines-md>
           <f7-list-item>
               <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
-              <f7-label>E-Mail</f7-label>
+              <f7-label>{{ $t("email") }}</f7-label>
 
               <f7-input type="email"
                         placeholder=""
@@ -13,7 +13,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Firma</f7-label>
+            <f7-label>{{ $t("company") }}</f7-label>
             <f7-input
                 :value="checkoutForm.firma.value"
                 type="text" placeholder="" clear-button
@@ -21,7 +21,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Abteilung</f7-label>
+            <f7-label>{{ $t("department") }}</f7-label>
             <f7-input
                 :value="checkoutForm.department.value"
                 type="text" placeholder="" clear-button
@@ -29,7 +29,7 @@
           </f7-list-item>
 
         <f7-list-item>
-            <f7-label>Vorname *</f7-label>
+            <f7-label>{{ $t("first_name") }} *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
                 required
@@ -40,7 +40,7 @@
           </f7-list-item>
 
         <f7-list-item>
-            <f7-label>Nachname *</f7-label>
+            <f7-label>{{ $t("last_name") }} *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
                 required
@@ -51,7 +51,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Strasse *</f7-label>
+            <f7-label>{{ $t("street") }} *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
              required
@@ -64,7 +64,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Hausnummer *</f7-label>
+            <f7-label>{{ $t("house_number") }} *</f7-label>
             <f7-input
                 required
                 validate
@@ -74,7 +74,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Etage</f7-label>
+            <f7-label>{{ $t("floor") }}</f7-label>
             <f7-input
                 :value="checkoutForm.floor.value"
                 type="text" placeholder="" clear-button
@@ -97,7 +97,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Telefonnummer *</f7-label>
+            <f7-label>{{ $t("phone") }} *</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
                 required
@@ -108,7 +108,7 @@
           </f7-list-item>
 
           <f7-list-item>
-            <f7-label>Bemerkung</f7-label>
+            <f7-label>{{ $t("note") }}</f7-label>
             <!-- f7-icon icon="demo-list-icon" slot="media"></f7-icon -->
             <f7-input
                 :value="checkoutForm.note.value"

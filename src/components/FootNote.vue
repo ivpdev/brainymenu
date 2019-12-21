@@ -7,20 +7,20 @@
                         <div class="chip footnote-button"
                             @mouseover="onAllergensMouseIn"
                             @click="onAllergensClick">
-                          <div class="chip-label">Allergene</div>
+                          <div class="chip-label">{{ $t("allergens") }}</div>
                         </div></td>
                     <td>
                         <div class="chip footnote-button"
                              @mouseover="onAdditivesMouseIn"
                              @click="onAdditivesClick">
-                          <div class="chip-label">Zusatzstoffen</div>
+                          <div class="chip-label">{{ $t("additives") }}</div>
                         </div>
                     </td>
                     <td>
                         <div class="chip footnote-button"
                              @mouseover="onContactMouseIn"
                              @click="onContactClick">
-                          <div class="chip-label">Für weitere Fragen</div>
+                          <div class="chip-label">{{ $t("contact") }}</div>
                         </div>
                     </td>
                 </tr>

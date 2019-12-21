@@ -1,6 +1,6 @@
 <template>
     <f7-block>
-      <f7-block-title>Bitte wählen Sie Ihre PLZ</f7-block-title>
+      <f7-block-title>{{ $t("choose_zip") }}</f7-block-title>
 
         <f7-list ref="zipSelect">
             <f7-list-item

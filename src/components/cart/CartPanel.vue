@@ -1,7 +1,7 @@
 <template>
     <f7-popup ref="cartPanel"  class="popup-chat">
         <f7-page class="cart-page">
-            <f7-navbar title="Cart" class="cart-navbar">
+            <f7-navbar title="" class="cart-navbar">
                 <f7-nav-right>
                      <f7-link popup-close>x</f7-link>
                 </f7-nav-right>
@@ -41,7 +41,7 @@
 
               <f7-actions ref="finalConfirmation">
                 <f7-actions-group>
-                  <f7-actions-label>Zahlungspflichtig bestellen</f7-actions-label>
+                  <f7-actions-label>{{ $t("submit_order_confirmation") }}</f7-actions-label>
 
                   <f7-actions-button @click="submitOrder">Ok</f7-actions-button>
                 </f7-actions-group>
@@ -56,7 +56,7 @@
                     :color="fabToCheckoutColor"
                     position="right-bottom"
                     @click="goToCheckout">
-                Weiter (<b>{{priceTotalInCartFormatted}} &euro;</b>)
+                    {{ $t("next") }} (<b>{{priceTotalInCartFormatted}} &euro;</b>)
             </f7-fab>
 
             <f7-fab v-show="step.number==1"
@@ -64,7 +64,7 @@
                     :color="fabToCheckoutColor"
                     position="left-bottom"
                     @click="closeCartPanel">
-                Zurück
+                {{ $t("back") }}
             </f7-fab>
 
             <f7-fab v-show="step.number==2"
@@ -72,7 +72,7 @@
                   :color="fabToFinalConfirmation"
                   position="right-bottom"
                   @click="goToFinalConfirmation">
-              Weiter
+              {{ $t("next") }}
             </f7-fab>
 
             <f7-fab v-show="step.number==2"
@@ -81,7 +81,7 @@
                   position="left-bottom"
                   popup-open=".popup-chat"
                   @click="goToCartSummary">
-              Zurück
+              {{ $t("back") }}
             </f7-fab>
         </f7-page>
     </f7-popup>

@@ -54,7 +54,7 @@
                       panel-open="left"
                       class="cart-button"
                       ref="fabCart"
-                      v-if="!editMode"
+                      v-if="showCartButton"
                       @click="openCart">
                   <f7-icon fa="shopping-cart"></f7-icon>
                   {{ $t("go_to_checkout") }}
@@ -124,6 +124,10 @@ export default {
 
     editMode: function() {
         return store.state.editMode
+    },
+
+    showCartButton: function() {
+        return !store.state.editMode && store.state.features.orderingEnabled
     },
 
     footNoteData: function() {

@@ -84,7 +84,8 @@ const checkoutFormClearState = {
 
 const features = {
     menuShowOnlyOpenedCategory: true,
-    sortable: false
+    sortable: false,
+    orderingEnabled: appConfig.orderingEnabled
 }
 
 const store = new Vuex.Store({

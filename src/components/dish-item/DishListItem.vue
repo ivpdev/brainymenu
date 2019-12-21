@@ -12,8 +12,10 @@
               <f7-button
                   fill
                   round
+                  :disabled="!orderingEnabled"
+                  class="price-button"
                   color="orange"
-                  icon-fa="cart-plus"
+                  :icon-fa="cartIconClass"
                   @click="onAddToCartClick(item, $event)">
                   {{formattedPrice}} &euro;
               </f7-button>
@@ -143,6 +145,14 @@ export default {
         }
     },
 
+    orderingEnabled: function() {
+        return store.state.features.orderingEnabled
+    },
+
+    cartIconClass: function() {
+        return store.state.features.orderingEnabled ? "cart-plus" : ""
+    },
+
     editMode: function() {
         return store.state.editMode;
     },
@@ -220,6 +230,7 @@ export default {
     },
 
     iosFlyToCartAnimationFallback() {
+        const $ = window.$
         const itemsCount = $('.fab-center-bottom .shopping-cart-count')
         const fab = $('.fab-center-bottom a')
         itemsCount.animate({
@@ -242,6 +253,8 @@ export default {
     },
 
     performFlyToCartAnimation: function() {
+        const $ = window.$
+
         //FIXME on iOS when the screen is scrolled position of the flying item is calculated incorrectly
         if (Framework7.device.ios) {
             this.iosFlyToCartAnimationFallback();
@@ -285,6 +298,10 @@ export default {
 .thumbnail {
     width: 9em;
     height: 6em;
+}
+
+.price-button.disabled {
+    opacity: 1 !important;
 }
 
 .thema-red .dish-list-item .item-inner {

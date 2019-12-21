@@ -1,5 +1,6 @@
 window.appConfig = {
-    mailServerUrl: '/contact_data.php',
+    orderingEnabled: true,
+    mailServerUrl: '/email_sender.php',
     openAt: [
     {
             day: 'Monday',

@@ -1,18 +1,12 @@
 This free is mobile ready menu for restaurants
 
 ### Getting Started
-1. Copy config.js.sample to config.js
-2. Modify config.js (see Configuration options)
-3. Build the app (`npm run serve`)
+1. Modify public/config.js
+2. Build the app (`npm run serve`)
 
 
 ### Starting in development mode
 `npm run serve`
-
-
-### Configuration options (config.js)
-TODO
-
 
 ### Shopping cart (optional)
 In order to enable ordering feature 3 steps should be done:
@@ -21,14 +15,15 @@ In order to enable ordering feature 3 steps should be done:
 3. Set property "orderingEnabled" to "true" in config.js
 
 ### Mail Sending Backend
-TODO
+see sample backend script email_sender_sample.php
 
 ### Features
-- Categories
+- Dishes & categories
 - Pictures
-- Shopping cart & making an order (backend is not provided)
-- allergenes and additives
-
+- Business lunch (only visible in configured time)
+- Shopping cart & making an order (only sample backend)
+- Configurable auto-disabling of ordering out-of-working time
+- Allergenes and Additives (required by German laws)
 
 
 ### Features (under development)

@@ -3,51 +3,50 @@ window.appConfig = {
     mailServerUrl: '/email_sender.php',
     openAt: [
     {
-            day: 'Monday',
-            from: '10:45',
-            to: '14:15'
-        }, {
-            day: 'Monday',
-            from: '16:45',
-            to: '22:15'
-        },{
-            day: 'Tuesday',
-            from: '10:45',
-            to: '14:15'
-        }, {
-            day: 'Tuesday',
-            from: '16:45',
-            to: '22:15'
-        }, {
-            day: 'Wednesday',
-            from: '10:45',
-            to: '14:15'
-        }, {
-            day: 'Wednesday',
-            from: '16:45',
-            to: '22:15'
-        }, {
-            day: 'Thursday',
-            from: '10:45',
-            to: '14:15'
-        }, {
-            day: 'Thursday',
-            from: '16:45',
-            to: '22:15'
-        }, {
-            day: 'Friday',
-            from: '10:45',
-            to: '14:15'
-        }, {
-            day: 'Friday',
-            from: '16:45',
-            to: '22:15'
-        },{
-            day: 'Sunday',
-            from: '11:45',
-            to: '21:45'
-        }
-    ],
+        day: 'Monday',
+        from: '10:45',
+        to: '14:15'
+    }, {
+        day: 'Monday',
+        from: '16:45',
+        to: '22:15'
+    },{
+        day: 'Tuesday',
+        from: '10:45',
+        to: '14:15'
+    }, {
+        day: 'Tuesday',
+        from: '16:45',
+        to: '22:15'
+    }, {
+        day: 'Wednesday',
+        from: '10:45',
+        to: '14:15'
+    }, {
+        day: 'Wednesday',
+        from: '16:45',
+        to: '22:15'
+    }, {
+        day: 'Thursday',
+        from: '10:45',
+        to: '14:15'
+    }, {
+        day: 'Thursday',
+        from: '16:45',
+        to: '22:15'
+    }, {
+        day: 'Friday',
+        from: '10:45',
+        to: '14:15'
+    }, {
+        day: 'Friday',
+        from: '16:45',
+        to: '22:15'
+    },{
+        day: 'Sunday',
+        from: '11:45',
+        to: '21:45'
+    }],
 
     closed: {
         closed: false,
@@ -98,7 +97,7 @@ window.appConfig = {
             "Tartazin": "16"
         },
 
-        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 22 84 19 63"
+        contact: "Wenden Sie sich bitte an die Rufnummer 089 / 12 34 56 78"
     },
     normalizationData: {
         allergens: {
@@ -118,7 +117,7 @@ window.appConfig = {
     },
 
     cafeData: {
-        "defaultImage": "http://asia-littledragon.de/images_br/ld_seitback1.jpg",
+        "defaultImage": "https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/sample-asia-restuarant2-small.jpg",
         "menu": [
             {
                 "category" : "Mittagsmenu",
@@ -584,7 +583,8 @@ window.appConfig = {
               //"spiciness": 1,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["vegetarisch"]
+              "traits" : ["vegetarisch"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-a-mouth-watery-of-a-creamy-soup-3662104.jpg"]
              // "ingredients" : null,
               //"nutritionFacts" : {
               //  "calories" : null,
@@ -598,7 +598,8 @@ window.appConfig = {
               "description" : "mit Gemüse (süß-sauer-scharf)",
               "price" : 2.70,
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["vegetarisch"]
+              "traits" : ["vegetarisch"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-appetizer-bowl-bread-breakfast-539451.jpg"]
             },
             {
               "name" : "3 Wan-Tan-Suppe",
@@ -606,7 +607,8 @@ window.appConfig = {
               "price" : 3.50,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["fleisch"]
+              "traits" : ["fleisch"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-shrimp-soup-in-white-ceramic-bowl-with-chili-on-brown-wooden-1437590.jpg"]
             },
             {
               "name" : "4 Glasnudel-Suppe",
@@ -614,7 +616,8 @@ window.appConfig = {
               "price" : 3.50,
               "allergens": ["Soja oder Sojaerzeugnisse"],
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["Hähnchen", "Bambus", "Glasnudeln"]
+              "traits" : ["Hähnchen", "Bambus", "Glasnudeln"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             },
             {
               "name" : "5 Tom-Yam-Gai",
@@ -622,7 +625,8 @@ window.appConfig = {
               "price" : 3.50,
               "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["Hähnchen", "Pilze"]
+              "traits" : ["Hähnchen", "Pilze"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             },
             {
               "name" : "6 Tom-Kha-Gai",
@@ -631,7 +635,8 @@ window.appConfig = {
               "spiciness": 1,
               "allergens": ["Milcherzeugnis"],
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["Hänchen", "Pilze", "Kokos"]
+              "traits" : ["Hänchen", "Pilze", "Kokos"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             },
             {
               "name" : "7 Tom-Yam-Gung",
@@ -639,28 +644,32 @@ window.appConfig = {
               "price" : 4.00,
               "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["Garnelen", "Pilze"]
+              "traits" : ["Garnelen", "Pilze"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             },
             {
               "name" : "8 Miso-Suppe",
               "description" : "mit Tofu & Seetang (japanisch)",
               "price" : 3.90,
-              "traits" : ["japanisch"]
+              "traits" : ["japanisch"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             },
             {
               "name" : "9 Kani-Miso-Suppe",
               "description" : "Suppe mit Krebsfleisch[1] und Seetang (japanisch)",
               "price" : 3.90,
               "additives": ["mit Farbstoffen"],
-              "traits" : ["japanisch", "Krabben", "Seetang"]
+              "traits" : ["japanisch", "Krabben", "Seetang"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             },
             {
-              "name" : "10 Little Dragon-Suppe",
+              "name" : "10 Super Asia Suppe",
               "description" : "mit Gemüse, Schnellnudeln, Hühnerbrust & Koriander",
               "price" : 3.90,
               "spiciness": 1,
               "additives": ["mit Geschmacksverstärker"],
-              "traits" : ["Nudeln", "Hähnchen"]
+              "traits" : ["Nudeln", "Hähnchen"],
+              "pics": ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/soup-with-meat-on-white-ceramic-bowl-1275894.jpg"]
             } ] },
           {"category" : "Vorspeisen",
             "traits" : ["Vorspeisen"],
@@ -813,28 +822,28 @@ window.appConfig = {
               "description" : "3 Tekka-, 3 Kappa-, 3 Sake-, 3 Avokado-Maki",
               "price" : 5.90,
               "traits" : ["Avokado", "Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S41.menu_02_05_2016_09_51_41.png"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/asia-carrot-chopsticks-delicious-357756.jpg"]
             },
             {
               "name" : "S42 12 Röllchen",
               "description" : "6 Salmon Stick-Maki, 6 Tekka-Maki",
               "price" : 6.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S42.menu_02_05_2016_09_57_22.png"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/asia-carrot-chopsticks-delicious-357756.jpg"]
             },
             {
               "name" : "S43 12 Röllchen",
               "description" : "6 Salmon-Philadelphia-, 6 Sake-Kawa-Maki",
               "price" : 8.90,
               "traits" : ["Avokado", "Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S43.menu_02_05_2016_10_14_05.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/asia-carrot-chopsticks-delicious-357756.jpg"]
             },
             {
               "name" : "S44 18 Röllchen",
               "description" : "6 Kappa-, 6 Avokado-, 6 Avokado-Philadelphia-Maki",
               "price" : 8.90,
               "traits" : ["Avokado", "vegetarisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S44.menu_02_05_2016_10_07_00.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/asia-carrot-chopsticks-delicious-357756.jpg"]
             },
             {
               "name" : "S45 18 Röllchen",
@@ -842,35 +851,35 @@ window.appConfig = {
               "price" : 8.90,
               "additives": ["mit Antioxidationsmittel"],
               "traits" : ["Avokado", "vegetarisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S45.menu_02_05_2016_10_10_14.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/asia-carrot-chopsticks-delicious-357756.jpg"]
             },
             {
               "name" : "S46 12 Röllchen + 2 Nigiri",
               "description" : "2 Nigiri: 1 Thunfisch, 1 Lachs; 12 Röllchen: 3 Sake-, 3 Tekka-, 6 Kappa-Maki",
               "price" : 8.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S46.menu_02_05_2016_10_11_52.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S47 18 Röllchen",
               "description" : "6 Sake-Kawa-, 3 Kappa-, 6 Sake-, 3 Avokado-Maki",
               "price" : 9.90,
               "traits" : ["Avokado", "Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S47.menu_02_05_2016_11_04_40.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S48 12 Röllchen + 3 Nigiri",
               "description" : "3 Nigiri: 1 Thunfisch, 1 Lachs, 1 Oktopus; 12 Röllchen Maki: 3 Kappa-, 3 Sake-, 3 Kampyo[1]-, 3 Tekka-Maki",
               "price" : 10.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S48.menu_02_05_2016_11_04_56.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S49 12 Röllchen + 2 Nigiri",
               "description" : "2 Nigiri: 1 Thunfisch, 1 Lachs; 12 Röllchen: 6 Sake-, 6 Tekka-Maki",
               "price" : 10.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S49.menu_02_05_2016_11_05_18.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S50 12 Röllchen + 2 Nigiri",
@@ -878,7 +887,7 @@ window.appConfig = {
               "price" : 11.90,
               "allergens": ["Sesam"],
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S50.menu_03_05_2016_15_04_18.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S51 18 Röllchen",
@@ -886,7 +895,7 @@ window.appConfig = {
               "price" : 13.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Fisch", "Avokado"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S51.menu_03_05_2016_15_04_34.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S52 6 Röllchen + 5 Nigiri",
@@ -894,7 +903,7 @@ window.appConfig = {
               "price" : 13.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch", "seafood"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S52.menu_03_05_2016_15_04_49.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S53 12 Röllchen + 4 Nigiri",
@@ -902,7 +911,7 @@ window.appConfig = {
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch", "seafood"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S53.menu_03_05_2016_15_09_17.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S54 12 Röllchen + 5 Nigiri",
@@ -910,21 +919,21 @@ window.appConfig = {
               "price" : 14.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Fisch", "seafood"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S54.menu_03_05_2016_15_09_38.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S55 12 Röllchen + 6 Nigiri",
               "description" : " 6 Nigiri: 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Octopus; 12 Röllchen: 6 Avokado-, 6 Tekka-Maki",
               "price" : 15.90,
               "traits" : ["Avokado", "Fisch", "seafood"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S55.menu_03_05_2016_15_09_58.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S56 12 Röllchen + 6 Nigiri",
               "description" : "6 Nigiri: 2 Thunfisch, 2 Lachs, 1 Scampi, 1 Tintenfisch; 12 Röllchen: 3 Kappa-, 3 Shinko-, 3 Ebi-, 3 Kani[S]-Maki",
               "price" : 15.90,
               "traits" : ["Fisch", "seafood"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S56.menu_03_05_2016_15_18_17.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S57 12 Röllchen + 6 Nigiri",
@@ -932,35 +941,35 @@ window.appConfig = {
               "price" : 16.90,
               "additives": ["mit Farbstoffen"],
               "traits" : ["Avokado", "Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S57.menu_03_05_2016_15_18_35.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-sushi-rolls-on-plate-2323391.jpg"]
             },
             {
               "name" : "S58 24 Röllchen + 10 Nigiri (für 2 Personen)",
               "description" : "10 Nigiri(versch. Sorte); 24 Röllchen: 6 Kappa-, 6 Tekka-, 6 Alaska-, 6 Sake-Maki",
               "price" : 29.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S58.menu_03_05_2016_15_23_46.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-japanesse-food-2323398.jpg"]
             },
             {
               "name" : "S59 18 Röllchen + 14 Nigiri (für 2-3 Personen)",
               "description" : "14 Nigiri(versch. Sorte); 18 Röllchen: 6 California[1,S]-, 6 Shinko-, 6 Alaska-Tobiko[1]-Maki",
               "price" : 34.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S59.menu_03_05_2016_15_26_38.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-japanesse-food-2323398.jpg"]
             },
             {
               "name" : "S60 18 Röllchen + 18 Nigiri (für 3 Personen)",
               "description" : "18 Nigiri(versch. Sorte); 18 Röllchen: 6 Sake-, 6 Tekka-, 6 Alaska-Tobiko[1]-Maki",
               "price" : 44.90,
               "traits" : ["Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S60.menu_03_05_2016_15_27_55.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-japanesse-food-2323398.jpg"]
             },
             {
               "name" : "S61 36 Röllchen - 28 Nigiri (Familien-Glück f. 4 Per.)",
               "description" : "28 Nigiri(versch. Sorte); 36 Röllchen: 6 Shinko-, 6 Tekka-, 6 Sake-, 6 Avokado-, 6 Sake-Kawa-, 6 Alaska-Tobico-Maki",
               "price" : 64.90,
               "traits" : ["Avokado", "Fisch"],
-              "pics" : ["http://asia-littledragon.de/images/tagessushi/S61.menu_03_05_2016_15_28_43.jpg"]
+              "pics" : ["https://brainymenu-demo.s3.eu-de.cloud-object-storage.appdomain.cloud/assorted-japanesse-food-2323398.jpg"]
             } ] },
           {"category" : "Sushi - Nigiri",
             "traits" : ["sushi", "nigiri", "japanisch"],

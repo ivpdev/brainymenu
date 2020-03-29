@@ -1,5 +1,7 @@
 This free is mobile ready menu for restaurants
 
+Demo: https://brainymenu-demo.mybluemix.net/
+
 ### Getting Started
 1. Modify public/config.js
 2. Build the app (`npm run serve`)

@@ -11,7 +11,7 @@
     "test-debug": "./node_modules/.bin/mocha --inspect-brk --reporter spec -r esm"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chai": "^4.2.0",
     "framework7": "^2.3.1",
     "framework7-icons": "^0.9.1",
